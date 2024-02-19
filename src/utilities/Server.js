@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://plomberie-serveur.onrender.com/api/auth";
+const API_BASE_URL = "https://plomberie-serveur.onrender.com/api";
 
 
 export const loginUser = async (email, password) => {
