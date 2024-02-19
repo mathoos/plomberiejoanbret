@@ -27,13 +27,10 @@ export const loginUser = async (email, password) => {
     }
 }
 
-export const getAllStuff = async (token) => {
+export const getAllStuff = async () => {
     try {
         const response = await fetch(`${API_BASE_STUFF}`, {
             method: "GET",
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
         });
         if (!response.ok) {
             throw new Error('La requête a échoué');

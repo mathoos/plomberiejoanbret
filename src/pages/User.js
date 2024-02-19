@@ -53,7 +53,7 @@ const User = () => {
 
     const fetchData = async () => {
         try {
-            const data = await getAllStuff(token);
+            const data = await getAllStuff();
             setThings(data); // Mettre à jour l'état things avec les objets récupérés
         } catch (error) {
             console.error("Une erreur s'est produite lors de la récupération des objets :", error);
@@ -63,14 +63,14 @@ const User = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getAllStuff(token);
+                const data = await getAllStuff();
                 setThings(data); // Mettre à jour l'état things avec les objets récupérés
             } catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des objets :", error);
             }
         };
         fetchData();
-    }, [token]); // Effectuer la requête à chaque changement du token
+    }, []); // Effectuer la requête à chaque changement du token
 
     
 
