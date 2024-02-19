@@ -30,6 +30,7 @@ export const loginUser = async (email, password) => {
 export const getAllStuff = async (token) => {
     try {
         const response = await fetch(`${API_BASE_STUFF}`, {
+            method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
             }

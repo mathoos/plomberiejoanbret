@@ -1,34 +1,25 @@
+import { useSelector } from "react-redux";
 import { useState, useEffect } from 'react';
+import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
 
 const Galerie = () => {
+    const token = useSelector((state) => state.user.token);
     const [images, setImages] = useState([]);
     const [lightboxOpen, setLightboxOpen] = useState(false);
 
     useEffect(() => {
-        const fetchAndDisplayGallery = async () => {
+        const fetchData = async () => {
             try {
-                const token = localStorage.getItem('token');
-                const response = await fetch('https://plomberie-serveur.onrender.com/api/auth/api/stuff', {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('La requête a échoué');
-                }
-
-                const data = await response.json();
-                setImages(data);
+                const data = await getAllStuff(token);
+                setImages(data); // Mettre à jour l'état things avec les objets récupérés
             } catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des objets :", error);
             }
         };
-
-        fetchAndDisplayGallery();
-    }, []);
+        fetchData();
+    }, [token]); // Effectuer la requête à chaque changement du token
 
     const openLightbox = (index) => {
         setLightboxOpen(true);
