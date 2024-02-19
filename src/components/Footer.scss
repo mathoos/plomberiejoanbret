@@ -1,0 +1,106 @@
+@import "../style.scss";
+
+.footer{
+    display : flex;
+    flex-direction: column;
+    gap : 5vh;
+    padding : 7.4vh 12.7vw;
+    background-color: $noir;
+    @media screen and (max-width : 990px){
+        padding : 10vh 30px;
+    }
+
+    a{
+        transition : .3s ease;
+        &:hover{
+            color : $vert;
+        }
+    }
+
+    &_container{
+        display : flex;
+        gap : 5.2vw;
+        padding-bottom : 5vh;
+        border-bottom : 1px solid $blanc;
+        @media screen and (max-width : 990px){
+            flex-direction: column;
+            align-items: center;
+            gap : 5vh;
+        }
+
+        &-bloc{
+            display : flex;
+            flex-direction: column;
+            gap : 2.3vh;
+            width : 9.5vw;
+            @media screen and (max-width : 990px){
+                align-items: center;
+                gap : 1vh;
+                width : 100%;
+            }
+
+            p, a{
+                font-size : .9vw;
+                color : $blanc;
+                @media screen and (max-width : 990px){
+                    font-size : 3.5vw;
+                    text-align : center;
+                }
+            }
+
+            &--rs{
+                display : flex;
+                align-items: center;
+                gap : .5vw;
+                @media screen and (max-width:990px){
+                    gap : 2.5vw;
+                }
+
+                &--icon{
+                    display : flex;
+
+                    img{
+                        width : 1.2vw;
+                        height : auto;
+
+                        @media screen and (max-width:990px){
+                            width : 5vw;
+                        }
+                    }
+                }
+            }
+
+            &.logo{
+                width : fit-content;
+                margin-left : auto;
+                @media screen and (max-width:990px){
+                   margin-left: 0;
+                }
+
+                img{
+                    width : 8vw;
+                    height : auto;
+                    @media screen and (max-width:990px){
+                        width : 25vw;
+                    }
+                }
+            }
+        }
+    }
+
+    &_copyright{
+        p{
+            font-size : .8vw;
+            color : $blanc;
+            @media screen and (max-width:990px){
+                font-size : 3.5vw;
+                text-align : center;
+            }
+
+            a{
+                font-size : inherit;
+                color : inherit;
+            }
+        }
+    }
+}

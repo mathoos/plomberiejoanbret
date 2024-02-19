@@ -1,0 +1,220 @@
+@import "../style.scss";
+
+.realisations{
+    display : flex;
+    flex-direction: column;
+    gap : 13.8vh;
+    padding : 19.4vh 12.7vw;
+    background-color: $vert-pale;
+    
+    @media screen and (max-width : 990px){
+        gap : 10vh;
+        padding : 15vh 30px;
+    }
+
+    &_container{
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width : 990px){
+            flex-direction: column;
+            gap : 5vh;
+        }
+
+        &-txt{
+            display : flex;
+            flex-direction: column;
+            gap : 6.5vh;  
+            @media screen and (max-width : 990px){
+                width : 100%;
+                gap : 0;
+            }
+
+            &--title{
+                width : 100%;
+                @media screen and (max-width:990px){
+                    width : 100%;
+                }  
+
+                h2{
+                    color : $vert;
+                    text-align : left;
+                    font-size: 3.5vw;
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform;  
+
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .3s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .3s;
+                        opacity : 0;
+                    } 
+
+                    @media screen and (max-width:990px){
+                        font-size: 9vw;
+                        text-align : center;
+                    }
+                }  
+            }    
+            
+            &--subtitle{
+                display : flex;
+                flex-direction: column;
+                gap : 2.5vh;
+                width : 27vw;
+                @media screen and (max-width : 990px){
+                    display : none;
+                }
+
+                .subtitle{
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform; 
+                    
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .4s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .4s;
+                        opacity : 0;
+                    } 
+                }
+
+                .description{
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform; 
+                    
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .5s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .5s;
+                        opacity : 0;
+                    } 
+                }
+            }   
+        }
+
+        &-slider{
+            display : flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap : 3.5vh;
+            @media screen and (max-width : 990px){
+                width : 100%;
+                margin-bottom : 10vh;
+            }
+
+            &--img{
+                position : relative;
+                width : 30vw;
+                height : 77vh; 
+                overflow : hidden;
+                
+                @media screen and (max-width : 990px){
+                    width : 100%;
+                    height : 60vh;
+                }
+                
+
+                &::after{
+                    position : absolute;
+                    content : "";
+                    left : 0;
+                    bottom : 0;
+                    width : 100%;
+                    background-color: $vert-pale;
+                }
+
+                img{
+                    width : 100%;
+                    height : 100%;            
+                    object-fit: cover;    
+                }
+
+                // .curtain{
+                //     position : absolute;
+                //     left : 0;
+                //     bottom : 0;
+                //     width : 100%;
+                //     height : 100%;
+                //     background-color: $vert-pale;
+                //     transition: .7s ease;
+
+                //     &.show {
+                //         height : 0;
+                    
+                //     }
+                    
+                //     &.hide {
+                //         height : 100%;
+                //     }
+                // }
+            }
+
+            &--arrows{
+                display : flex;
+                gap : 1.5vw;
+                @media screen and (max-width : 990px){
+                   gap : 5vw;
+                }
+
+                .arrow{
+                    display : flex;
+                    justify-content: center;
+                    align-items: center;
+                    width : 3vw;
+                    height : 3vw;
+                    border : 1px solid $noir;
+                    border-radius : 100vmax;
+                    transition : .3s ease;
+                    cursor : pointer;
+                    @media screen and (max-width : 990px){
+                        width : 15vw;
+                        height : 15vw;
+                    }
+
+                    &.arrow-left{
+                        svg{
+                            transform : rotate(90deg);
+                        }
+                    }
+
+                    &.arrow-right{
+                        svg{
+                            transform : rotate(-90deg);
+                        } 
+                    }
+
+                    svg{
+                        width : 1.2vw;
+                        will-change: transform;
+                        transition : .3s ease;
+                        @media screen and (max-width : 990px){
+                            width : 5vw;
+                            height : 5vw;
+                        }
+                    }
+
+                    &:hover{
+                        background-color: $noir;
+                        svg{
+                            path{
+                                fill : $blanc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

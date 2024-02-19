@@ -1,0 +1,65 @@
+@import "../style.scss";
+
+.galerie{
+    display : flex;
+    flex-direction: column;
+    gap : 10vh;
+    padding : 19.4vh 8.3vw;
+    background-color: $blanc;
+    @media screen and (max-width : 990px){
+        padding : 10vh 30px;
+    }
+
+    &_title{
+        h2{
+            color : $vert;
+        }
+    }
+
+    &_container {       
+        display : flex;
+        justify-content: space-between;
+        gap : 3.5vw;
+        @media screen and (max-width : 990px){
+            gap : 10px;
+        }
+
+        .box{
+            display : flex;
+            flex-direction: column;
+            gap : 3.5vw;
+            width : calc( 100% / 4);
+            @media screen and (max-width : 990px){
+                gap : 10px;
+            }
+        }
+        
+        &-image{
+            width : 100%;
+            height : auto;
+
+            img{
+                width : 100%;
+                height : 100%;
+                object-fit: cover;
+                transition : .7s ease;
+                cursor : pointer;
+            }
+
+            &:hover{
+                img{
+                    filter : grayscale(100%)
+                }
+            }
+
+            &.active{
+                display : flex;
+            }
+
+            &.inactive{
+                display : none;
+            }
+        }
+    }
+}
+

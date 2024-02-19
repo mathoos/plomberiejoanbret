@@ -1,0 +1,104 @@
+@import "../style.scss";
+
+.connexion{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height : 100vh;
+    background-color: $noir;
+    @media screen and (max-width : 990px){
+        padding : 0;
+    }
+
+    &_form{
+        display : flex;
+        flex-direction: column;
+        gap : 7vh;
+        background-color: $blanc;
+        border : 2px solid $noir;
+        padding : 10vh 5vw; 
+        @media screen and (max-width : 990px){
+           gap : 10vh;
+           width : 100%;
+           height : 100%;
+        }
+
+        .h2{
+            font-size : 1.5vw;
+            @media screen and (max-width : 990px){
+                font-size: 7vw;
+            }
+        }
+
+        &-fieldset{
+            display : flex;
+            flex-direction: column;
+            gap : 2.5vh;
+
+            fieldset{
+                display : flex;
+                flex-direction: column;
+                gap : 1vh;
+                min-height : 2vw;
+                @media screen and (max-width : 990px){
+                    min-height : 5vw;
+                }
+
+                label{
+                    font-family: "Archivo";
+                    line-height : 1.2;
+                    font-size: 1vw;
+                    font-weight : 600;
+                    color : $noir;
+                    @media screen and (max-width : 990px){
+                        font-size: 5vw;
+                    }
+                }
+
+                #email, #password{
+                    width : 30vw;
+                    font-size : 1vw;
+                    padding : 5px;
+                    border : 1px solid $noir;
+                    border-radius : 5px;
+                    font-family : "Ysabeau Office";
+                    @media screen and (max-width : 990px){
+                        width : 100%;
+                        font-size : 5vw;
+                    }
+
+                    &:focus{
+                        outline : 1px solid $noir;
+                    }
+                }
+
+                .error-message{
+                    color : red;
+                }
+            }
+        }
+
+        &-connect{
+            align-self: flex-end;
+
+            button{
+                background-color: transparent;
+                color : $noir;
+                border : 1px solid $noir;
+                padding : 1vh 1.5vw;
+                cursor : pointer;
+                transition : .3s ease;
+                @media screen and (max-width : 990px){
+                    padding : 1vh 5vw;
+                }
+
+                &:hover{
+                    background-color: $noir;
+                    color : $blanc;
+                    border-color : transparent;
+                }
+            }
+        }
+    }
+}

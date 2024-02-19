@@ -1,0 +1,37 @@
+@import "../style.scss";
+
+.marquee{
+    padding : 9.2vh 0;
+    background-color: $noir;
+    @media screen and (max-width:990px){
+        padding : 5vh 0;
+    }
+
+    &_container{
+        display : flex;
+        flex-wrap: nowrap;      
+
+        p{
+            font-family : "Archivo";
+            font-weight : 900;
+            font-size : 3.7vw;
+            white-space: nowrap;
+            color : $blanc;
+            text-transform : uppercase;
+            animation: marquee 20s linear infinite forwards;
+            @media screen and (max-width:990px){
+                font-size : 10vw;
+                animation: marquee 25s linear infinite forwards;
+            }      
+
+            span{
+                color : transparent;
+                -webkit-text-stroke: 2px $blanc;
+
+                @media screen and (max-width:990px){
+                    -webkit-text-stroke: 1px $blanc;
+                }
+            }
+        }  
+    }
+}

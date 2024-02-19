@@ -1,0 +1,39 @@
+{
+    "photographies": [
+    {
+        "title" : "Salle <br/> de bain",
+        "subtitle" : "Plus qu'une simple pièce fonctionnelle, la salle de bain est un lieu de détente.",
+        "description" : "Nous comprenons l'importance de la salle de bain en tant que lieu de bien-être, et c'est pourquoi nous sommes dédiés à créer des salles de bain sur mesure et fonctionnelles, pour répondre à vos besoins, votre style et vos préférences.",
+        "photo": "/slider/salle-de-bain(3).jpg"
+    },
+    {
+        "title" : "Salle <br> de douche",
+        "subtitle" : "La plomberie est la colonne vertébrale de toute salle de douche performante.",
+        "description" : "Chaque salle de douche que nous concevons est adaptée à vos préférences esthétiques. Moderne et minimaliste, ou plutôt rustique, nous inventons un espace où élégance et confort se rencontrent pour créer une expérience de bien-être inégalée.",
+        "photo": "/slider/salle-de-douche(4).jpg"
+    },
+    {
+        "title" : "Salle <br> d'eau",
+        "subtitle" : "Une pièce fonctionnelle où domine le souci du confort et de l'hygiène.",
+        "description" : "Nous proposons une gamme variée de toilettes, avec des options écoénergétiques pour réduire votre empreinte écologique. Nous intervenons également sur les problèmes de fuites, de débouchage de canalisations, ou tout autre problème de toilettes qui peut perturber votre quotidien.",
+        "photo": "/slider/toilette(1).jpg"
+    },
+    {
+        "title" : "Création de <br> cuisine",
+        "subtitle" : "Votre cuisine devrait refléter votre style de vie et vos goûts personnels.",
+        "description" : "Que vous rêviez d'une cuisine moderne aux lignes épurées, ou d'une cuisine traditionnelle chaleureuse, nous travaillons en étroite collaboration avec vous pour concrétiser votre vision. Nous modernisons votre plomberie, pour une cuisine fonctionnelle et élégante.",
+        "photo": "/slider/cuisine(4).jpg"
+    },
+    {
+        "title" : "Aménagement <br> PMR",
+        "subtitle" : "Des espaces fonctionnels et esthétiques qui répondent à des besoins spécifiques.",
+        "description" : "Notre engagement envers l'accessibilité universelle se traduit par une gamme complète de services d'installation de mobilier adapté aux personnes à mobilité réduite, conçus pour améliorer la vie quotidienne et garantir une indépendance maximale.",
+        "photo": "/slider/amenagement-pmr(2).jpg"
+    },
+    {
+        "title" : "Installation <br> de mobilier",
+        "subtitle" : "Le mobilier est l'âme de chaque espace de vie au coeur de votre habitation.",
+        "description" : "Le mobilier joue un rôle essentiel dans la création d'espaces fonctionnels, esthétiques et confortables. Que ce soit dans votre salle de bain, salle de douche ou cuisine, nous installons du mobilier sur mesure pour répondre à vos besoins spécifiques.",
+        "photo": "/slider/mobilier(3).jpg"
+    }
+]}

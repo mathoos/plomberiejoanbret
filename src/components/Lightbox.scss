@@ -1,0 +1,186 @@
+@import "../style.scss";
+
+
+.lightbox{
+    position : fixed;
+    top : 0;
+    left : 0;
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    gap : 3vw;
+    width : 100%;
+    height : 100vh;
+    background-color: $blanc;  
+    padding : 10vh 15vw 10vh 15vw;
+    transition : opacity .3s ease;
+    z-index : 100;
+
+    @media screen and (max-width : 990px){
+        flex-direction: column;
+        gap : 5vh;
+        padding : 10vh 30px 5vh 30px;
+    }
+
+    &.fadeOut{
+        opacity : 0;
+    }
+
+    &_image{
+        width : 43.5vw; 
+        height : 100%;
+        overflow: hidden;
+        @media screen and (max-width : 990px){
+            width : 100%;
+            height : 100%;
+        }
+
+        img{
+            width : auto;
+            height : 100%;
+            object-fit: contain;
+            @media screen and (max-width : 990px){
+                width : 100%;
+                height : 100%;
+            }
+        }
+    }
+
+    &_details{
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width : 23.5vw;
+        height : 100%;
+        padding-top : 10vh;
+        @media screen and (max-width : 990px){
+            padding : 0;
+            width : 100%;
+            height : fit-content;
+        }
+        
+
+        &-txt{
+            display : flex;
+            flex-direction: column;
+            gap : 3vh;
+            @media screen and (max-width : 990px){
+                display : none;
+            }
+
+            h2{
+                font-size : 1.5vw;
+            }
+        }  
+    }
+
+    &_arrows{
+        display : flex;
+        gap : 1.5vw;
+
+        @media screen and (max-width : 990px){
+            justify-content: flex-end;
+            gap : 5vw;
+            bottom : 5vh;
+        }
+
+        .arrow{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            width : 3vw;
+            height : 3vw;
+            border : 1px solid $noir;
+            background-color: $blanc;
+            border-radius : 100vmax;
+            transition : .3s ease;
+            cursor : pointer;
+
+            @media screen and (max-width : 990px){
+                width : 15vw;
+                height : 15vw;
+            }
+
+            &.lightbox-prev{
+                svg{
+                    transform : rotate(90deg);
+                }
+            }
+
+            &.lightbox-next{
+                svg{
+                    transform : rotate(-90deg);
+                    
+                } 
+            }
+
+            svg{
+                width : 1.2vw;
+                will-change: transform;
+                fill : $noir;
+                transition : .3s ease;
+                @media screen and (max-width : 990px){
+                    width : 5vw;
+                    height : 5vw;
+                }
+            }
+
+            &:hover{
+                background-color: $noir;
+                svg{
+                    fill : $blanc;
+                }
+            }
+        }
+    }
+
+    &_close{
+        position : absolute;
+        top : 2vw;
+        right : 2vw;
+        width : 3vw;
+        height : 3vw;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        border-radius : 100%;
+        transition : .5s ease;
+        will-change : transform;
+        cursor : pointer;
+
+        @media screen and (max-width : 990px){
+            width : 15vw;
+            height : 15vw;
+        }
+
+        &-barre{
+            position : absolute;           
+            width : 1.5vw;
+            height : 2px;
+            background-color: $noir;
+            transition : .3s ease;
+            @media screen and (max-width : 990px){
+                width : 5vw;
+            }
+
+            &--1 {
+                top : 50%;
+                left : 50%;
+                transform : translate(-50%, -50%) rotate(45deg);
+            }
+
+            &--2 {
+                top : 50%;
+                left : 50%;
+                transform : translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        &:hover{
+            background-color: $noir;
+            .lightbox_close-barre{
+                background-color : $blanc;
+            }
+        }
+    }
+}

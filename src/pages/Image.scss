@@ -1,0 +1,277 @@
+@import "../style.scss";
+
+
+.image{
+    .container{
+        display : flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap : 5vh;
+        width : 100%;
+        height : 100vh;
+        padding : 20vh 10vw 10vh 10vw;
+
+        @media screen and (max-width : 990px){
+            gap : 10vh;
+            padding : 15vh 30px 5vh 30px;
+            min-height : 100vh;
+            height : auto;
+        }
+    
+        &_objet{
+            display : flex;
+            align-items: flex-end;
+            gap : 5vw;
+            width : 100%;
+            @media screen and (max-width : 990px){
+                flex-direction: column;
+                align-items: flex-start;
+                gap : 5vh;
+            }
+    
+            &-img{
+                width : 27vw;
+                height : 27vw;
+                overflow : hidden;
+                @media screen and (max-width : 990px){
+                    width : 100%;
+                    height : auto;
+                }
+    
+                img{
+                    width : 100%;
+                    height : 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            &-details{
+                display : flex;
+                flex-direction: column;
+                gap : 3vh;
+                height : 100%;
+    
+                h2{
+                    font-size : 1.5vw;
+                    width : 20vw;
+                    @media screen and (max-width : 990px){
+                        font-size : 7vw;
+                        width : 100%;
+                    }
+                }
+    
+                &--description{
+                    width : 35vw;
+                    @media screen and (max-width : 990px){
+                        width : 100%;
+                    }
+                }
+    
+                .bouton{
+                    font-size : 1vw;
+                    text-transform : none;
+                    min-height : fit-content;
+                    padding : 1vh 1vw;
+                    border-width : 1px;
+                    font-weight : normal;
+                    cursor : initial;
+                    pointer-events: none;
+                    @media screen and (max-width : 990px){
+                        padding : 1vh 5vw;
+                        font-size : 5vw;
+                    }
+                }
+            }   
+        }
+    
+        &_buttons{
+            display : flex;
+            gap : 2vw;
+    
+            &-btn{
+                background-color: $noir;
+                color : $blanc;
+                border : 1px solid transparent;
+                padding : 1vh 1.5vw;
+                cursor : pointer;
+                transition : .3s ease;
+    
+                &:hover{
+                    background-color: $blanc;
+                    color : $noir;
+                    border-color : $noir;
+                }
+            }
+        }
+    }
+    
+    .modal{
+        position : fixed;
+        top : 0;
+        left : 0;
+        display : none;
+        justify-content: center;
+        align-items: center;
+        width : 100%;
+        height : 100vh;
+        background-color: #373636d4;
+        z-index : 105;
+        @media screen and (max-width : 990px){
+            padding : 10vh 30px;
+        }
+    
+        &_form{
+            position : relative;
+            display : flex;
+            flex-direction: column;     
+            gap : 7vh;
+            background-color: $blanc;
+            border : 2px solid $noir;
+            padding : 10vh 5vw; 
+            @media screen and (max-width : 990px){
+                justify-content: flex-end;
+                width : 100%;
+                height : 100%;
+                padding : 10vh 5vw 5vh 5vw;
+            }
+    
+            &-close{
+                position : absolute;
+                top : 2vw;
+                right : 2vw;
+                width : 3vw;
+                height : 3vw;
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                border-radius : 100%;
+                transition : .5s ease;
+                will-change : transform;
+                cursor : pointer;
+    
+                @media screen and (max-width : 990px){
+                    width : 15vw;
+                    height : 15vw;
+                }
+        
+                &-barre{
+                    position : absolute;           
+                    width : 1.5vw;
+                    height : 2px;
+                    background-color: $noir;
+                    transition : .3s ease;
+                    @media screen and (max-width : 990px){
+                        width : 5vw;
+                    }
+        
+                    &--1 {
+                        top : 50%;
+                        left : 50%;
+                        transform : translate(-50%, -50%) rotate(45deg);
+                    }
+        
+                    &--2 {
+                        top : 50%;
+                        left : 50%;
+                        transform : translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+        
+                &:hover{
+                    background-color: $noir;
+                    .modal_form-close-barre{
+                        background-color : $blanc;
+                    }
+                }
+            }
+    
+            .h2{
+                font-size : 1.5vw;
+                @media screen and (max-width : 990px){
+                    font-size : 6vw;
+                }
+            }
+    
+            &-fieldset{
+                display : flex;
+                flex-direction: column;
+                gap : 2.5vh;
+    
+                fieldset{
+                    display : flex;
+                    flex-direction: column;
+                    gap : 1vh;
+    
+                    label{
+                        font-family: "Archivo";
+                        line-height : 1.2;
+                        font-size: 1vw;
+                        font-weight : 600;
+                        color : $noir;
+                        @media screen and (max-width : 990px){
+                            font-size: 3vw;
+                        }
+                    }
+    
+                    #title, #description, #tag-select, option{
+                        width : 30vw;
+                        font-size : 1vw;
+                        padding : 5px;
+                        border : 1px solid $noir;
+                        border-radius : 5px;
+                        font-family : "Ysabeau Office";
+                        @media screen and (max-width : 990px){
+                            width : 100%;
+                            font-size: 3vw;
+                        }
+                    }
+    
+                    #file{
+                        font-size : 1vw;
+                        padding : 5px;
+                        border-radius : 5px;
+                        font-family : "Ysabeau Office";
+                        @media screen and (max-width : 990px){
+                            font-size: 3vw;
+                        }
+                    }
+    
+                    textarea{
+                        min-height : 10vh;
+                        resize: none;
+                        @media screen and (max-width : 990px){
+                            min-height : 15vh;
+                        }
+                    }
+                }
+            }
+    
+            &-modify{
+                align-self: flex-end;
+    
+                button{
+                    background-color: transparent;
+                    color : $noir;
+                    border : 1px solid $noir;
+                    padding : 1vh 1.5vw;
+                    cursor : pointer;
+                    transition : .3s ease;
+                    @media screen and (max-width : 990px){
+                        padding : 1vh 5vw;
+                    }
+    
+                    &:hover{
+                        background-color: $noir;
+                        color : $blanc;
+                        border-color : transparent;
+                    }
+                }
+            }
+        }
+    
+        &.active{
+            display : flex;
+        }
+    }
+}
+
