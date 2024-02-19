@@ -28,16 +28,13 @@ const Galerie = () => {
     };
 
     const numberOfBoxes = 4; // Nombre de .box que vous avez
-    const imagesPerBox = Math.ceil(images.length / numberOfBoxes); // Nombre d'images par .box
+    const imageGroups = Array.from({ length: numberOfBoxes }, () => []);
 
-    // Diviser les images en groupes correspondant au nombre de .box
-    const imageGroups = [];
-    for (let i = 0; i < numberOfBoxes; i++) {
-        const startIndex = i * imagesPerBox;
-        const endIndex = startIndex + imagesPerBox;
-        const group = images.slice(startIndex, endIndex);
-        imageGroups.push(group);
-    }
+    // Distribuer les images dans chaque groupe
+    images.forEach((image, index) => {
+        const boxIndex = index % numberOfBoxes;
+        imageGroups[boxIndex].push(image);
+    });
 
     return (
         <section className="galerie">
