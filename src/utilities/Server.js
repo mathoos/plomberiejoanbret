@@ -1,10 +1,10 @@
-const API_BASE_URL = "https://plomberie-serveur.onrender.com/api";
+const API_BASE_URL = "https://plomberie-serveur.onrender.com/api/auth";
 
 
 export const loginUser = async (email, password) => {
     try {
         // On envoie une requête de connexion POST à l'API de connexion avec les données de l'utilisateur saisies dans le formulaire
-        const response = await fetch(`https://plomberie-serveur.onrender.com/api/auth/login`, {
+        const response = await fetch(`${API_BASE_URL}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
