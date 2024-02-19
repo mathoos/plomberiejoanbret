@@ -36,7 +36,7 @@ const User = () => {
 
     const fetchStuff = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/stuff', {
+            const response = await fetch('https://plomberie-serveur.onrender.com/api/stuff', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
