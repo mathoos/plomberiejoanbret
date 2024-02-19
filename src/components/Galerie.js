@@ -1,25 +1,23 @@
-import { useSelector } from "react-redux";
 import { useState, useEffect } from 'react';
 import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
 
 const Galerie = () => {
-    const token = useSelector((state) => state.user.token);
     const [images, setImages] = useState([]);
     const [lightboxOpen, setLightboxOpen] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getAllStuff(token);
-                setImages(data); // Mettre à jour l'état things avec les objets récupérés
+                const data = await getAllStuff();
+                setImages(data); // Mettre à jour l'état avec les objets récupérés
             } catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des objets :", error);
             }
         };
         fetchData();
-    }, [token]); // Effectuer la requête à chaque changement du token
+    }, []); // Effectuer la requête à chaque changement du token
 
     const openLightbox = (index) => {
         setLightboxOpen(true);
