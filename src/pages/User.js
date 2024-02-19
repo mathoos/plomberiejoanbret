@@ -1,7 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { setUser } from "../utilities/Slice";
-import { getUserProfile, createObject } from "../utilities/Server"; // Importer les fonctions nécessaires
+import { getAllStuff, createObject } from "../utilities/Server"; // Importer les fonctions nécessaires
 import { useNavigate } from "react-router-dom";
 
 import Navbar from '../components/Navbar';
@@ -9,7 +8,6 @@ import './User.scss';
 
 const User = () => {
     const token = useSelector((state) => state.user.token);
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const [things, setThings] = useState([]);
     const [modalActive, setModalActive] = useState(false); // État pour contrôler la classe .active de la modal
@@ -34,60 +32,45 @@ const User = () => {
         }
     };
 
-    const fetchStuff = async () => {
-        try {
-            const response = await fetch('https://plomberie-serveur.onrender.com/api/auth/api/stuff', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            if (!response.ok) {
-                throw new Error('La requête a échoué');
-            }
-            const data = await response.json();
-            setThings(data);
-        } 
-        catch (error) {
-            console.error('Une erreur s\'est produite lors de la récupération des objets :', error);
-        }
-    };
-
-    useEffect(() => {
-        async function fetchUserProfile() {
-            try {
-                const userProfileData = await getUserProfile(token);
-                dispatch(setUser(userProfileData.user));
-                console.log(userProfileData);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        if (!token) {
-            navigate("/");
-        } else {
-            fetchUserProfile();
-            fetchStuff();
-        }
-    }, [token, dispatch, navigate]);
-
 
     const handleCreateObjectFormSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         try {
             await createObject(formData, token);
-            fetchStuff();
             event.target.reset();
-            closeModal()
+            closeModal();
+            fetchData();
         } catch (error) {
             console.error("Une erreur s'est produite lors de la création de l'objet :", error);
         }
     };
 
     const handleCardClick = async (objectId) => {
+        // Naviguer vers la page Image.js avec les paramètres appropriés dans l'URL
         navigate(`/image?id=${objectId}&token=${encodeURIComponent(token)}`);
     };
+
+    const fetchData = async () => {
+        try {
+            const data = await getAllStuff(token);
+            setThings(data); // Mettre à jour l'état things avec les objets récupérés
+        } catch (error) {
+            console.error("Une erreur s'est produite lors de la récupération des objets :", error);
+        }
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getAllStuff(token);
+                setThings(data); // Mettre à jour l'état things avec les objets récupérés
+            } catch (error) {
+                console.error("Une erreur s'est produite lors de la récupération des objets :", error);
+            }
+        };
+        fetchData();
+    }, [token]); // Effectuer la requête à chaque changement du token
 
     
 

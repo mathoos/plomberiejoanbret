@@ -1,10 +1,11 @@
-const API_BASE_URL = "https://plomberie-serveur.onrender.com/api/auth";
+const API_BASE_AUTH = "https://plomberie-serveur.onrender.com/api/auth";
+const API_BASE_STUFF = "https://plomberie-serveur.onrender.com/api/stuff";
 
 
 export const loginUser = async (email, password) => {
     try {
         // On envoie une requête de connexion POST à l'API de connexion avec les données de l'utilisateur saisies dans le formulaire
-        const response = await fetch(`${API_BASE_URL}/login`, {
+        const response = await fetch(`${API_BASE_AUTH}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -26,33 +27,28 @@ export const loginUser = async (email, password) => {
     }
 }
 
-
-// Fonction pour effectuer la requête de récupération du profil de l'utilisateur
-export const getUserProfile = async (token) => {
+export const getAllStuff = async (token) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/profile`, {
-            method: "GET",
+        const response = await fetch(`${API_BASE_STUFF}`, {
             headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-            },
+                Authorization: `Bearer ${token}`
+            }
         });
-
-        const responseData = await response.json();
-        return responseData;
+        if (!response.ok) {
+            throw new Error('La requête a échoué');
+        }
+        const data = await response.json();
+        return data;
     } 
-
     catch (error) {
-        console.error("Erreur lors de la requête de profil de l'utilisateur :", error);
-        throw error;
+        throw new Error(`Une erreur s'est produite lors de la récupération des objets : ${error.message}`);
     }
-}
-
+};
 
 
 export const createObject = async (formData, token) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/stuff`, {
+        const response = await fetch(`${API_BASE_STUFF}`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -74,7 +70,7 @@ export const createObject = async (formData, token) => {
 
 export const getObjectDetails = async (objectId, token) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/stuff/${objectId}`, {
+        const response = await fetch(`${API_BASE_STUFF}/${objectId}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -92,7 +88,7 @@ export const getObjectDetails = async (objectId, token) => {
 
 export const modifyObject = async (objectId, formData, token) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/stuff/${objectId}`, {
+        const response = await fetch(`${API_BASE_STUFF}/${objectId}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -118,7 +114,7 @@ export const modifyObject = async (objectId, formData, token) => {
 export const deleteObject = async (objectId, token) => {
     try {
         // Effectuez une requête DELETE à l'API pour supprimer l'objet
-        const response = await fetch(`${API_BASE_URL}/api/stuff/${objectId}`, {
+        const response = await fetch(`${API_BASE_STUFF}/${objectId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -139,7 +135,7 @@ export const deleteObject = async (objectId, token) => {
 
 export const logoutUser = async (token) => {
     try {
-        await fetch(`${API_BASE_URL}/logout`, {
+        await fetch(`${API_BASE_AUTH}/logout`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`
