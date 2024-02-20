@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
+import { add100Vh } from '../functions/add100vh';
 import './Lightbox.scss';
 
 const Lightbox = ({ image, onClose }) => {
@@ -12,9 +13,13 @@ const Lightbox = ({ image, onClose }) => {
         setCurrentIndex((prevIndex) => (prevIndex === image.length - 1 ? 0 : prevIndex + 1));
     };
 
+    useEffect(() => {
+        add100Vh();
+    }, []);
+
     return (
         <div className="galerie" onClick={onClose}>
-            <div className="lightbox" onClick={(e) => e.stopPropagation()}>
+            <div className="lightbox heightJs" onClick={(e) => e.stopPropagation()}>
                 <div className="lightbox_image">
                     <img src={image[currentIndex].imageUrl} alt={image[currentIndex].title}/>          
                 </div>

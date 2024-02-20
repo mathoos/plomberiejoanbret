@@ -8,7 +8,8 @@
     height : 100vh;
     background-color: $noir;
     @media screen and (max-width : 990px){
-        padding : 0;
+        padding : 10vh 30px;
+        height: var(--heightJs);
     }
 
     &_form{

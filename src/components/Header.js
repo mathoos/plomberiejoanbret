@@ -1,9 +1,13 @@
+import React, { useEffect } from 'react';
+import { add100Vh } from '../functions/add100vh';
 import Pastille from "../img/pastilles/pastille-fond-noir.svg";
-
 import './Header.scss';
 
-
 const Header = () => {
+
+    useEffect(() => {
+        add100Vh();
+    }, []);
 
     return (
         <header className="header heightJs" id="header">
@@ -30,6 +34,5 @@ const Header = () => {
     ) 
 }
 
-
-export default Header
+export default Header;
 

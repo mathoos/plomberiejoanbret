@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-
+import { add100Vh } from '../functions/add100vh';
 import { loginUser } from "../utilities/Server";
 import {setToken} from "../utilities/Slice";
 
@@ -34,9 +34,13 @@ function Login() {
         }
     };
 
+    useEffect(() => {
+        add100Vh();
+    }, []);
+
 
     return (
-        <div className="connexion">
+        <div className="connexion heightJs">
             <form className="connexion_form" id="loginForm" onSubmit={handleSubmit}>
                 <h2 className="h2">Se connecter</h2>
                 <div className="connexion_form-fieldset">
