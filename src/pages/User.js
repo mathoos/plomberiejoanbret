@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getAllStuff, createObject } from "../utilities/Server"; // Importer les fonctions nécessaires
+import { getAllStuff, createObject } from "../utilities/Server"; 
 import { useNavigate } from "react-router-dom";
 
 import Navbar from '../components/Navbar';
@@ -10,28 +10,26 @@ const User = () => {
     const token = useSelector((state) => state.user.token);
     const navigate = useNavigate();
     const [things, setThings] = useState([]);
-    const [modalActive, setModalActive] = useState(false); // État pour contrôler la classe .active de la modal
+    const [modalActive, setModalActive] = useState(false); 
 
     const closeModal = () => {
         setModalActive(false);
     };
 
     const handleAddButtonClick = () => {
-        setModalActive(true); // Activer la modal lorsque le bouton "Ajouter" est cliqué
+        setModalActive(true); 
     };
 
     const handleCloseButtonClick = (event) => {
-        event.stopPropagation(); // Éviter la propagation de l'événement pour ne pas déclencher le clic sur le conteneur modal
-        closeModal(); // Désactiver la modal lorsque le bouton de fermeture est cliqué
+        event.stopPropagation(); 
+        closeModal();
     };
 
     const handleModalClick = (event) => {
-        // Si la modal est active et que l'utilisateur clique en dehors du formulaire, désactiver la modal
         if (modalActive && !event.target.closest('.modal_form')) {
             closeModal();
         }
     };
-
 
     const handleCreateObjectFormSubmit = async (event) => {
         event.preventDefault();
@@ -41,36 +39,41 @@ const User = () => {
             event.target.reset();
             closeModal();
             fetchData();
-        } catch (error) {
+        } 
+        catch (error) {
             console.error("Une erreur s'est produite lors de la création de l'objet :", error);
         }
     };
 
     const handleCardClick = async (objectId) => {
-        // Naviguer vers la page Image.js avec les paramètres appropriés dans l'URL
         navigate(`/image?id=${objectId}&token=${encodeURIComponent(token)}`);
     };
 
     const fetchData = async () => {
         try {
             const data = await getAllStuff();
-            setThings(data); // Mettre à jour l'état things avec les objets récupérés
-        } catch (error) {
+            setThings(data); 
+        } 
+        catch (error) {
             console.error("Une erreur s'est produite lors de la récupération des objets :", error);
         }
     };
 
     useEffect(() => {
+        if (!token) {
+            navigate('/login');
+        }
         const fetchData = async () => {
             try {
                 const data = await getAllStuff();
-                setThings(data); // Mettre à jour l'état things avec les objets récupérés
-            } catch (error) {
+                setThings(data); 
+            } 
+            catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des objets :", error);
             }
         };
         fetchData();
-    }, []); // Effectuer la requête à chaque changement du token
+    }, [token, navigate]); 
 
     
 

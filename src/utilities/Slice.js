@@ -1,29 +1,27 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-// Création de l'état initial du Slice défini sur null 
 const initialState = {
     token: null,
     user: null,
 }
 
-// Création du Slice
+
 const userSlice = createSlice({
-    name: 'user', // un nom pour générer automatiquement des noms d'action basés sur le nom du Slice
-    initialState, // un état initial
-    reducers: { // des reducers qui modifient l'état du Slice en réponse à des actions
+    name: 'user', 
+    initialState, 
+    reducers: { 
 
         // Reducer pour mettre à jour le token
-        setToken(state, action) { 
+        setToken(state, action) {
             state.token = action.payload // action.payload permet d'obtenir les données associées à l'action
         },
 
-        // Reducer pour mettre à jour le user
-        setUser(state, action) {
-            state.user = action.payload
+        // Reducer pour effacer le token
+        clearToken(state) {
+            state.token = null;
         }
     }
-})
+});
 
-export const {setToken, setUser} = userSlice.actions
-
-export default userSlice.reducer
+export const { setToken, setUser, clearToken } = userSlice.actions;
+export default userSlice.reducer;

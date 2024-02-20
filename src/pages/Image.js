@@ -2,16 +2,20 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import './Image.scss';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { getObjectDetails , modifyObject, deleteObject} from '../utilities/Server';
 
 function Image() {
+
     const [objectDetails, setObjectDetails] = useState({});
     const [formData, setFormData] = useState({
         title: '',
         description: '',
         tag: ''
     });
+
     const location = useLocation();
+    const navigate = useNavigate();
     const queryParams = new URLSearchParams(location.search);
     const token = queryParams.get('token');
     const [modalActive, setModalActive] = useState(false);
@@ -27,7 +31,8 @@ function Image() {
                     description: data.description,
                     tag: data.tag
                 });
-            } catch (error) {
+            } 
+            catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des détails de l'objet :", error);
             }
         };
@@ -40,26 +45,25 @@ function Image() {
         const formData = new FormData(event.target);
         try {
             await modifyObject(objectId, formData, token);
-            // Mettre à jour l'état objectDetails avec les nouvelles données après la modification
             const newData = await getObjectDetails(objectId, token);
             setObjectDetails(newData);
-            setModalActive(false); // Fermer la modal après la soumission réussie du formulaire
-        } catch (error) {
+            setModalActive(false); 
+        } 
+        catch (error) {
             console.error("Une erreur s'est produite lors de la modification de l'objet :", error);
         }
     };
 
     const handleEditButtonClick = () => {
-        setModalActive(true); // Activer la modal lorsque le bouton "Modifier" est cliqué
+        setModalActive(true); 
     };
 
     const handleCloseButtonClick = (event) => {
         event.stopPropagation();
-        setModalActive(false); // Désactiver la modal lorsque le bouton de fermeture est cliqué
+        setModalActive(false); 
     };
 
     const handleModalClick = (event) => {
-        // Si la modal est active et que l'utilisateur clique en dehors du formulaire, désactiver la modal
         if (modalActive && !event.target.closest('.modal_form')) {
             setModalActive(false);
         }
@@ -68,8 +72,9 @@ function Image() {
     const handleDeleteButtonClick = async () => {
         try {
             await deleteObject(objectId, token);
-            window.location.href = '/user'; // Rediriger vers la page /user après la suppression réussie de l'objet
-        } catch (error) {
+            navigate("/user");
+        } 
+        catch (error) {
             console.error("Une erreur s'est produite lors de la suppression de l'objet :", error);
         }
     };

@@ -21,8 +21,8 @@ function Login() {
         e.preventDefault();
     
         try {
-            const response = await loginUser(email, password); // On récupère la réponse obtenue dans loginUser
-            const token = response.token; // On accède directement au token dans la réponse
+            const response = await loginUser(email, password); 
+            const token = response.token; 
             localStorage.setItem('token', token);
 
             dispatch(setToken(token));

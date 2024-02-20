@@ -11,13 +11,14 @@ const Galerie = () => {
         const fetchData = async () => {
             try {
                 const data = await getAllStuff();
-                setImages(data); // Mettre à jour l'état avec les objets récupérés
-            } catch (error) {
+                setImages(data);
+            } 
+            catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des objets :", error);
             }
         };
         fetchData();
-    }, []); // Effectuer la requête à chaque changement du token
+    }, []);
 
     const openLightbox = (index) => {
         setLightboxOpen(true);
@@ -27,10 +28,9 @@ const Galerie = () => {
         setLightboxOpen(false);
     };
 
-    const numberOfBoxes = 4; // Nombre de .box que vous avez
+    const numberOfBoxes = 4; 
     const imageGroups = Array.from({ length: numberOfBoxes }, () => []);
 
-    // Distribuer les images dans chaque groupe
     images.forEach((image, index) => {
         const boxIndex = index % numberOfBoxes;
         imageGroups[boxIndex].push(image);
