@@ -20,6 +20,13 @@
     transition : .3s ease;
     z-index : 1;
 
+    &:hover{
+        color : $blanc;
+        &::after{
+            height : 100%;
+        }      
+    }
+
     &_vert{
         border-color : $vert;
         color : $vert;
@@ -33,6 +40,18 @@
         color : $noir;
         &::after{
             background-color: $noir;
+        }
+    }
+
+    &_invertNoir{
+        border-color : none;
+        color : $blanc;
+        background-color: $noir;
+        &::after{
+            background-color: $blanc;
+        }
+        &:hover{
+            color : $noir;
         }
     }
 
@@ -52,12 +71,5 @@
         font-size: 5vw;
         min-height : 8vh;
         text-transform: none;
-    }
-
-    &:hover{
-        color : $blanc;
-        &::after{
-            height : 100%;
-        }      
-    }
+    }  
 }

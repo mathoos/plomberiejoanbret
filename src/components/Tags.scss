@@ -1,0 +1,38 @@
+@import "../style.scss";
+
+.accelerateurs{
+    padding : 15vh 8.3vw;
+    @media screen and (max-width:990px){
+        padding : 10vh 30px;
+    }
+
+    &_container{
+        display : flex;
+        justify-content: space-between;
+        @media screen and (max-width:990px){
+            flex-wrap: wrap;
+            gap : 5vw;
+        }
+  
+        .bouton{
+            min-height : 5vh;
+            font-size : 18px;
+            border-color : $vert;
+            color : $vert;
+            pointer-events: none;
+            @media screen and (max-width:990px){
+                font-size : 4.5vw;
+                padding : 0 5vw;
+                flex-grow: 1;
+            }
+
+            &::after{
+                background-color: $vert;
+            }
+
+            &:hover{
+                color : $blanc;
+            }
+        }
+    }
+}
