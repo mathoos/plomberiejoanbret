@@ -21,6 +21,7 @@ const User = () => {
     };
 
     const handleCloseButtonClick = (event) => {
+        event.preventDefault();
         event.stopPropagation(); 
         closeModal();
     };
