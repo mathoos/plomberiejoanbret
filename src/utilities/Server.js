@@ -2,6 +2,7 @@ const API_BASE_AUTH = "https://plomberie-serveur.onrender.com/api/auth";
 const API_BASE_STUFF = "https://plomberie-serveur.onrender.com/api/stuff";
 
 
+
 export const loginUser = async (email, password) => {
     try {
         const response = await fetch(`${API_BASE_AUTH}/login`, {
@@ -16,8 +17,7 @@ export const loginUser = async (email, password) => {
         });
         const responseData = await response.json();
         return responseData;
-    } 
-    catch (error) {
+    } catch (error) {
         console.error("Erreur lors de la requête de connexion :", error);
         throw error;
     }
@@ -33,8 +33,7 @@ export const getAllStuff = async () => {
         }
         const data = await response.json();
         return data;
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error(`Une erreur s'est produite lors de la récupération des objets : ${error.message}`);
     }
 };
@@ -55,8 +54,7 @@ export const createObject = async (formData, token) => {
         }
         const data = await response.json();
         console.log(data.message);
-    } 
-    catch (error) {
+    } catch (error) {
         throw error;
     }
 };
@@ -74,8 +72,7 @@ export const getObjectDetails = async (objectId, token) => {
         }
         const data = await response.json();
         return data;
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error(`Une erreur s'est produite lors de la récupération des détails de l'objet : ${error.message}`);
     }
 }
@@ -98,8 +95,7 @@ export const modifyObject = async (objectId, formData, token) => {
         const data = await response.json();
         console.log(data.message);
         return data; 
-    } 
-    catch (error) {
+    } catch (error) {
         console.error("Une erreur s'est produite lors de la modification de l'objet :", error);
         throw error;
     }
@@ -121,8 +117,7 @@ export const deleteObject = async (objectId, token) => {
         else {
             throw new Error('La suppression de l\'objet a échoué');
         }
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error('Une erreur s\'est produite lors de la suppression de l\'objet : ' + error.message);
     }
 };
