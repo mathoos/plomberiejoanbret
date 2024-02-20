@@ -4,6 +4,8 @@ import './Lightbox.scss';
 
 const Lightbox = ({ image, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [touchStartX, setTouchStartX] = useState(null);
+    const [touchEndX, setTouchEndX] = useState(null);
 
     const prevImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? image.length - 1 : prevIndex - 1));
@@ -13,13 +15,44 @@ const Lightbox = ({ image, onClose }) => {
         setCurrentIndex((prevIndex) => (prevIndex === image.length - 1 ? 0 : prevIndex + 1));
     };
 
+    const handleTouchStart = (e) => {
+        setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEndX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStartX - touchEndX > 50) {
+            nextImage();
+        } else if (touchEndX - touchStartX > 50) {
+            prevImage();
+        }
+        setTouchStartX(null);
+        setTouchEndX(null);
+    };
+
     useEffect(() => {
         add100Vh();
-    }, []);
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [onClose]);
 
     return (
         <div className="galerie" onClick={onClose}>
-            <div className="lightbox heightJs" onClick={(e) => e.stopPropagation()}>
+            <div className="lightbox heightJs" onClick={(e) => e.stopPropagation()}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
                 <div className="lightbox_image">
                     <img src={image[currentIndex].imageUrl} alt={image[currentIndex].title}/>          
                 </div>
