@@ -35,16 +35,7 @@ const Lightbox = ({ image, onClose }) => {
 
     useEffect(() => {
         add100Vh();
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                onClose();
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [onClose]);
+    }, []);
 
     return (
         <div className="galerie" onClick={onClose}>
