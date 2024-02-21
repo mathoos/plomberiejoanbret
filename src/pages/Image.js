@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
 import './Image.scss';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -90,7 +89,6 @@ function Image() {
 
     return (
         <div className="image">
-            <Navbar isUserPage={true}/>
             <div className="container">
                 <div className="container_objet" id="objectDetails">
                     <figure className="container_objet-img">
@@ -103,8 +101,8 @@ function Image() {
                     </div>
                 </div>
                 <div className="container_buttons">
-                    <button className="container_buttons-btn" id="editBtn" onClick={handleEditButtonClick}>Modifier</button>
-                    <button className="container_buttons-btn" id="deleteButton" onClick={handleDeleteButtonClick}>Supprimer</button>
+                    <button className="bouton bouton_invertNoir" onClick={handleEditButtonClick}>Modifier</button>
+                    <button className="bouton bouton_invertNoir" onClick={handleDeleteButtonClick}>Supprimer</button>
                 </div>
             </div>
             <div className={`modal ${modalActive ? 'active' : ''}`} onClick={handleModalClick}>      
@@ -113,7 +111,7 @@ function Image() {
                         <div className="modal_form-close-barre modal_form-close-barre--1"></div>
                         <div className="modal_form-close-barre modal_form-close-barre--2"></div>
                     </button>
-                    <h2 className="h2">Modifier ma photo</h2>
+                    <h2>Modifier ma <br/> photo</h2>
                     <div className="modal_form-fieldset">
                         <fieldset>
                             <label htmlFor="title">Titre</label>
@@ -138,8 +136,8 @@ function Image() {
                             <input type="file" id="file" name="image" />
                         </fieldset>
                     </div>
-                    <div className="modal_form-modify">
-                        <button className="modal_form-modify" type="submit">Valider</button>
+                    <div className="modal_form-bouton">
+                        <button className="bouton bouton_noir" type="submit">Valider</button>     
                     </div>             
                 </form>
             </div>
