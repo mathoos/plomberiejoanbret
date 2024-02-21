@@ -71,7 +71,7 @@
                         color : $noir;
                         padding-left : 15px;
                         @media screen and (max-width : 990px){
-                            font-size: 5vw;
+                            font-size: 4vw;
                         }
                     }
     
@@ -83,7 +83,7 @@
                         border-radius : 100vmax;
                         font-family : "Ysabeau Office";
                         @media screen and (max-width : 990px){
-                            font-size : 5vw;
+                            font-size : 4vw;
                         }
     
                         &:focus{
@@ -110,8 +110,8 @@
                     text-transform: none;
                     @media screen and (max-width:990px){
                         padding : 0 10vw;
-                        font-size: 5vw;
-                        min-height : 7vh;
+                        font-size: 4vw;
+                        min-height : 5vh;
                     } 
                 }
             }
