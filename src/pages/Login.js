@@ -34,10 +34,10 @@ function Login() {
     return (
         <div>
             <Header showPastille={false} showHeaderTxt={false}>
-                <div className="connexion">
-                    <form className="connexion_form" id="loginForm" onSubmit={handleSubmit}>
+                <div className="header_login">
+                    <form className="header_login-form" id="loginForm" onSubmit={handleSubmit}>
                         <h1>Se connecter</h1>
-                        <div className="connexion_form-fieldset">
+                        <div className="header_login-form--fieldset">
                             <fieldset>
                                 <label htmlFor="email">Email</label>
                                 <input type="email" id="email" name="email" required onChange={(e) => setEmail(e.target.value)}/>
@@ -50,7 +50,7 @@ function Login() {
                                 {message ? <p>{message}</p> : null}
                             </fieldset>       
                         </div>
-                        <div className="connexion_form-bouton">
+                        <div className="header_login-form--bouton">
                             <button className="bouton bouton_invertNoir" type="submit">Se connecter</button>
                         </div>  
                     </form>
