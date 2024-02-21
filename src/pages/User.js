@@ -82,11 +82,9 @@ const User = () => {
         <div className="user">
             <Navbar isUserPage={true}/>
             <div className="container">
-                <h2 className="h2">Mes photos</h2>
+                <h1>Mes photos</h1>
                 <div className="container_buttons">
-                    <button className="container_buttons-btn" id="addBtn" onClick={handleAddButtonClick}>
-                        Ajouter
-                    </button>
+                    <button className="bouton bouton_noir" onClick={handleAddButtonClick}>Ajouter</button>
                 </div>
                 <div className="container_images">
                     {things.map(thing => (
@@ -103,7 +101,7 @@ const User = () => {
                         <div className="modal_form-close-barre modal_form-close-barre--1"></div>
                         <div className="modal_form-close-barre modal_form-close-barre--2"></div>
                     </button>
-                    <h2 className="h2">Ajouter une photo</h2>
+                    <h2>Ajouter une <br/> photo</h2>
                     <div className="modal_form-fieldset">
                         <fieldset>
                             <label htmlFor="title">Titre</label>
@@ -128,8 +126,9 @@ const User = () => {
                             <input type="file" id="file" name="image" required />
                         </fieldset>
                     </div>
-                    <div className="modal_form-create">
-                        <button type="submit">Créer</button>
+                    <div className="modal_form-bouton">
+                        <button className="bouton bouton_noir" type="submit">Créer</button>
+                        
                     </div>
                 </form>
             </div>
