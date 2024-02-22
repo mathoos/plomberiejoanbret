@@ -11,21 +11,18 @@
     }
 
     &_img{
-        width : 40vw;
+        width : 35vw;
         height : 100%;
-        background-image: url("../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash.jpg");
-        background-size : contain;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        z-index: -1;
 
         @media screen and (max-width : 990px){
-            position : static;
             width : 100%;
             height : 50vh;
-            background-attachment: unset;
-            background-size : cover;
+        }
+
+        img{
+            width : 100%;
+            height : 100%;
+            object-fit: cover;
         }
 
         &::after{
@@ -44,8 +41,8 @@
         position : relative;
         display : flex;
         align-items : center;
-        width : 60vw;
-        height : 100vh;
+        width : 65vw;
+        height : 100%;
         padding : 10vh 8.5vw;
         @media screen and (max-width : 990px){
             position : static;

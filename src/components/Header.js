@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { add100Vh } from '../functions/add100vh';
 import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
 import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
+import HeaderImg from "../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash.jpg";
 import './Header.scss';
 
 const Header = ({ 
@@ -38,7 +39,9 @@ const Header = ({
                     </figure>       
                 </div>
             )}
-            <div className="header_img"></div>
+            <figure className="header_img">
+                <img src={HeaderImg} alt="Paroie de douche"/>
+            </figure>
         </header>
     ) 
 }
