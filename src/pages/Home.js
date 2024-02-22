@@ -1,7 +1,5 @@
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
-import Navbar from '../components/Navbar';
 import Header from '../components/Header';
-import Menu from '../components/Menu';
 import Tags from '../components/Tags';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
@@ -15,17 +13,9 @@ import Footer from '../components/Footer';
 
 function Home() {
 
-    const lenis = useLenis(({ scroll }) => {
-        // called every scroll
-    })
-
-
     return (
-        <ReactLenis root>
-            
+        <div>           
             <Header/>
-            {/* <Navbar/>
-            <Menu/> */}
             <Tags/>
             <Entreprise/>
             <Marquee/>
@@ -34,7 +24,7 @@ function Home() {
             <Marquee/>
             <Contact/>
             <Footer/>
-        </ReactLenis>
+        </div>
     )
 }
 

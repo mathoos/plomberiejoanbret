@@ -1,27 +1,23 @@
-import React, { useEffect , useState } from 'react';
+import React, { useEffect } from 'react';
 import { add100Vh } from '../functions/add100vh';
+import { openMenu } from '../functions/openMenu';
 import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
 import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
 import HeaderImg from "../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash.jpg";
-
 import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 import './Header.scss';
+
 
 const Header = ({ 
     showHeaderTxt=true,
     children
     }) => {
 
-    useEffect(() => {
-        add100Vh();
-    }, []);
-
-    const [isMenuActive, setMenuActive] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuActive(prevState => !prevState);
-    };
+        useEffect(() => {
+            add100Vh();
+            openMenu();
+        }, []);
 
     return (
         <header className="header heightJs" id="header">
@@ -51,11 +47,10 @@ const Header = ({
             <figure className="header_img">
                 <img src={HeaderImg} alt="Paroie de douche"/>
             </figure>
-            <Navbar toggleMenu={toggleMenu} />
-            <Menu isActive={isMenuActive} />     
+            <Navbar/>
+            <Menu />
         </header>
     ) 
 }
 
 export default Header;
-
