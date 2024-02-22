@@ -22,9 +22,10 @@ function Home() {
 
     return (
         <ReactLenis root>
-            <Navbar/>
+            
             <Header/>
-            <Menu/>
+            {/* <Navbar/>
+            <Menu/> */}
             <Tags/>
             <Entreprise/>
             <Marquee/>

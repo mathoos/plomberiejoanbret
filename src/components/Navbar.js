@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Logo from "../img/logos/logo-plomberie-noir.svg";
 import {Link} from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -5,9 +6,15 @@ import { clearToken } from "../utilities/Slice";
 import { useNavigate } from "react-router-dom";
 import './Navbar.scss';
 
-const Navbar = ({ isUserPage }) => {
+const Navbar = ({ isUserPage , toggleMenu }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [isMenuButtonActive, setMenuButtonActive] = useState(false);
+
+    const toggleMenuButton = () => {
+        setMenuButtonActive(prevState => !prevState);
+        toggleMenu(); 
+    };
 
     const handleLogout = async () => {
         try {
@@ -40,7 +47,7 @@ const Navbar = ({ isUserPage }) => {
                     </>
                 )}
             </div>
-            <button className="nav_menu">
+            <button className={`nav_menu ${isMenuButtonActive ? 'active' : ''}`} onClick={toggleMenuButton}>
                 <div className="nav_menu-barre"></div>
                 <div className="nav_menu-barre"></div>
                 <div className="nav_menu-barre"></div>

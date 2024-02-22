@@ -1,10 +1,10 @@
 import './Menu.scss';
 
 
-const Menu = () => {
+const Menu = ({ isActive }) => {
 
     return (
-        <section className="menu">
+        <section className={`menu ${isActive ? 'active' : ''}`}>
             <div className="menu_container">
                 <a href="#entreprise" className="menu_container-link">L'entreprise</a>
                 <hr/>
