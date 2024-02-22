@@ -20,7 +20,7 @@ const Galerie = () => {
         fetchData();
     }, []);
 
-    const openLightbox = (index) => {
+    const openLightbox = () => {
         setLightboxOpen(true);
         document.documentElement.classList.add('no-scroll');
     };
