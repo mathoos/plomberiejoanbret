@@ -53,7 +53,7 @@ const Realisations = () => {
                             </p>
                         </div>
                     </div>
-                    <Link to="/realisations" className="bouton bouton_vert hidden-mobile">Voir toutes nos réalisations</Link>
+                    <Link to="/realisations" className="bouton bouton_blanc hidden-mobile">Toutes nos réalisations</Link>
                 </div>
                 <div className="realisations_container-slider">
                     <figure className="realisations_container-slider--img">
@@ -78,7 +78,7 @@ const Realisations = () => {
                     </div>
                 </div>
                 <Link to="/realisations" className="realisations_container-txt--btn hidden-pc">
-                    <p className="bouton bouton_noir">Voir toutes nos réalisations</p>
+                    <p className="bouton bouton_blanc">Toutes nos réalisations</p>
                 </Link>
             </div>
         </section>

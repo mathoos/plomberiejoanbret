@@ -27,6 +27,15 @@
         }      
     }
 
+    &_blanc{
+        background-color: $blanc;
+        border-color : $vert;
+        color : $vert;
+        &::after{
+            background-color: $vert;
+        }
+    }
+
     &_vert{
         border-color : $vert;
         color : $vert;

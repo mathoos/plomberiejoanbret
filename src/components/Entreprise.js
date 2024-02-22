@@ -38,7 +38,7 @@ const Entreprise = () => {
                             et permet à l'entreprise de se dépasser toujours plus.
                         </p>
                     </div>
-                    <a href="#prestations" className="bouton bouton_vert">Nos prestations</a>
+                    <a href="#prestations" className="bouton bouton_blanc">Nos prestations</a>
                 </div>      
             </div>
         </section>
