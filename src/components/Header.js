@@ -3,7 +3,7 @@ import { add100Vh } from '../functions/add100vh';
 import { openMenu } from '../functions/openMenu';
 import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
 import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
-import HeaderImg from "../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash.jpg";
+import HeaderImg from "../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash-min-compressed.jpg";
 import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 import './Header.scss';
