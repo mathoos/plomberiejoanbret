@@ -111,7 +111,7 @@ function Image() {
                         <div className="modal_form-close-barre modal_form-close-barre--1"></div>
                         <div className="modal_form-close-barre modal_form-close-barre--2"></div>
                     </button>
-                    <h2>Modifier ma <br/> photo</h2>
+                    <h2>Modifier ma <br className="hidden-pc"/> photo</h2>
                     <div className="modal_form-fieldset">
                         <fieldset>
                             <label htmlFor="title">Titre</label>

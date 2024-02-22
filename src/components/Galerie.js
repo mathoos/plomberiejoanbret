@@ -22,10 +22,12 @@ const Galerie = () => {
 
     const openLightbox = (index) => {
         setLightboxOpen(true);
+        document.documentElement.classList.add('no-scroll');
     };
 
     const closeLightbox = () => {
         setLightboxOpen(false);
+        document.documentElement.classList.remove('no-scroll');
     };
 
     const numberOfBoxes = 4; 

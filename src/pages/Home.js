@@ -1,4 +1,3 @@
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Header from '../components/Header';
 import Tags from '../components/Tags';
 import Entreprise from '../components/Entreprise';
@@ -7,8 +6,6 @@ import Realisations from '../components/Realisations';
 import Contact from '../components/Contact';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
-
-
 
 
 function Home() {
