@@ -32,8 +32,8 @@ function Login() {
     };
 
     return (
-        <div>
-            <Header showPastille={false} showHeaderTxt={false}>
+        <div className="login">
+            <Header showHeaderTxt={false}>
                 <div className="header_login">
                     <form className="header_login-form" id="loginForm" onSubmit={handleSubmit}>
                         <h1>Se connecter</h1>

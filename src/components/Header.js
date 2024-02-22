@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { add100Vh } from '../functions/add100vh';
-import Pastille from "../img/pastilles/pastille-fond-noir.svg";
+import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
+import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
 import './Header.scss';
 
 const Header = ({ 
-    showPastille=true, 
     showHeaderTxt=true,
     children
     }) => {
@@ -25,20 +25,20 @@ const Header = ({
                             </h1>
                         </div>
                         <div className="header_txt-container--subtitle">
-                            <p>Votre partenaire plomberie alliant passion de l'artisanat et excellence du service dans Rouen et périphérie</p>
+                            <p>
+                                Artisan plombier agréé Jacob Delafon <br/>
+                                Dépannage, création & rénovation <br/> 
+                                Rouen et périphérie
+                            </p>
                         </div>
-                        <a href="#contact" className="bouton bouton_noir">Nous contacter</a>
-                    </div>       
+                    </div> 
+                    <figure className="header_txt-pastille">
+                        <img src={PastilleTxt} className="txt" alt="Pastille Plomberie Joan Bret"/>
+                        <img src={PastilleImg} className="img" alt="Pastille Plomberie Joan Bret"/>
+                    </figure>       
                 </div>
             )}
-
             <div className="header_img"></div>
-
-            {showPastille && (
-                <figure className="header_pastille">
-                    <img src={Pastille} alt="Pastille Plomberie Joan Bret"/>
-                </figure>  
-            )}
         </header>
     ) 
 }

@@ -1,7 +1,6 @@
 @import "../style.scss";
 
 .header{
-    position : relative;
     display : flex;
     width : 100%;
     height : 100vh;
@@ -12,7 +11,7 @@
     }
 
     &_img{
-        width : 30vw; 
+        width : 40vw;
         height : 100%;
         background-image: url("../img/galerie/darren-richardson-1zKFtv-TmWM-unsplash.jpg");
         background-size : contain;
@@ -24,9 +23,8 @@
         @media screen and (max-width : 990px){
             position : static;
             width : 100%;
-            height : 55vh;
+            height : 50vh;
             background-attachment: unset;
-            background-position: bottom;
             background-size : cover;
         }
 
@@ -43,14 +41,16 @@
     }
 
     &_txt{
+        position : relative;
         display : flex;
-        align-items : flex-end;
-        width : 70vw;
+        align-items : center;
+        width : 60vw;
         height : 100vh;
-        padding : 0 8.5vw 10vh 8.5vw; 
+        padding : 10vh 8.5vw;
         @media screen and (max-width : 990px){
+            position : static;
             width : 100%;
-            height : 45vh;
+            height : 50vh;
             padding : 15vh 30px 5vh 30px;
         }
 
@@ -73,11 +73,9 @@
             }
 
             &--subtitle{
-                margin-bottom : 5vh;
                 width : 35vw;
                 @media screen and (max-width : 990px){
                     width : 100%;
-                    margin-bottom : 0;
                 }
 
                 p{
@@ -93,37 +91,37 @@
                         line-height : 1.2;
                     }
                 }
-            }
-
-            .bouton{
-                opacity : 0;
-                transform : translateY(-100%);
-                animation : slideTop .7s ease .6s forwards;
-                @media screen and (max-width : 990px){
-                    display : none;
-                }
-            }      
-        }   
-    }
-
-    &_pastille{
-        position : absolute;
-        bottom : 2.5vw;
-        right : 2.5vw;
-        right : 35vw;
-        z-index : 99;
-
-        @media screen and (max-width:990px){
-            bottom : 5vw;
-            right : 5vw;
+            }     
         }
-
-        img{
-            width : 8vw;
-            height : auto;
-            
+        
+        &-pastille{
+            position : absolute;
+            bottom : 2.5vw;
+            right : 2.5vw;
+            z-index : 99;
+    
             @media screen and (max-width:990px){
-                width : 25vw;
+                bottom : 30px;
+                right : 30px;
+            }
+    
+            img{
+                width : 8vw;
+                height : auto;
+
+                &.img{
+                    position : absolute;
+                    top : 0;
+                    left : 0;
+                }
+
+                &.txt{
+                    animation : infiniteRotation 20s infinite linear;
+                }
+                
+                @media screen and (max-width:990px){
+                    width : 25vw;
+                }
             }
         }
     }
