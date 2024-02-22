@@ -20,7 +20,6 @@ const Navbar = ({ isUserPage }) => {
             console.error("Une erreur s'est produite lors de la déconnexion :", error);
         }
     };
-    
 
 
     return(   
