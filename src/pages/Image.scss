@@ -70,22 +70,24 @@
                     margin-bottom : 7vh;
                     @media screen and (max-width : 990px){
                         width : 100%;
-                        margin-bottom : 0;
+                        margin-bottom : 3vh;
                     }
                 }
     
                 .bouton{
-                    font-size : 1vw;
-                    text-transform : none;
-                    min-height : fit-content;
-                    padding : 1vh 1vw;
-                    border-width : 1px;
-                    font-weight : normal;
-                    cursor : initial;
-                    pointer-events: none;
-                    @media screen and (max-width : 990px){
-                        padding : 1vh 5vw;
-                        font-size : 3vw;
+                    &.btnFiltre{
+                        font-size : 1vw;
+                        text-transform : none;
+                        min-height : 4vh;
+                        padding : 0 1vw;
+                        border-width : 1px;
+                        font-weight : normal;
+                        cursor : initial;
+                        pointer-events: none;
+                        @media screen and (max-width : 990px){
+                            padding : 0 5vw;
+                            font-size : 4vw;
+                        }
                     }
                 }
             }   
@@ -93,16 +95,14 @@
     
         &_buttons{
             display : flex;
-            gap : 2vw;
+            gap : 2.5vw;
     
             .bouton{
                 border-width : 1px;
                 text-transform: none;
                 min-height : 5vh;
                 @media screen and (max-width:990px){
-                    padding : 0 10vw;
                     font-size: 5vw;
-                    min-height : 5vh;
                 } 
             }
         }

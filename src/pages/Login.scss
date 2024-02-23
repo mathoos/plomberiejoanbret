@@ -64,19 +64,20 @@
                         label{
                             font-family: "Archivo";
                             line-height : 1.2;
-                            font-size: 1vw;
+                            font-size: 1.1vw;
                             font-weight : 600;
                             color : $noir;
-                            padding-left : 15px;
+                            padding-left : 10px;
                             @media screen and (max-width : 990px){
-                                font-size: 4vw;
+                                font-size: 5vw;
                             }
                         }
         
                         #email, #password{
                             width : 100%;
                             font-size : 1vw;
-                            padding : 10px 20px;
+                            padding : 10px;
+                            min-height : 5vh;
                             border : 1px solid $noir;
                             border-radius : 100vmax;
                             font-family : "Ysabeau Office";
@@ -103,13 +104,10 @@
         
                     .bouton{
                         border-width : 1px;
-                        font-weight : 600;
-                        font-size : 1.2vw;
                         text-transform: none;
+                        min-height : 5vh;
                         @media screen and (max-width:990px){
-                            padding : 0 10vw;
-                            font-size: 4vw;
-                            min-height : 5vh;
+                            font-size: 5vw;
                         } 
                     }
                 }
