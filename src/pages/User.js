@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getAllStuff, createObject } from "../utilities/Server"; 
 import { useNavigate } from "react-router-dom";
 
+import Form from '../components/Form';
 import Navbar from '../components/Navbar';
 import './User.scss';
 
@@ -18,18 +19,6 @@ const User = () => {
 
     const handleAddButtonClick = () => {
         setModalActive(true); 
-    };
-
-    const handleCloseButtonClick = (event) => {
-        event.preventDefault();
-        event.stopPropagation(); 
-        closeModal();
-    };
-
-    const handleModalClick = (event) => {
-        if (modalActive && !event.target.closest('.modal_form')) {
-            closeModal();
-        }
     };
 
     const handleCreateObjectFormSubmit = async (event) => {
@@ -95,43 +84,13 @@ const User = () => {
                 </div>
             </div>
 
-            <div className={`modal ${modalActive ? 'active' : ''}`} onClick={handleModalClick}>
-                <form className="modal_form" id="createForm" onSubmit={handleCreateObjectFormSubmit}>
-                    <button className="modal_form-close" id="closeBtn" onClick={handleCloseButtonClick}>
-                        <div className="modal_form-close-barre modal_form-close-barre--1"></div>
-                        <div className="modal_form-close-barre modal_form-close-barre--2"></div>
-                    </button>
-                    <h2>Ajouter une <br className="hidden-pc"/> photo</h2>
-                    <div className="modal_form-fieldset">
-                        <fieldset>
-                            <label htmlFor="title">Titre</label>
-                            <input type="text" id="title" name="title" required />
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="description">Description</label>
-                            <textarea id="description" name="description" required></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="tag">Tag</label>
-                            <select name="tag" id="tag-select" required>
-                                <option value="salle de bain">Salle de bain</option>
-                                <option value="salle de douche">Salle de douche</option>
-                                <option value="cuisine">Cuisine</option>
-                                <option value="amenagement pmr">Aménagement PMR</option>
-                                <option value="mobilier">Mobilier</option>
-                                <option value="toilette">Toilette</option>
-                            </select>
-                        </fieldset>
-                        <fieldset>
-                            <input type="file" id="file" name="image" required />
-                        </fieldset>
-                    </div>
-                    <div className="modal_form-bouton">
-                        <button className="bouton bouton_noir" type="submit">Créer</button>
-                        
-                    </div>
-                </form>
-            </div>
+            <Form
+                title="Ajouter une photo"
+                handleSubmit={handleCreateObjectFormSubmit}
+                closeModal={closeModal} 
+                modalActive={modalActive}
+                initialData={{ title: '', description: '', tag: '' }}
+            />
         </div>
     )
 }

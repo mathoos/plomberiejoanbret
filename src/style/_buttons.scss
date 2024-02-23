@@ -19,9 +19,10 @@
     overflow: hidden;
     transition : .3s ease;
     z-index : 1;
+
     @media screen and (max-width:990px){
-        padding : 0 8vw;
         font-size: 5vw;
+        padding : 0 8vw;    
         min-height : 6.5vh;
     }  
 

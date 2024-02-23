@@ -1,18 +1,14 @@
 import { useEffect, useState } from 'react';
-import './Image.scss';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { getObjectDetails , modifyObject, deleteObject} from '../utilities/Server';
 
+import Form from '../components/Form';
+import './Image.scss';
+
 function Image() {
 
     const [objectDetails, setObjectDetails] = useState({});
-    const [formData, setFormData] = useState({
-        title: '',
-        description: '',
-        tag: ''
-    });
-
     const location = useLocation();
     const navigate = useNavigate();
     const queryParams = new URLSearchParams(location.search);
@@ -25,11 +21,6 @@ function Image() {
             try {
                 const data = await getObjectDetails(objectId, token);
                 setObjectDetails(data);
-                setFormData({
-                    title: data.title,
-                    description: data.description,
-                    tag: data.tag
-                });
             } 
             catch (error) {
                 console.error("Une erreur s'est produite lors de la récupération des détails de l'objet :", error);
@@ -38,6 +29,10 @@ function Image() {
 
         fetchObject();
     }, [objectId, token]);
+
+    const closeModal = () => {
+        setModalActive(false);
+    };
 
     const handleEditObjectFormSubmit = async (event) => {
         event.preventDefault();
@@ -57,17 +52,6 @@ function Image() {
         setModalActive(true); 
     };
 
-    const handleCloseButtonClick = (event) => {
-        event.stopPropagation();
-        setModalActive(false); 
-    };
-
-    const handleModalClick = (event) => {
-        if (modalActive && !event.target.closest('.modal_form')) {
-            setModalActive(false);
-        }
-    };
-
     const handleDeleteButtonClick = async () => {
         try {
             await deleteObject(objectId, token);
@@ -77,14 +61,6 @@ function Image() {
             console.error("Une erreur s'est produite lors de la suppression de l'objet :", error);
         }
     };
-
-    const handleInputChange = (event) => {
-        setFormData({
-            ...formData,
-            [event.target.name]: event.target.value
-        });
-    };
-
 
 
     return (
@@ -105,42 +81,18 @@ function Image() {
                     <button className="bouton bouton_invertNoir" onClick={handleDeleteButtonClick}>Supprimer</button>
                 </div>
             </div>
-            <div className={`modal ${modalActive ? 'active' : ''}`} onClick={handleModalClick}>      
-                <form className="modal_form" id="editForm" onSubmit={handleEditObjectFormSubmit}>
-                    <button className="modal_form-close" id="closeBtn" type="button" onClick={handleCloseButtonClick}>
-                        <div className="modal_form-close-barre modal_form-close-barre--1"></div>
-                        <div className="modal_form-close-barre modal_form-close-barre--2"></div>
-                    </button>
-                    <h2>Modifier ma <br className="hidden-pc"/> photo</h2>
-                    <div className="modal_form-fieldset">
-                        <fieldset>
-                            <label htmlFor="title">Titre</label>
-                            <input type="text" id="title" name="title" value={formData.title} onChange={handleInputChange}/>
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="description">Description</label>       
-                            <textarea id="description" name="description" value={formData.description} onChange={handleInputChange}></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="tag">Tag</label>
-                            <select name="tag" id="tag-select" required value={formData.tag} onChange={handleInputChange}>
-                                <option value="salle de bain">Salle de bain</option>
-                                <option value="salle de douche">Salle de douche</option>
-                                <option value="cuisine">Cuisine</option>
-                                <option value="amenagement pmr">Aménagement PMR</option>
-                                <option value="mobilier">Mobilier</option>
-                                <option value="toilette">Toilette</option>
-                            </select>
-                        </fieldset>
-                        <fieldset>
-                            <input type="file" id="file" name="image" />
-                        </fieldset>
-                    </div>
-                    <div className="modal_form-bouton">
-                        <button className="bouton bouton_noir" type="submit">Valider</button>     
-                    </div>             
-                </form>
-            </div>
+
+            <Form
+                title="Modifier ma photo"
+                handleSubmit={handleEditObjectFormSubmit}
+                closeModal={closeModal}
+                modalActive={modalActive}
+                initialData={{
+                    title: objectDetails.title || '',
+                    description: objectDetails.description || '',
+                    tag: objectDetails.tag || ''
+                }}
+            />
         </div>
     )
 }

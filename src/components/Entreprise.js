@@ -1,4 +1,4 @@
-import SalleDeBain from "../img/galerie/modern-bathroom-authentic-interior-design.jpg";
+import SalleDeBain from "../img/galerie/baignoire-vert.jpg";
 import PastilleTxt from "../img/pastilles/pastille-verte-txt.svg";
 import PastilleImg from "../img/pastilles/pastille-verte-img.svg";
 

@@ -1,3 +1,36 @@
+p, a, button{
+    font-family: "Ysabeau Office";
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height : 1.5;
+    text-align : left;
+    color : $noir;
+    margin: 0;
+    padding : 0;   
+
+    &.subtitle{
+        font-size : 1.5vw;
+        font-weight : 500;
+        line-height : 1.2;
+        text-transform : uppercase;
+    }
+
+    span{
+        font-family: inherit;
+        font-size : inherit;
+        font-weight : inherit;
+    }
+
+    @media screen and (max-width:990px){
+        font-size: 5vw;
+
+        &.subtitle{
+            font-size : 5.5vw;
+        }
+    }
+}
+
+
 h1{
     font-family: "Archivo";
     font-size: 7vw;
@@ -73,39 +106,5 @@ h4{
 
     @media screen and (max-width:990px){
         font-size: 4vw;
-    }
-}
-
-
-
-p, a, button{
-    font-family: "Ysabeau Office";
-    font-size: 1.1vw;
-    font-weight: 300;
-    line-height : 1.5;
-    text-align : left;
-    color : $noir;
-    margin: 0;
-    padding : 0;   
-
-    &.subtitle{
-        font-size : 1.5vw;
-        font-weight : 500;
-        line-height : 1.2;
-        text-transform : uppercase;
-    }
-
-    span{
-        font-family: inherit;
-        font-size : inherit;
-        font-weight : inherit;
-    }
-
-    @media screen and (max-width:990px){
-        font-size: 5vw;
-
-        &.subtitle{
-            font-size : 5.5vw;
-        }
     }
 }

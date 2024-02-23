@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 import './Contact.scss';
-import SalleDeDouche from "../img/galerie/bathroom-2.jpg";
+import SalleDeDouche from "../img/galerie/salle-de-douche-moderne.jpg";
 import PastilleTxt from "../img/pastilles/pastille-noire-txt.svg";
 import PastilleImage from "../img/pastilles/pastille-noire-img.svg";
 
