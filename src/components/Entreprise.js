@@ -2,14 +2,19 @@ import SalleDeBain from "../img/galerie/baignoire-vert.jpg";
 import PastilleTxt from "../img/pastilles/pastille-verte-txt.svg";
 import PastilleImg from "../img/pastilles/pastille-verte-img.svg";
 
+import { useParallax } from "react-scroll-parallax";
 import './Entreprise.scss';
 
 
 const Entreprise = () => {
 
+    const parallax = useParallax({
+        speed: -10,
+    });
+
     return (
         <section className="entreprise" id="entreprise">
-            <figure className="entreprise_img">
+            <div ref={parallax.ref} className="entreprise_img">
                 <figure className="entreprise_img-img">
                     <img src={SalleDeBain} alt="Salle de bain"/>
                 </figure>
@@ -17,7 +22,7 @@ const Entreprise = () => {
                     <img src={PastilleTxt} alt="Pastille Entreprise Plomberie Joan Bret"/>
                     <img src={PastilleImg} alt="Pastille Entreprise Plomberie Joan Bret" className="img"/>
                 </figure>
-            </figure>
+            </div>
             <div className="entreprise_bloc">
                 <div className="entreprise_bloc-container">
                     <div className="entreprise_bloc-container--title">
