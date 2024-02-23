@@ -24,7 +24,7 @@ const Navbar = ({ isUserPage }) => {
 
     return(   
               
-        <nav className={`nav ${isUserPage ? "user-page" : ""}`}>
+        <nav className="nav">
             <Link to="/" className="nav_logo">
                 <img src={Logo} alt="Logo Plomberie Joan Bret"/>
             </Link>
@@ -41,6 +41,7 @@ const Navbar = ({ isUserPage }) => {
                     </>
                 )}
             </div>
+            
             <button className="nav_menu">
                 <div className="nav_menu-barre"></div>
                 <div className="nav_menu-barre"></div>
