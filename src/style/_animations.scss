@@ -1,34 +1,13 @@
-// KEYFRAMES
-
 @keyframes infiniteRotation {
     100%{
         transform : rotate(360deg)
     }
 }
 
-@keyframes upDown {
-    from {
-        transform: translateY(0%) rotate(180deg);
-    }
-
-    50% {
-        transform: translateY(-20%) rotate(180deg);
-    }
-
-    100% {
-        transform: translateY(0%) rotate(180deg);
-    }
-}
 
 @keyframes marquee {
     100%{
         transform : translate(-100%, 0)
-    }
-}
-
-@keyframes opacity{
-    to{
-        opacity : 1;
     }
 }
 
@@ -38,84 +17,4 @@
         transform : translateY(0);
         opacity : 1;
     }
-}
-
-@keyframes scale{
-    0%{
-        transform : scale(1)
-    }
-    50%{
-        transform : scale(1.2)
-    }
-    100%{
-        transform : scale(1)
-    }
-}
-
-
-
-@keyframes curtain{
-    to{
-        height : 0;
-    }
-}
-
-
-// ANIMATION REVEAL
-
-.reveal-bottom{
-    transform : translateY(50%);
-    opacity : 0;
-    transition : 1s ease;
-
-    &.reveal-visible{
-        transform : translateY(0);
-        opacity : 1 !important;
-    }
-}
-
-.reveal-left{
-    transform : translateX(-50%);
-    opacity : 0;
-    transition : 1s ease;
-
-    &.reveal-visible{
-        transform : translateX(0);
-        opacity : 1;
-    }
-}
-
-.reveal-right{
-    transform : translateX(50%);
-    opacity : 0;
-    transition : 1s ease;
-
-    &.reveal-visible{
-        transform : translateX(0);
-        opacity : 1;
-    }
-}
-
-.reveal-scale{
-    transform : scale(1.2);
-    transition : 1s ease;
-
-    &.reveal-visible{
-        transform : scale(1);
-        opacity : 1;
-    }
-}
-
-
-.reveal-curtain{
-    &::after{
-        height : 100%;
-        transition : 1.5s ease;
-    }
-
-    &.reveal-visible{
-        &::after{
-            height : 0;
-        }       
-    }   
 }
