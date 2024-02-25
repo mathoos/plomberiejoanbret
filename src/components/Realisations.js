@@ -61,7 +61,7 @@ const Realisations = () => {
                 </div>
                 <div className="realisations_container-slider">
                     <figure className="realisations_container-slider--img">
-                        <Reveal keyframes={scaleAnimation}>
+                        <Reveal keyframes={scaleAnimation} className="reveal">
                             <img src={photographies[currentImageIndex]?.photo} alt="Réalisation"/>
                         </Reveal>
                     </figure>          

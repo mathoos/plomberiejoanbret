@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Reveal } from "react-awesome-reveal";
+import { bottomAnimation , scaleAnimation } from "../functions/keyframes";
 import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
@@ -49,7 +51,9 @@ const Galerie = () => {
                     <div key={groupIndex} className="box">
                         {group.map((image, index) => (
                             <figure key={index} className="galerie_container-image" onClick={() => openLightbox(index)}>
-                                <img src={image.imageUrl} alt={image.title} />
+                                <Reveal keyframes={bottomAnimation} triggerOnce="true">
+                                    <img src={image.imageUrl} alt={image.title} />
+                                </Reveal>
                             </figure>
                         ))}
                     </div>
