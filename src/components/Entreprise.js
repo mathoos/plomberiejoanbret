@@ -1,25 +1,28 @@
 import SalleDeBain from "../img/galerie/baignoire-vert.jpg";
 import PastilleTxt from "../img/pastilles/pastille-verte-txt.svg";
 import PastilleImg from "../img/pastilles/pastille-verte-img.svg";
-
-import { useParallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
+import { Reveal } from "react-awesome-reveal";
+import {scaleAnimation} from "../functions/keyframes";
 import './Entreprise.scss';
 
 
 const Entreprise = () => {
 
-    const parallax = useParallax({
-        speed: -10,
-    });
+
 
     return (
         <section className="entreprise" id="entreprise">
-            <div ref={parallax.ref} className="entreprise_img">
+            <div className="entreprise_img">
                 <figure className="entreprise_img-img">
-                    <img src={SalleDeBain} alt="Salle de bain"/>
+                    <Reveal keyframes={scaleAnimation} className="reveal">
+                        <img src={SalleDeBain} alt="Salle de bain"/>
+                    </Reveal>             
                 </figure>
                 <figure className="entreprise_img-pastille">
-                    <img src={PastilleTxt} alt="Pastille Entreprise Plomberie Joan Bret"/>
+                    <Parallax rotate={[0, 180]} speed="-1000" easing="linear">
+                        <img src={PastilleTxt} alt="Pastille Entreprise Plomberie Joan Bret"/>
+                    </Parallax>
                     <img src={PastilleImg} alt="Pastille Entreprise Plomberie Joan Bret" className="img"/>
                 </figure>
             </div>

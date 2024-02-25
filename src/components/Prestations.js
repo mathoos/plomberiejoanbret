@@ -1,3 +1,4 @@
+import { Parallax } from "react-scroll-parallax";
 import LogoVert from "../img/logos/logo-plomberie-vert.svg";
 import PictogrammeSalleDeBain from "../img/pictogrammes/salle-de-bain.svg";
 import PictogrammeSalleDeDouche from "../img/pictogrammes/salle-de-douche.svg";
@@ -5,7 +6,6 @@ import PictogrammeCuisine from "../img/pictogrammes/cuisine.svg";
 import PictogrammeAmenagementPMR from "../img/pictogrammes/amenagement-pmr.svg";
 import PictogrammeDepannage from "../img/pictogrammes/depannage.svg";
 import PictogrammeTraitementEau from "../img/pictogrammes/traitement-eau.svg";
-
 import './Prestations.scss';
 
 
@@ -14,7 +14,9 @@ const Prestations = () => {
     return (
         <section className="prestations" id="prestations">
         <figure className="prestations_forme">
-            <img src={LogoVert} alt="Logo Plomberie Joan Bret"/>
+            <Parallax translateY={['50px', '-50px']} easing="ease">
+                <img src={LogoVert} alt="Logo Plomberie Joan Bret"/>
+            </Parallax>
         </figure>
         <h2>Nos domaine <br/>
             <span>d'intervention</span>

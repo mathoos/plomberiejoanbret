@@ -68,8 +68,7 @@ a{
     overflow-y: hidden;
 }
 
-
-.parallax{
-    will-change : transform;
-    transition : .6s linear;
+.reveal{
+    width : 100%;
+    height : 100%;
 }

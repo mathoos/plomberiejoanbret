@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { Parallax } from "react-scroll-parallax";
 import { add100Vh } from '../functions/add100vh';
 import { openMenu } from '../functions/openMenu';
 import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
@@ -45,7 +46,9 @@ const Header = ({
                 </div>
             )}
             <figure className="header_img">
-                <img src={HeaderImg} alt="Paroie de douche"/>
+                <Parallax translateY={['-200px', '200px']}>
+                    <img src={HeaderImg} alt="Paroie de douche"/>
+                </Parallax>
             </figure>
             <Navbar/>
             <Menu />
