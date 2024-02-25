@@ -28,16 +28,16 @@ const Entreprise = () => {
             </div>
             <div className="entreprise_bloc">
                 <div className="entreprise_bloc-container">
-                    <Reveal keyframes={bottomAnimation} className="entreprise_bloc-container--title">
+                    <Reveal keyframes={bottomAnimation} triggerOnce="true" className="entreprise_bloc-container--title">
                         <h2>L'entreprise</h2>
                     </Reveal>
                     <div className="entreprise_bloc-container--txt">
-                        <Reveal keyframes={bottomAnimation}>
+                        <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="subtitle">
                                 Votre partenaire plomberie, alliant passion de l'artisanat et excellence du service.
                             </p> 
                         </Reveal>
-                        <Reveal keyframes={bottomAnimation}>
+                        <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p>
                                 Formé au métier de plombier dès l'âge de 16 ans, c'est en janvier 1994 que je décide 
                                 de devenir indépendant et de créer ma propre entreprise de plomberie.<br/><br/>
@@ -50,7 +50,7 @@ const Entreprise = () => {
                             </p>
                         </Reveal> 
                     </div>
-                    <Reveal keyframes={bottomAnimation}>
+                    <Reveal keyframes={bottomAnimation} triggerOnce="true">
                         <a href="#prestations" className="bouton bouton_blanc">Nos prestations</a>
                     </Reveal>
                 </div>      

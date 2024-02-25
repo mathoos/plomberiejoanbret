@@ -20,7 +20,7 @@ const Prestations = () => {
                 <img src={LogoVert} alt="Logo Plomberie Joan Bret"/>
             </Parallax>
         </figure>
-        <Reveal keyframes={bottomAnimation}>
+        <Reveal keyframes={bottomAnimation} triggerOnce="true">
             <h2>Nos domaine <br/>
                 <span>d'intervention</span>
             </h2>

@@ -1,3 +1,5 @@
+// KEYFRAMES
+
 @keyframes infiniteRotation {
     100%{
         transform : rotate(360deg)
@@ -16,5 +18,12 @@
     to{
         transform : translateY(0);
         opacity : 1;
+    }
+}
+
+
+@keyframes curtain{
+    to{
+        height : 0;
     }
 }

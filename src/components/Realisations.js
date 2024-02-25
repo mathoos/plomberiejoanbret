@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Reveal } from "react-awesome-reveal";
-import { bottomAnimation , rightAnimation } from "../functions/keyframes";
+import { bottomAnimation , scaleAnimation } from "../functions/keyframes";
 import {Link} from "react-router-dom";
 import './Realisations.scss';
 
@@ -39,29 +39,29 @@ const Realisations = () => {
             <div className="realisations_container">
                 <div className="realisations_container-txt">
                     <div className="realisations_container-txt--title">
-                        <Reveal keyframes={bottomAnimation}>
+                        <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <h2 dangerouslySetInnerHTML={{__html: photographies[currentImageIndex]?.title}}></h2>    
                         </Reveal> 
                     </div>
                     <div className="realisations_container-txt--subtitle">
-                        <Reveal keyframes={bottomAnimation}>
+                        <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="subtitle">
                                 {photographies[currentImageIndex]?.subtitle}
                             </p>
                         </Reveal>
-                        <Reveal keyframes={bottomAnimation}>
+                        <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="description">
                                 {photographies[currentImageIndex]?.description}
                             </p>
                         </Reveal>
                     </div>
-                    <Reveal keyframes={bottomAnimation}>
+                    <Reveal keyframes={bottomAnimation} triggerOnce="true">
                         <Link to="/realisations" className="bouton bouton_blanc hidden-mobile">Toutes nos réalisations</Link>
                     </Reveal>
                 </div>
                 <div className="realisations_container-slider">
                     <figure className="realisations_container-slider--img">
-                        <Reveal keyframes={rightAnimation}>
+                        <Reveal keyframes={scaleAnimation}>
                             <img src={photographies[currentImageIndex]?.photo} alt="Réalisation"/>
                         </Reveal>
                     </figure>          
