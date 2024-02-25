@@ -62,27 +62,30 @@
                         }
         
                         label{
-                            font-family: "Archivo";
+                            font-family: "Ysabeau Office";
                             line-height : 1.2;
                             font-size: 1.1vw;
                             font-weight : 600;
                             color : $noir;
-                            padding-left : 10px;
+                            padding-left : 15px;
                             @media screen and (max-width : 990px){
                                 font-size: 5vw;
+                                padding-left : 20px;
                             }
                         }
         
                         #email, #password{
                             width : 100%;
-                            font-size : 1vw;
-                            padding : 10px;
-                            min-height : 5vh;
+                            font-size : 1.1vw;
+                            padding : 0 15px;
+                            min-height : 6vh;
                             border : 1px solid $noir;
                             border-radius : 100vmax;
                             font-family : "Ysabeau Office";
                             @media screen and (max-width : 990px){
-                                font-size : 4vw;
+                                font-size : 5vw;
+                                padding : 0 20px;
+                                min-height : 5vh;
                             }
         
                             &:focus{
@@ -105,7 +108,7 @@
                     .bouton{
                         border-width : 1px;
                         text-transform: none;
-                        min-height : 5vh;
+                        min-height : 6vh;
                         @media screen and (max-width:990px){
                             font-size: 5vw;
                         } 

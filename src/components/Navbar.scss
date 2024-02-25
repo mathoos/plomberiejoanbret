@@ -12,9 +12,8 @@
     border-bottom : 1px solid $noir;
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
-    transition : .3s ease;
     transform : translateY(-100%);
-    animation : slideTop .7s ease forwards;
+    animation : slideTop 1s ease .2s forwards;
     z-index : 100;
 
     @media screen and (max-width:990px){

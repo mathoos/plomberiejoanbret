@@ -9,8 +9,6 @@ import './Entreprise.scss';
 
 const Entreprise = () => {
 
-
-
     return (
         <section className="entreprise" id="entreprise">
             <div className="entreprise_img">

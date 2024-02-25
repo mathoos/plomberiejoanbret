@@ -21,7 +21,7 @@
         flex-direction: column;
         gap : 7vh;
         background-color: $blanc;
-        padding : 5vh 5vw; 
+        padding : 2.5vw; 
         border-radius : 20px;
         height : fit-content;
         @media screen and (max-width : 990px){
@@ -98,12 +98,12 @@
                 gap : 1vh;
 
                 label{
-                    font-family: "Archivo";
+                    font-family: "Ysabeau Office";
                     line-height : 1.2;
                     font-size: 1.1vw;
                     font-weight : 600;
                     color : $noir;
-                    padding-left : 10px;
+                    padding-left : 15px;
                     @media screen and (max-width : 990px){
                         font-size: 5vw;
                     }
@@ -114,32 +114,36 @@
                     -moz-appearance: none;
                     width : 30vw;
                     font-size : 1.1vw;
-                    padding : 10px;
+                    padding : 0 15px;
+                    min-height : 6vh;
                     border : 1px solid $noir;
                     border-radius : 100vmax;
                     font-family : "Ysabeau Office";
                     @media screen and (max-width : 990px){
                         width : 100%;
-                        font-size: 4vw;
+                        font-size : 5vw;
+                        padding : 0 20px;
+                        min-height : 5vh;
                     }
                 }
 
                 #file{
-                    font-size : 1vw;
+                    font-size : 1.1vw;
                     padding : 5px;
                     border-radius : 5px;
                     font-family : "Ysabeau Office";
                     @media screen and (max-width : 990px){
-                        font-size: 4vw;
+                        font-size: 5vw;
                     }
                 }
 
-                textarea{
+                #description{
                     min-height : 15vh;
                     resize: none;
                     border-radius : 15px !important;
                     @media screen and (max-width : 990px){
                         min-height : 15vh;
+                        padding : 10px 15px;
                     }
                 }
             }
@@ -151,9 +155,10 @@
             .bouton{
                 border-width : 1px;
                 text-transform: none;
-                min-height : 5vh;
+                min-height : 6vh;
                 @media screen and (max-width:990px){
                     font-size: 5vw;
+                    min-height : 5vh;
                 } 
             }
         }

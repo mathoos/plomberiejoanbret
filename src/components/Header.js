@@ -4,7 +4,6 @@ import { add100Vh } from '../functions/add100vh';
 import { openMenu } from '../functions/openMenu';
 import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
 import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
-import HeaderImg from "../img/galerie/paroie-salle-de-douche.jpg";
 import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 import './Header.scss';
@@ -12,6 +11,7 @@ import './Header.scss';
 
 const Header = ({ 
     showHeaderTxt=true,
+    img,
     children
     }) => {
 
@@ -47,7 +47,7 @@ const Header = ({
             )}
             <figure className="header_img">
                 <Parallax translateY={['-200px', '200px']}>
-                    <img src={HeaderImg} alt="Paroie de douche"/>
+                    <img src={img} alt="Paroie de douche"/>
                 </Parallax>
             </figure>
             <Navbar/>

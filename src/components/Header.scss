@@ -10,6 +10,7 @@
     }
 
     &_img{
+        position : relative;
         width : 35vw;
         height : 100%;
         overflow : hidden;
@@ -33,7 +34,7 @@
             width : 100%;
             height : 100%;
             background-color: $blanc;
-            animation : curtain .7s linear forwards;
+            animation : curtain 1s linear .5s forwards;
         }
     }
 
@@ -60,12 +61,10 @@
             }
 
             &--title{
-                padding : 1px;
-
                 h1{
                     opacity : 0;
                     transform : translateY(-50%);
-                    animation : slideTop 1s ease forwards;
+                    animation : slideTop 1s ease .4s forwards;
                 }
             }
 
@@ -80,8 +79,8 @@
                     font-weight : 200;
                     line-height : 1.2;
                     opacity : 0;
-                    transform : translateY(-100%);
-                    animation : slideTop .7s ease .3s forwards;
+                    transform : translateY(-50%);
+                    animation : slideTop 1s ease .6s forwards;
                     
                     @media screen and (max-width : 990px){
                         font-size : 5vw;

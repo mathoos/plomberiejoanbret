@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { loginUser } from "../utilities/Server";
 import { setToken } from "../utilities/Slice";
 import Header from "../components/Header";
+import HeaderImg from "../img/galerie/baignoire-produits.jpg";
 import './Login.scss';
 
 function Login() {
@@ -33,7 +34,7 @@ function Login() {
 
     return (
         <div className="login">
-            <Header showHeaderTxt={false}>
+            <Header showHeaderTxt={false} img={HeaderImg}>
                 <div className="header_login">
                     <form className="header_login-form" id="loginForm" onSubmit={handleSubmit}>
                         <h1>Se connecter</h1>
