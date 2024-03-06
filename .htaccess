@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://plomberiejoanbret.fr%{REQUEST_URI} [R=301,L]
+RewriteRule ^Pages/Prestations/Prestations\.html$ https://plomberiejoanbret.fr/ [R=301,L]
+RewriteRule ^Pages/Entreprise/index\.html$ https://plomberiejoanbret.fr/ [R=301,L]
+RewriteRule ^Pages/R%C3%A9alisations/realisations\.html$ https://plomberiejoanbret.fr/ [R=301,L]
+RewriteRule ^Pages/Contact/index\.html$ https://plomberiejoanbret.fr/ [R=301,L]
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/plomepuw/public_html/backend"
+PassengerBaseURI "/"
+PassengerNodejs "/home/plomepuw/nodevenv/public_html/backend/20/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
