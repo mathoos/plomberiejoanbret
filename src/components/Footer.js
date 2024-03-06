@@ -24,7 +24,7 @@ function Footer(){
                 </figure>
             </div>
             <div className="footer_copyright">
-                <p>Copyright 2023 Plomberie Joan Bret - <a href="/">Mentions légales</a> </p>
+                <p>Copyright 2024 Plomberie Joan Bret - <a href="/">Mentions légales</a> </p>
                 <p>Site designé et développé par <a href="https://www.linkedin.com/in/mathildebret/" target="_blank" rel="noreferrer">Mathilde Bret</a></p>
             </div>
         </footer>

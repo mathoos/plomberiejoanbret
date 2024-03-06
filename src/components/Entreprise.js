@@ -44,7 +44,7 @@ const Entreprise = () => {
                                 je m'épanouis à présent dans la création de salle de bain, de salle de douche et de cuisine.<br/><br/>
                                 
                                 Si l'artisanat me passionne, c'est surtout la satisfaction de mes clients qui m'apporte fierté 
-                                et permet à l'entreprise de se dépasser toujours plus..
+                                et permet à l'entreprise de se dépasser toujours plus.
                             </p>
                         </Reveal> 
                     </div>
