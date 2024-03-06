@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Reveal } from "react-awesome-reveal";
-import { bottomAnimation , scaleAnimation } from "../functions/keyframes";
+import { bottomAnimation } from "../functions/keyframes";
 import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
