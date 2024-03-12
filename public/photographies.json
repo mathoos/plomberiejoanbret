@@ -7,7 +7,8 @@
         "/realisations/salle-de-bain/salle-de-bain(5).jpg",
         "/realisations/salle-de-bain/salle-de-bain(6).jpg",
         "/realisations/salle-de-bain/salle-de-bain(7).jpg",
-        "/realisations/salle-de-bain/salle-de-bain(8).jpg",        
+        "/realisations/salle-de-bain/salle-de-bain(8).jpg",     
+        "/realisations/salle-de-bain/salle-de-bain(9).jpg",     
         "/realisations/cuisine/cuisine(1).jpg",
         "/realisations/cuisine/cuisine(2).jpg",
         "/realisations/cuisine/cuisine(3).jpg",
@@ -26,8 +27,12 @@
         "/realisations/mobilier/mobilier(6).jpg",
         "/realisations/mobilier/mobilier(7).jpg",
         "/realisations/mobilier/mobilier(8).jpg",
+        "/realisations/mobilier/mobilier(9).jpg",
         "/realisations/amenagement-pmr/amenagement-pmr(1).jpg",
         "/realisations/amenagement-pmr/amenagement-pmr(2).jpg",
+        "/realisations/amenagement-pmr/amenagement-pmr(3).jpg",
+        "/realisations/amenagement-pmr/amenagement-pmr(4).jpg",
+        "/realisations/amenagement-pmr/amenagement-pmr(5).jpg",
         "/realisations/salle-de-douche/salle-de-douche(1).jpg",
         "/realisations/salle-de-douche/salle-de-douche(2).jpg",
         "/realisations/salle-de-douche/salle-de-douche(3).jpg",
@@ -42,9 +47,11 @@
         "/realisations/salle-de-douche/salle-de-douche(12).jpg",
         "/realisations/salle-de-douche/salle-de-douche(13).jpg",
         "/realisations/salle-de-douche/salle-de-douche(14).jpg",
-        "/realisations/salle-de-douche/salle-de-douche(15).jpg",
         "/realisations/toilette/toilette(1).jpg",
         "/realisations/toilette/toilette(2).jpg",
-        "/realisations/toilette/toilette(3).jpg"
+        "/realisations/toilette/toilette(3).jpg",
+        "/realisations/toilette/toilette(4).jpg",
+        "/realisations/toilette/toilette(5).jpg",
+        "/realisations/toilette/toilette(6).jpg"
     ]
 }
