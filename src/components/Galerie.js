@@ -1,26 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Reveal } from "react-awesome-reveal";
 import { bottomAnimation } from "../functions/keyframes";
-// import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
 
 const Galerie = () => {
     const [images, setImages] = useState([]);
     const [lightboxOpen, setLightboxOpen] = useState(false);
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const data = await getAllStuff();
-    //             setImages(data);
-    //         } 
-    //         catch (error) {
-    //             console.error("Une erreur s'est produite lors de la récupération des objets :", error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
 
     useEffect(() => {
         const fetchData = async () => {

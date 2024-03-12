@@ -45,14 +45,10 @@ const Lightbox = ({ image, onClose }) => {
                 onTouchEnd={handleTouchEnd}
             >
                 <div className="lightbox_image">
-                    <img src={image[currentIndex].imageUrl} alt={image[currentIndex].title}/>          
+                    <img src={image[currentIndex]} alt={image[currentIndex]}/>          
                 </div>
 
                 <div className="lightbox_details">
-                    <div className="lightbox_details-txt">
-                        <h2>{image[currentIndex].title}</h2>
-                        <p>{image[currentIndex].description}</p>
-                    </div>
 
                     <div className="lightbox_arrows">
                         <button className="arrow lightbox-prev" onClick={prevImage}>
