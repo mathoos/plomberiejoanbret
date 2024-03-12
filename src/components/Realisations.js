@@ -13,7 +13,7 @@ const Realisations = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('realisationsPreview.json');
+                const res = await fetch('/realisationsPreview.json');
                 const data = await res.json();
                 setPhotographies(data.photographies);
             } catch (error) {

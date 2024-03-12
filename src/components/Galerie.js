@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Reveal } from "react-awesome-reveal";
 import { bottomAnimation } from "../functions/keyframes";
-import { getAllStuff } from "../utilities/Server";
+// import { getAllStuff } from "../utilities/Server";
 import Lightbox from './Lightbox';
 import './Galerie.scss';
 
@@ -9,17 +9,31 @@ const Galerie = () => {
     const [images, setImages] = useState([]);
     const [lightboxOpen, setLightboxOpen] = useState(false);
 
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const data = await getAllStuff();
+    //             setImages(data);
+    //         } 
+    //         catch (error) {
+    //             console.error("Une erreur s'est produite lors de la récupération des objets :", error);
+    //         }
+    //     };
+    //     fetchData();
+    // }, []);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getAllStuff();
-                setImages(data);
+                const res = await fetch('/photographies.json');
+                const data = await res.json();
+                setImages(data.photographies);
             } 
             catch (error) {
-                console.error("Une erreur s'est produite lors de la récupération des objets :", error);
+                console.log(error);
             }
         };
-        fetchData();
+        fetchData();    
     }, []);
 
     const openLightbox = () => {
@@ -52,7 +66,7 @@ const Galerie = () => {
                         {group.map((image, index) => (
                             <figure key={index} className="galerie_container-image" onClick={() => openLightbox(index)}>
                                 <Reveal keyframes={bottomAnimation} triggerOnce="true">
-                                    <img src={image.imageUrl} alt={image.title} />
+                                    <img src={image} alt={image.title} />
                                 </Reveal>
                             </figure>
                         ))}
