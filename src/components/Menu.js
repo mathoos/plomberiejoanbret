@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Menu.scss';
 
 const OpenMenu = () => {
@@ -20,7 +19,7 @@ const OpenMenu = () => {
     return (
         <section className="menu">
             <div className="menu_container">
-                <Link to={linkTo} className="menu_container-link">{linkText}</Link>
+                <a href={linkTo} className="menu_container-link">{linkText}</a>
             </div>
         </section>
     );

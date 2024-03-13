@@ -56,7 +56,7 @@ const Realisations = () => {
                         </Reveal>
                     </div>
                     <Reveal keyframes={bottomAnimation} triggerOnce="true">
-                        <Link to="/realisations" className="bouton bouton_blanc hidden-mobile">Toutes nos réalisations</Link>
+                        <a href="/realisations" className="bouton bouton_blanc hidden-mobile">Toutes nos réalisations</a>
                     </Reveal>
                 </div>
                 <div className="realisations_container-slider">
@@ -82,9 +82,9 @@ const Realisations = () => {
                         </figure>
                     </div>
                 </div>
-                <Link to="/realisations" className="realisations_container-txt--btn hidden-pc">
-                    <p className="bouton bouton_blanc">Toutes nos réalisations</p>
-                </Link>
+                <div className="realisations_container-txt--btn hidden-pc">
+                    <a href="/realisations" className="bouton bouton_blanc">Toutes nos réalisations</a>
+                </div>
             </div>
         </section>
     ) 
