@@ -52,7 +52,7 @@ const Galerie = () => {
         }
     };
 
-    const numberOfBoxes = window.innerWidth < 990 ? 3 : 4; // Changer à 3 pour les appareils mobiles
+    const numberOfBoxes = window.innerWidth < 990 ? 3 : 4;
     const imageGroups = Array.from({ length: numberOfBoxes }, () => []);
 
     images.forEach((image, index) => {
