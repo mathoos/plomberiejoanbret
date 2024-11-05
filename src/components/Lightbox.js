@@ -40,7 +40,7 @@ const Lightbox = ({ image, onClose, onPrev, onNext }) => {
                 onTouchEnd={handleTouchEnd}
             >
                 <div className="lightbox_image">
-                    <img src={image} alt="coucou"/>         
+                    <img src={image.src} alt={image.alt} />         
                 </div>
 
                 <div className="lightbox_details">

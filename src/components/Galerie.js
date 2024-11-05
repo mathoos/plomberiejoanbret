@@ -72,7 +72,7 @@ const Galerie = () => {
                         {group.map(({ image, index }) => ( 
                             <figure key={index} className="galerie_container-image" onClick={() => openLightbox(index)}>
                                 <Reveal keyframes={bottomAnimation} triggerOnce={true}>
-                                    <img src={image} alt="Réalisation de plomberie" />
+                                    <img src={image.src} alt={image.alt} />
                                 </Reveal>
                             </figure>
                         ))}
