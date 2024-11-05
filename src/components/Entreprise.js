@@ -27,12 +27,12 @@ const Entreprise = () => {
             <div className="entreprise_bloc">
                 <div className="entreprise_bloc-container">
                     <Reveal keyframes={bottomAnimation} triggerOnce="true" className="entreprise_bloc-container--title">
-                        <h2>L'entreprise</h2>
+                        <h2>Plomberie <br/> Joan Bret</h2>
                     </Reveal>
                     <div className="entreprise_bloc-container--txt">
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="subtitle">
-                                Votre partenaire plomberie, alliant passion de l'artisanat et excellence du service.
+                                Votre partenaire plomberie sur Rouen, alliant passion et savoir-faire artisanal.
                             </p> 
                         </Reveal>
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
@@ -40,10 +40,10 @@ const Entreprise = () => {
                                 Formé au métier de plombier dès l'âge de 16 ans, c'est en janvier 1994 que je décide 
                                 de devenir indépendant et de créer ma propre entreprise de plomberie.<br/><br/>
 
-                                En maintenant 32 ans d'existence, l'entreprise a bien évolué; de simples dépannages sanitaires, 
+                                En maintenant 32 ans d'existence, l'entreprise a bien évolué. De simples dépannages sanitaires, 
                                 je m'épanouis à présent dans la création de salle de bain, de salle de douche et de cuisine.<br/><br/>
                                 
-                                Si l'artisanat me passionne, c'est surtout la satisfaction de mes clients qui m'apporte fierté 
+                                Si le métier de plombier me passionne, c'est surtout la satisfaction de mes clients qui m'apporte fierté 
                                 et permet à l'entreprise de se dépasser toujours plus.
                             </p>
                         </Reveal> 
