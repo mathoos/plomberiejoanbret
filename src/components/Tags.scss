@@ -1,37 +1,37 @@
 @import "../style.scss";
 
 .accelerateurs{
-    padding : 20vh 8.5vw;
-    @media screen and (max-width:990px){
-        padding : 10vh 30px;
-    }
+
 
     &_container{
         display : flex;
         justify-content: space-between;
+        flex-wrap : wrap;
+        gap : .5vw;
         @media screen and (max-width:990px){
-            flex-wrap: wrap;
-            gap : 5vw;
+            gap : 2vw;
         }
   
         .bouton{
             min-height : 5vh;
-            font-size : 18px;
-            border-color : $vert;
-            color : $vert;
-            pointer-events: none;
+
             @media screen and (max-width:990px){
-                font-size : 4.5vw;
+                min-height : 4vh;
+                font-size : 3vw;
                 padding : 0 5vw;
                 flex-grow: 1;
+
+                &:last-of-type{
+                    flex-grow : 0;
+                }
             }
 
-            &::after{
-                background-color: $vert;
-            }
-
-            &:hover{
+            &.active{
                 color : $blanc;
+
+                &::after{
+                    height : 100%;
+                }
             }
         }
     }

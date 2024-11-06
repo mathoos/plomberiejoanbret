@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Tags from '../components/Tags';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
 import Realisations from '../components/Realisations';
@@ -14,7 +13,6 @@ function Home() {
     return (
         <div>           
             <Header img={HeaderImg}/>
-            <Tags/>
             <Entreprise/>
             <Marquee/>
             <Prestations/>

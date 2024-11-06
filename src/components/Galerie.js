@@ -1,26 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Reveal } from "react-awesome-reveal";
 import { bottomAnimation } from "../functions/keyframes";
+import Tags from './Tags';
 import Lightbox from './Lightbox';
+import { useNavigate, useLocation } from 'react-router-dom'; // Importer useNavigate et useLocation
 import './Galerie.scss';
 
 const Galerie = () => {
     const [images, setImages] = useState([]);
+    const [filteredImages, setFilteredImages] = useState([]);
+    const [selectedTag, setSelectedTag] = useState("all");
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // Charger les images à partir du fichier JSON
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await fetch('/photographies.json');
                 const data = await res.json();
                 setImages(data.photographies);
+                setFilteredImages(data.photographies);
             } catch (error) {
                 console.log(error);
             }
         };
-        fetchData();    
+        fetchData();
     }, []);
+
+    // Initialiser selectedTag en fonction de l'URL
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const tag = params.get("tag");
+        if (tag) {
+            setSelectedTag(tag);
+        }
+    }, [location.search]);
+
+    // Filtrer les images lorsque selectedTag change
+    useEffect(() => {
+        if (selectedTag === "all") {
+            setFilteredImages(images);
+        } else {
+            setFilteredImages(images.filter(image => image.tag === selectedTag));
+        }
+    }, [selectedTag, images]);
 
     const openLightbox = (index) => {
         setSelectedImageIndex(index);
@@ -35,27 +62,22 @@ const Galerie = () => {
     };
 
     const prevImage = () => {
-        if (selectedImageIndex === 0) {
-            setSelectedImageIndex(images.length - 1);
-        } 
-        else {
-            setSelectedImageIndex(selectedImageIndex - 1);
-        }
+        setSelectedImageIndex((selectedImageIndex === 0) ? filteredImages.length - 1 : selectedImageIndex - 1);
     };
 
     const nextImage = () => {
-        if (selectedImageIndex === images.length - 1) {
-            setSelectedImageIndex(0);
-        } 
-        else {
-            setSelectedImageIndex(selectedImageIndex + 1);
-        }
+        setSelectedImageIndex((selectedImageIndex === filteredImages.length - 1) ? 0 : selectedImageIndex + 1);
+    };
+
+    const handleTagClick = (tag) => {
+        setSelectedTag(tag);
+        navigate(`?tag=${tag}`, { replace: true }); // Mettre à jour l'URL sans rechargement de page
     };
 
     const numberOfBoxes = window.innerWidth < 990 ? 3 : 4;
     const imageGroups = Array.from({ length: numberOfBoxes }, () => []);
 
-    images.forEach((image, index) => {
+    filteredImages.forEach((image, index) => {
         const boxIndex = index % numberOfBoxes;
         imageGroups[boxIndex].push({ image, index });
     });
@@ -65,6 +87,8 @@ const Galerie = () => {
             <div className="galerie_title">
                 <h2>Toutes nos réalisations</h2>
             </div>
+
+            <Tags onTagClick={handleTagClick} selectedTag={selectedTag} />
             
             <div className="galerie_container">
                 {imageGroups.map((group, groupIndex) => (
@@ -82,7 +106,7 @@ const Galerie = () => {
 
             {lightboxOpen && (
                 <Lightbox
-                    image={images[selectedImageIndex]}
+                    image={filteredImages[selectedImageIndex]}
                     onClose={closeLightbox}
                     onPrev={prevImage}
                     onNext={nextImage}
