@@ -6,7 +6,7 @@ import Realisations from '../components/Realisations';
 import Contact from '../components/Contact';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
-import HeaderImg from "../img/galerie/salle-de-bain(10).jpg";
+import HeaderImg from "../img/galerie/header_home.jpg";
 
 
 function Home() {
