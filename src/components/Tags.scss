@@ -1,6 +1,15 @@
 @import "../style.scss";
 
 .accelerateurs{
+    padding : 20vh 5vw;
+
+    &.realisations-page{
+        padding : 0;
+
+        .bouton{
+            pointer-events : auto;
+        }
+    }
 
 
     &_container{
@@ -14,6 +23,7 @@
   
         .bouton{
             min-height : 5vh;
+            pointer-events : none;
 
             @media screen and (max-width:990px){
                 min-height : 4vh;

@@ -86,7 +86,7 @@ const Galerie = () => {
     return (
         <section className="galerie">
 
-            <Tags onTagClick={handleTagClick} selectedTag={selectedTag} />
+            <Tags onTagClick={handleTagClick} selectedTag={selectedTag} isHomePage={false}/>
             
             <div className="galerie_container">
                 {imageGroups.map((group, groupIndex) => (

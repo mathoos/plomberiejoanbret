@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Tags from '../components/Tags';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
 import Realisations from '../components/Realisations';
@@ -23,6 +24,7 @@ function Home() {
                         Rouen et périphérie
                     `} 
             />
+            <Tags isHomePage={true} />
             <Entreprise/>
             <Marquee/>
             <Prestations/>
