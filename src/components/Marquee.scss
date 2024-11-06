@@ -3,6 +3,8 @@
 .marquee{
     padding : 9.2vh 0;
     background-color: $noir;
+    width : 100%;
+    overflow : hidden;
     @media screen and (max-width:990px){
         padding : 5vh 0;
     }

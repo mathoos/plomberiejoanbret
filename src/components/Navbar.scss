@@ -7,7 +7,7 @@
     display : flex;
     justify-content: space-between;
     width : 100%;
-    padding : 2.5vh 0 2.5vh 8.5vw ;
+    padding : 2.5vh 5vw 2.5vh 8.5vw;
     background: rgba(255, 255, 255, 0.342);
     border-bottom : 2px solid $noir;
     backdrop-filter: blur( 13.5px );
@@ -44,42 +44,17 @@
         display : flex;
         align-items : center;
         justify-content: space-between;
-        gap : 3.5vw;
-        padding : 0 5vw;
-        width : 55vw;
+        gap : 3vw;
 
         @media screen and (max-width:990px){
             display : none;
         }
 
         &-link{
-            position : relative;
-            display : flex;
-            align-items: center;
-            gap : 1vw;
             font-size : 1.25vw;
-            font-weight : 600;             
-            cursor: pointer;  
-            transition : .3s ease;
-            
-            &::after{
-                position : absolute;
-                content :"";
-                left : 50%;
-                bottom : -20%;
-                transform : translateX(-50%);
-                width : 0;
-                height : 1px;
-                background-color: $noir;
-                transition : .5s ease;
-                z-index : -2;
-            }         
-
-            &:hover{
-                &::after{
-                    width : 50%;
-                }
-            }
+            font-weight : 600;  
+            text-transform : none;  
+            cursor: pointer;
         }
 
         .bouton{

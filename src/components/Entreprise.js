@@ -1,7 +1,4 @@
 import SalleDeBain from "../img/galerie/baignoire-vert.jpg";
-import PastilleTxt from "../img/pastilles/pastille-verte-txt.svg";
-import PastilleImg from "../img/pastilles/pastille-verte-img.svg";
-import { Parallax } from "react-scroll-parallax";
 import { Reveal } from "react-awesome-reveal";
 import {scaleAnimation , bottomAnimation} from "../functions/keyframes";
 import './Entreprise.scss';

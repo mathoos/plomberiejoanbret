@@ -37,6 +37,7 @@ const Navbar = ({ isUserPage }) => {
                         <a href="#entreprise" className="nav_links-link">L'entreprise</a>
                         <a href="#prestations" className="nav_links-link">Prestations</a>
                         <a href="/realisations" className="nav_links-link">Réalisations</a>
+                        <a href="#contact" className="nav_links-link">Contact</a>
                         <Link to="tel:0235607629" className="bouton bouton_noir">02 35 60 76 29</Link>
                     </>
                 )}
