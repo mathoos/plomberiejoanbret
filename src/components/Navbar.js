@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../img/logos/logo-plomberie-noir.svg";
+import Logo from "../img/logos/logo-plomberie-circle-noir.svg";
 import {Link} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { clearToken } from "../utilities/Slice";

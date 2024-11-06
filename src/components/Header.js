@@ -12,6 +12,9 @@ import './Header.scss';
 const Header = ({ 
     showHeaderTxt=true,
     img,
+    title,
+    span,
+    txt,
     children
     }) => {
 
@@ -27,17 +30,14 @@ const Header = ({
                 <div className="header_txt">
                     <div className="header_txt-container">
                         <div className="header_txt-container--title">
-                            <h1>Plomberie <br/> 
-                                <span>Joan Bret</span>
+                            <h1>{title} <br/> 
+                                <span>{span}</span>
                             </h1>
                         </div>
                         <div className="header_txt-container--subtitle">
-                            <p>
-                                Artisan plombier agréé Jacob Delafon <br/>
-                                Dépannage, création & rénovation <br/> 
-                                Rouen et périphérie
-                            </p>
+                            <p dangerouslySetInnerHTML={{ __html: txt }} />
                         </div>
+                        {/* <p className="bouton bouton_invertNoir">Nous contacter</p> */}
                     </div> 
                     <figure className="header_txt-pastille">
                         <img src={PastilleTxt} className="txt" alt="Pastille Plomberie Joan Bret"/>
@@ -47,7 +47,7 @@ const Header = ({
             )}
             <figure className="header_img">
                 <Parallax translateY={['-200px', '200px']}>
-                    <img src={img} alt="Paroie de douche"/>
+                    <img src={img} alt="Salle de bain"/>
                 </Parallax>
             </figure>
             <Navbar/>

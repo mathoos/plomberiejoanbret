@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'; 
 import { Reveal } from "react-awesome-reveal";
 import { bottomAnimation } from "../functions/keyframes";
 import Tags from './Tags';
 import Lightbox from './Lightbox';
-import { useNavigate, useLocation } from 'react-router-dom'; // Importer useNavigate et useLocation
+
 import './Galerie.scss';
 
 const Galerie = () => {
@@ -71,7 +72,7 @@ const Galerie = () => {
 
     const handleTagClick = (tag) => {
         setSelectedTag(tag);
-        navigate(`?tag=${tag}`, { replace: true }); // Mettre à jour l'URL sans rechargement de page
+        navigate(`?tag=${tag}`, { replace: true });
     };
 
     const numberOfBoxes = window.innerWidth < 990 ? 3 : 4;
@@ -84,9 +85,6 @@ const Galerie = () => {
 
     return (
         <section className="galerie">
-            <div className="galerie_title">
-                <h2>Toutes nos réalisations</h2>
-            </div>
 
             <Tags onTagClick={handleTagClick} selectedTag={selectedTag} />
             

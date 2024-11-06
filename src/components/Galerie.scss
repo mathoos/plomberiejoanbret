@@ -38,6 +38,7 @@
         &-image{
             width : 100%;
             height : auto;
+            overflow:  hidden;
 
             img{
                 width : 100%;
@@ -49,7 +50,7 @@
 
             &:hover{
                 img{
-                    filter : grayscale(100%)
+                    transform : scale(1.1)
                 }
             }
 

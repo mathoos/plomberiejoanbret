@@ -17,7 +17,7 @@ const Tags = ({ onTagClick, selectedTag }) => {
                 {tags.map((tag) => (
                     <button
                         key={tag.value}
-                        className={`bouton bouton_vert ${selectedTag === tag.value ? "active" : ""}`}
+                        className={`bouton bouton_noir ${selectedTag === tag.value ? "active" : ""}`}
                         onClick={() => onTagClick(tag.value)}
                     >
                         {tag.label}
