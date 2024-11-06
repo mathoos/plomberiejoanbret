@@ -3,6 +3,7 @@
     display : flex;
     justify-content: center;
     align-items: center;
+    flex-wrap : nowrap;
     width : fit-content;
     min-height : 7vh;
     padding : 0 2vw;
@@ -24,6 +25,7 @@
         font-size: 5vw;
         padding : 0 8vw;    
         min-height : 6.5vh;
+        white-space : nowrap;
     }  
 
     &:hover{

@@ -2,9 +2,15 @@
 
 .accelerateurs{
     padding : 20vh 5vw;
+    @media screen and (max-width:990px){
+        display : none;
+    }
 
     &.realisations-page{
         padding : 0;
+        @media screen and (max-width:990px){
+            display : flex;
+        }
 
         .bouton{
             pointer-events : auto;

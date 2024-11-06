@@ -17,28 +17,22 @@ const Entreprise = () => {
                         <img src={SalleDeBain} alt="Salle de bain"/>
                     </Reveal>             
                 </figure>
-                <figure className="entreprise_img-pastille">
-                    <Parallax rotate={[0, 180]} speed="-1000" easing="linear">
-                        <img src={PastilleTxt} alt="Pastille Entreprise Plomberie Joan Bret"/>
-                    </Parallax>
-                    <img src={PastilleImg} alt="Pastille Entreprise Plomberie Joan Bret" className="img"/>
-                </figure>
             </div>
             <div className="entreprise_bloc">
                 <div className="entreprise_bloc-container">
                     <Reveal keyframes={bottomAnimation} triggerOnce="true" className="entreprise_bloc-container--title">
-                        <h2>Plomberie <br/> Joan Bret</h2>
+                        <h2>Expérience d'un plombier</h2>
                     </Reveal>
                     <div className="entreprise_bloc-container--txt">
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="subtitle">
-                                Votre partenaire plomberie sur Rouen, alliant passion et savoir-faire artisanal.
+                                Votre partenaire plomberie, alliant passion et savoir-faire artisanal, sur Rouen et sa périphérie.
                             </p> 
                         </Reveal>
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p>
                                 Formé au métier de plombier dès l'âge de 16 ans, c'est en janvier 1994 que je décide 
-                                de devenir indépendant et de créer ma propre entreprise de plomberie.<br/><br/>
+                                de devenir indépendant et de créer ma propre entreprise de plomberie sur Rouen.<br/><br/>
 
                                 En maintenant 32 ans d'existence, l'entreprise a bien évolué. De simples dépannages sanitaires, 
                                 je m'épanouis à présent dans la création de salle de bain, de salle de douche et de cuisine.<br/><br/>

@@ -20,15 +20,15 @@
         position : fixed;
         align-items: center;
         border-bottom : 1px solid $noir;
-        padding : 2.5vh 30px;
+        padding : 2vh 30px;
     }
 
     &_logo{
         width : 3vw;
         height : 3vw;
         @media screen and (max-width:990px){
-            width : 8vw;
-            height : 8vw;
+            width : 9vw;
+            height : 9vw;
         }
 
         img{

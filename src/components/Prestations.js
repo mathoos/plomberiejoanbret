@@ -21,8 +21,8 @@ const Prestations = () => {
             </Parallax>
         </figure>
         <Reveal keyframes={bottomAnimation} triggerOnce="true">
-            <h2>Nos domaine <br/>
-                <span>d'intervention</span>
+            <h2>Nos domaines <br/>
+                d'intervention
             </h2>
         </Reveal>
         

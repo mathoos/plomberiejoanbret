@@ -35,7 +35,7 @@ const Header = ({
                             </h1>
                         </div>
                         <div className="header_txt-container--subtitle">
-                            <p dangerouslySetInnerHTML={{ __html: txt }} />
+                            <p className="subtitle" dangerouslySetInnerHTML={{ __html: txt }} />
                         </div>
                         {/* <p className="bouton bouton_invertNoir">Nous contacter</p> */}
                     </div> 

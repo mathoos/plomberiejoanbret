@@ -16,9 +16,10 @@
         display : flex;
         justify-content: space-between;
         align-items: center;
+
         @media screen and (max-width : 990px){
             flex-direction: column;
-            gap : 5vh;
+            gap : 2.5vh;
         }
 
         &-txt{
@@ -27,19 +28,14 @@
             gap : 6.5vh;  
             @media screen and (max-width : 990px){
                 width : 100%;
-                gap : 0;
+                gap : 2.5vh;
             }
 
             &--title{
                 width : 100%;
-                @media screen and (max-width:990px){
-                    width : 100%;
-                }  
 
                 h2{
                     color : $vert;
-                    text-align : left;
-                    font-size: 3.5vw;
                     transition: transform .8s ease, opacity .4s ease;
                     will-change: transform;  
 
@@ -53,11 +49,6 @@
                         transition-delay : .3s;
                         opacity : 0;
                     } 
-
-                    @media screen and (max-width:990px){
-                        font-size: 9vw;
-                        text-align : center;
-                    }
                 }  
             }    
             
@@ -67,12 +58,15 @@
                 gap : 2.5vh;
                 width : 27vw;
                 @media screen and (max-width : 990px){
-                    display : none;
+                    width : 100%;
                 }
 
                 .subtitle{
                     transition: transform .8s ease, opacity .4s ease;
                     will-change: transform; 
+                    @media screen and (max-width:990px){
+                        font-size: 4.5vw;
+                    }
                     
                     &.show {
                         transform: translateY(0);
@@ -89,6 +83,9 @@
                 .description{
                     transition: transform .8s ease, opacity .4s ease;
                     will-change: transform; 
+                    @media screen and (max-width:990px){
+                        font-size: 4.5vw;
+                    }
                     
                     &.show {
                         transform: translateY(0);
@@ -105,10 +102,12 @@
         }
 
         &-slider{
+            position : relative;
             display : flex;
             flex-direction: column;
             align-items: flex-end;
             gap : 3.5vh;
+
             @media screen and (max-width : 990px){
                 width : 100%;
                 margin-bottom : 10vh;
@@ -117,12 +116,16 @@
             &--img{
                 position : relative;
                 width : 30vw;
-                height : 70vh; 
+                height : 80vh; 
                 overflow : hidden;
+                border-radius : 100vmax 100vmax 0 0;
+                border : 2px solid $noir;
                 
                 @media screen and (max-width : 990px){
                     width : 100%;
-                    height : 60vh;
+                    height : 45vh;
+                    border-radius : 0;
+                    border : none;
                 }
                 
 
@@ -143,10 +146,15 @@
             }
 
             &--arrows{
+                position : absolute;
+                right : 30px;
+                bottom : 30px;
                 display : flex;
                 gap : 1.5vw;
                 @media screen and (max-width : 990px){
-                   gap : 5vw;
+                    bottom : unset;
+                    top : 30px;
+                    gap : 5vw;
                 }
 
                 .arrow{
@@ -156,6 +164,7 @@
                     width : 3vw;
                     height : 3vw;
                     border : 1px solid $noir;
+                    background-color: $blanc;
                     border-radius : 100vmax;
                     transition : .3s ease;
                     cursor : pointer;
