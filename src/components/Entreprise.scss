@@ -55,7 +55,6 @@
                 gap : 3vh;
 
                 .subtitle{
-                    //font-size : 1.1vw;
                     color : $primary;
                 }
             }
@@ -69,10 +68,15 @@
                     width : 100%;
                 }
             }
+
+            .bouton{
+                &:hover{
+                    color : $secondary;
+                    &::after{
+                        background-color: $noir;
+                    }
+                } 
+            }
         }
-    }
-
-    &.entreprise-contact{
-
     }
 }

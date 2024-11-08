@@ -13,7 +13,7 @@
     a{
         transition : .3s ease;
         &:hover{
-            color : $secondary;
+            color : $primary;
         }
     }
 
@@ -100,6 +100,9 @@
             a{
                 font-size : inherit;
                 color : inherit;
+                &:hover{
+                    color : $primary;
+                }
             }
         }
     }
