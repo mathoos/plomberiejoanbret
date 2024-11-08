@@ -2,205 +2,187 @@
 
 .realisations{
     display : flex;
-    flex-direction: column;
-    gap : 13.8vh;
-    padding : 19.4vh 12.7vw;
-    background-color: $vert-pale;
+    background-color: $noir;
+    height : 100vh;
     
     @media screen and (max-width : 990px){
-        gap : 10vh;
-        padding : 15vh 30px;
+        flex-direction: column;
     }
 
-    &_container{
+    &_txt{
         display : flex;
-        justify-content: space-between;
         align-items: center;
+        width : 45vw;
+        padding : 7.5vw 8.5vw;
+        @media screen and (max-width : 990px){
+            width : 100%;
+            height : 60vh;
+            padding : 30px;
+        }
+
+        .container{
+            display : flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap : 10vh; 
+            width : 28vw;
+            height : 100%;
+            @media screen and (max-width : 990px){
+                gap : 5vh;
+                width : 100%;
+            }
+        }
+
+        &-title{
+            display : flex;
+            flex-direction: column;
+            gap : 3vh;
+            
+
+            h2{
+                color : $secondary;
+                transition: transform .8s ease, opacity .4s ease;
+                will-change: transform;  
+
+                &.show {
+                    transform: translateY(0);
+                    transition-delay : .3s;
+                }
+                
+                &.hide {
+                    transform: translateY(-100%);
+                    transition-delay : .3s;
+                    opacity : 0;
+                } 
+            }  
+
+            .subtitle{
+                color : $secondary;
+                transition: transform .8s ease, opacity .4s ease;
+                will-change: transform; 
+                
+                &.show {
+                    transform: translateY(0);
+                    transition-delay : .4s;
+                }
+                
+                &.hide {
+                    transform: translateY(-100%);
+                    transition-delay : .4s;
+                    opacity : 0;
+                } 
+            }
+        }    
+        
+        &-subtitle{
+            @media screen and (max-width : 990px){
+                width : 100%;
+            }
+
+            .description{
+                color : $secondary;
+                transition: transform .8s ease, opacity .4s ease;
+                will-change: transform; 
+                @media screen and (max-width:990px){
+                    font-size: 4.5vw;
+                }
+                
+                &.show {
+                    transform: translateY(0);
+                    transition-delay : .5s;
+                }
+                
+                &.hide {
+                    transform: translateY(-100%);
+                    transition-delay : .5s;
+                    opacity : 0;
+                } 
+            }
+        }   
+    }
+
+    &_slider{
+        position : relative;
+        width : 55vw;
 
         @media screen and (max-width : 990px){
-            flex-direction: column;
-            gap : 2.5vh;
+            width : 100%;
+            height : 40vh;
         }
 
-        &-txt{
-            display : flex;
-            flex-direction: column;
-            gap : 6.5vh;  
-            @media screen and (max-width : 990px){
-                width : 100%;
-                gap : 2.5vh;
-            }
-
-            &--title{
-                width : 100%;
-
-                h2{
-                    color : $vert;
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform;  
-
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .3s;
-                    }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .3s;
-                        opacity : 0;
-                    } 
-                }  
-            }    
+        &-img{
+            width : 100%;
+            height : 100%;
+            overflow : hidden;
             
-            &--subtitle{
-                display : flex;
-                flex-direction: column;
-                gap : 2.5vh;
-                width : 27vw;
-                @media screen and (max-width : 990px){
-                    width : 100%;
-                }
+            &::after{
+                position : absolute;
+                content : "";
+                left : 0;
+                bottom : 0;
+                width : 100%;
+                background-color: $secondary;
+            }
 
-                .subtitle{
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform; 
-                    @media screen and (max-width:990px){
-                        font-size: 4.5vw;
-                    }
-                    
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .4s;
-                    }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .4s;
-                        opacity : 0;
-                    } 
-                }
-
-                .description{
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform; 
-                    @media screen and (max-width:990px){
-                        font-size: 4.5vw;
-                    }
-                    
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .5s;
-                    }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .5s;
-                        opacity : 0;
-                    } 
-                }
-            }   
+            img{
+                width : 100%;
+                height : 100%;            
+                object-fit: cover;    
+            }
         }
 
-        &-slider{
-            position : relative;
-            display : flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap : 3.5vh;
+        &-arrows{
+            position : absolute;
+            left : -1.5vw;
+            bottom : 50%;
+            transform : translateY(50%);
 
             @media screen and (max-width : 990px){
-                width : 100%;
-                margin-bottom : 10vh;
-            }
-
-            &--img{
-                position : relative;
-                width : 30vw;
-                height : 80vh; 
-                overflow : hidden;
-                border-radius : 100vmax 100vmax 0 0;
-                border : 2px solid $noir;
-                
-                @media screen and (max-width : 990px){
-                    width : 100%;
-                    height : 45vh;
-                    border-radius : 0;
-                    border : none;
-                }
-                
-
-                &::after{
-                    position : absolute;
-                    content : "";
-                    left : 0;
-                    bottom : 0;
-                    width : 100%;
-                    background-color: $vert-pale;
-                }
-
-                img{
-                    width : 100%;
-                    height : 100%;            
-                    object-fit: cover;    
-                }
-            }
-
-            &--arrows{
-                position : absolute;
-                right : 30px;
                 bottom : 30px;
+                left : unset;
+                right : 30px;
+                transform : translateY(0);
+            }
+
+            .arrow{
                 display : flex;
-                gap : 1.5vw;
+                justify-content: center;
+                align-items: center;
+                width : 3vw;
+                height : 3vw;
+                background-color: $primary;
+                border-radius : 100vmax;
+                transition : .3s ease;
+                cursor : pointer;
                 @media screen and (max-width : 990px){
-                    bottom : unset;
-                    top : 30px;
-                    gap : 5vw;
+                    width : 15vw;
+                    height : 15vw;
                 }
 
-                .arrow{
-                    display : flex;
-                    justify-content: center;
-                    align-items: center;
-                    width : 3vw;
-                    height : 3vw;
-                    border : 1px solid $noir;
-                    background-color: $blanc;
-                    border-radius : 100vmax;
-                    transition : .3s ease;
-                    cursor : pointer;
-                    @media screen and (max-width : 990px){
-                        width : 15vw;
-                        height : 15vw;
-                    }
-
-                    &.arrow-left{
-                        svg{
-                            transform : rotate(90deg);
-                        }
-                    }
-
-                    &.arrow-right{
-                        svg{
-                            transform : rotate(-90deg);
-                        } 
-                    }
-
+                &.arrow-right{
                     svg{
-                        width : 1.2vw;
-                        will-change: transform;
-                        transition : .3s ease;
-                        @media screen and (max-width : 990px){
-                            width : 5vw;
-                            height : 5vw;
-                        }
-                    }
+                        transform : rotate(-90deg);
+                    } 
+                }
 
-                    &:hover{
-                        background-color: $noir;
-                        svg{
-                            path{
-                                fill : $blanc;
-                            }
+                svg{
+                    width : 1.2vw;
+                    will-change: transform;
+                    transition : .3s ease;
+                    path{
+                        fill : $secondary;
+                    }
+                    @media screen and (max-width : 990px){
+                        width : 5vw;
+                        height : 5vw;
+                    }
+                }
+
+                &:hover{
+                    background-color: $secondary;
+                    svg{
+                        path{
+                            fill : $primary;
                         }
                     }
                 }

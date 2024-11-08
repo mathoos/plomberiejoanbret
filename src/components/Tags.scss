@@ -1,35 +1,18 @@
 @import "../style.scss";
 
 .accelerateurs{
-    padding : 20vh 5vw;
-    @media screen and (max-width:990px){
-        display : none;
-    }
-
-    &.realisations-page{
-        padding : 0;
-        @media screen and (max-width:990px){
-            display : flex;
-        }
-
-        .bouton{
-            pointer-events : auto;
-        }
-    }
-
 
     &_container{
         display : flex;
         justify-content: space-between;
         flex-wrap : wrap;
-        gap : .5vw;
+        gap : 1vw;
         @media screen and (max-width:990px){
             gap : 2vw;
         }
   
         .bouton{
             min-height : 5vh;
-            pointer-events : none;
 
             @media screen and (max-width:990px){
                 min-height : 4vh;
@@ -43,13 +26,13 @@
                 }
             }
 
-            &.active{
-                color : $blanc;
-
+            &:hover, &.active{
+                color : $noir;
                 &::after{
+                    background-color: $secondary;
                     height : 100%;
                 }
-            }
+            }  
         }
     }
 }

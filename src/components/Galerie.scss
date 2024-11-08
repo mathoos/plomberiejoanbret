@@ -5,14 +5,15 @@
     flex-direction: column;
     gap : 10vh;
     padding : 19.4vh 8.5vw;
-    background-color: $blanc;
+    background-color: $primary;
+
     @media screen and (max-width : 990px){
         padding : 10vh 30px;
     }
 
     &_title{
         h2{
-            color : $vert;
+            color : $secondary;
         }
     }
 

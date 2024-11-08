@@ -13,7 +13,7 @@
     a{
         transition : .3s ease;
         &:hover{
-            color : $vert;
+            color : $secondary;
         }
     }
 
@@ -21,7 +21,7 @@
         display : flex;
         gap : 5.2vw;
         padding-bottom : 5vh;
-        border-bottom : 1px solid $blanc;
+        border-bottom : 1px solid $secondary;
         @media screen and (max-width : 990px){
             flex-direction: column;
             align-items: center;
@@ -41,7 +41,7 @@
 
             p, a{
                 font-size : .9vw;
-                color : $blanc;
+                color : $secondary;
                 @media screen and (max-width : 990px){
                     font-size : 3.5vw;
                     text-align : center;
@@ -78,7 +78,7 @@
                 }
 
                 img{
-                    width : 8vw;
+                    width : 4.5vw;
                     height : auto;
                     @media screen and (max-width:990px){
                         width : 25vw;
@@ -91,7 +91,7 @@
     &_copyright{
         p{
             font-size : .8vw;
-            color : $blanc;
+            color : $secondary;
             @media screen and (max-width:990px){
                 font-size : 3.5vw;
                 text-align : center;

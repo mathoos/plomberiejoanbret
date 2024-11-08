@@ -14,12 +14,14 @@
         flex-wrap: nowrap;      
 
         p{
-            font-family : "Archivo";
-            font-weight : 900;
+            font-family : $font-title;
             font-size : 3.7vw;
             white-space: nowrap;
-            color : $blanc;
+            color : $secondary;
             text-transform : uppercase;
+            font-variation-settings:
+                "wdth" 120,
+                "wght" $heavy;
             animation: marquee 20s linear infinite forwards;
             @media screen and (max-width:990px){
                 font-size : 10vw;
@@ -28,12 +30,16 @@
 
             span{
                 color : transparent;
-                -webkit-text-stroke: 2px $blanc;
+                -webkit-text-stroke: 2px $secondary;
 
                 @media screen and (max-width:990px){
                     -webkit-text-stroke: 1px $blanc;
                 }
             }
         }  
+    }
+
+    &.marron{
+        background-color: $primary;
     }
 }

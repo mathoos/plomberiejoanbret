@@ -1,17 +1,14 @@
 @import "../style.scss";
 
 .nav{
-    position : fixed;
+    position : absolute;
     top : 0;
     left : 0;
     display : flex;
     justify-content: space-between;
     width : 100%;
     padding : 2.5vh 5vw 2.5vh 8.5vw;
-    background: rgba(255, 255, 255, 0.342);
-    border-bottom : 2px solid $noir;
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    background-color: $primary;
     transform : translateY(-100%);
     animation : slideTop 1s ease .2s forwards;
     z-index : 100;
@@ -19,7 +16,6 @@
     @media screen and (max-width:990px){
         position : fixed;
         align-items: center;
-        border-bottom : 1px solid $noir;
         padding : 2vh 30px;
     }
 
@@ -51,14 +47,14 @@
         }
 
         &-link{
-            font-size : 1.25vw;
-            font-weight : 600;  
-            text-transform : none;  
+            font-size : 1.1vw;
+            color : $secondary;
+            font-family : $font-title;
+            font-variation-settings:
+                "wdth" 120,
+                "wght" $regular;
+            text-transform : uppercase;
             cursor: pointer;
-        }
-
-        .bouton{
-            min-height : 5vh;
         }
     }
 
@@ -73,7 +69,7 @@
             left : 0;
             width : 100%;
             height : 2px;
-            background-color: $noir;
+            background-color: $secondary;
             will-change : transform;
             transition : .5s ease;
 

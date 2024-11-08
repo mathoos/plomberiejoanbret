@@ -1,6 +1,6 @@
 import './Tags.scss';
 
-const Tags = ({ onTagClick, selectedTag, isHomePage }) => {
+const Tags = ({ onTagClick, selectedTag }) => {
     const tags = [
         { label: "Tous", value: "all" },
         { label: "Salle de bain", value: "salle de bain" },
@@ -12,12 +12,12 @@ const Tags = ({ onTagClick, selectedTag, isHomePage }) => {
     ];
 
     return (
-        <section className={`accelerateurs ${isHomePage ? '' : 'realisations-page'}`}>
+        <section className="accelerateurs">
             <div className="accelerateurs_container">
                 {tags.map((tag) => (
                     <button
                         key={tag.value}
-                        className={`bouton ${selectedTag === tag.value ? "active" : ""} ${isHomePage ? 'bouton_vert' : 'bouton_noir'}`}
+                        className={`bouton bouton_noir ${selectedTag === tag.value ? "active" : ""}`}
                         onClick={() => onTagClick(tag.value)}
                     >
                         {tag.label}

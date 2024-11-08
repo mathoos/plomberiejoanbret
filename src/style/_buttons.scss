@@ -5,72 +5,66 @@
     align-items: center;
     flex-wrap : nowrap;
     width : fit-content;
-    min-height : 7vh;
+    min-height : 5vh;
     padding : 0 2vw;
     border-radius: 100vmax; 
-    border-width : 2px;
-    border-style: solid;
-    background-color: transparent;
-    font-family : "Ysabeau Office";
     font-size : 1.1vw;
-    font-weight : 600;
-    line-height : 1;
     text-transform: uppercase;
+    font-family : $font-title;
+    font-variation-settings:
+        "wdth" 120,
+        "wght" $regular;
     cursor : pointer;
     overflow: hidden;
     transition : .3s ease;
     z-index : 1;
 
     @media screen and (max-width:990px){
-        font-size: 5vw;
+        font-size: 3.5vw;
         padding : 0 8vw;    
-        min-height : 6.5vh;
+        min-height : 5vh;
         white-space : nowrap;
     }  
 
     &:hover{
-        color : $blanc;
         &::after{
             height : 100%;
         }      
     }
 
-    &_blanc{
-        background-color: $blanc;
-        border-color : $vert;
-        color : $vert;
-        &::after{
-            background-color: $vert;
-        }
+    &_marron{
+        background-color: $primary;
+        color : $secondary;
+        &:hover{
+            color : $primary;
+            &::after{
+                background-color: $secondary;
+            }
+        }     
     }
 
-    &_vert{
-        border-color : $vert;
-        color : $vert;
-        &::after{
-            background-color: $vert;
-        }
+    &_beige{
+        background-color: $secondary;
+        color : $primary;
+        &:hover{
+            color : $secondary;
+            &::after{
+                background-color: $noir;
+            }
+        }  
     }
 
     &_noir{
-        border-color : $noir;
-        color : $noir;
-        &::after{
-            background-color: $noir;
-        }
-    }
-
-    &_invertNoir{
-        border-color : none;
-        color : $blanc;
         background-color: $noir;
-        &::after{
-            background-color: $blanc;
-        }
+        color : $secondary;
         &:hover{
             color : $noir;
-        }
+            &::after{
+                background-color: $secondary;
+            }
+        }  
     }
+
 
     &::after{
         position : absolute;

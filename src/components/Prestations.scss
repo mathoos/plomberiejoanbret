@@ -7,9 +7,14 @@
     gap : 13.8vh;
     padding : 19.4vh 8.5vw;
     overflow : hidden;
+    background-color: $primary;
     @media screen and (max-width : 990px){
         gap : 10vh;
         padding : 15vh 30px;
+    }
+
+    h2{
+        color : $noir;
     }
 
     &_forme{
@@ -39,7 +44,6 @@
         @media screen and (max-width : 990px){
             flex-direction: column;
             gap : 8vh;
-            padding : 0 10vw;
         }
 
         .bloc{
@@ -60,7 +64,8 @@
                 align-items: center;
                 width : 6.5vw;
                 height : 6.5vw;
-                border : 2px solid $noir;
+                //border : 2px solid $primary;
+                background-color: $secondary;;
                 border-radius: 100vmax;
 
                 @media screen and (max-width : 990px){
@@ -76,13 +81,10 @@
                     }
                 }
             }
-            
-            h3{
-                white-space : nowrap;
-            }
 
             p{
                 text-align : center;
+                color : $secondary;
             }
         }
     }
