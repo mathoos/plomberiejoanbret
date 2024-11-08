@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Parallax } from "react-scroll-parallax";
 import { add100Vh } from '../functions/add100vh';
-import PastilleTxt from "../img/pastilles/pastille-noire_txt.svg";
-import PastilleImg from "../img/pastilles/pastille-noire_img.svg";
+import PastilleTxt from "../img/pastilles/pastille-marron-txt.svg";
+import PastilleImg from "../img/pastilles/pastille-marron-img.svg";
 import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 import './Header.scss';
