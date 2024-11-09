@@ -1,15 +1,7 @@
 @import "../style.scss";
 
 .galerie{
-    display : flex;
-    flex-direction: column;
-    gap : 10vh;
-    padding : 19.4vh 8.5vw;
     background-color: $primary;
-
-    @media screen and (max-width : 990px){
-        padding : 10vh 30px;
-    }
 
     &_title{
         h2{
@@ -21,6 +13,7 @@
         display : flex;
         justify-content: space-between;
         gap : 3.5vw;
+        padding : 0 8.5vw 10vh 8.5vw;
         @media screen and (max-width : 990px){
             gap : 10px;
         }

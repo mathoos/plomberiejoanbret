@@ -8,10 +8,9 @@
     display : flex;
     justify-content : center;
     align-items: center;
-    gap : 3vw;
     width : 100%;
     height : 100vh;
-    background-color: $blanc;  
+    background-color: $noir;  
     padding : 10vh 15vw 10vh 15vw;
     transition : opacity .3s ease;
     z-index : 100;
@@ -28,9 +27,13 @@
     }
 
     &_image{
-        width : 43.5vw; 
-        height : 100%;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        width : 45vw; 
+        height : 80vh;
         overflow: hidden;
+
         @media screen and (max-width : 990px){
             width : 100%;
             height : 100%;
@@ -47,37 +50,13 @@
         }
     }
 
-    &_details{
-        display : flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width : 23.5vw;
-        height : 100%;
-        padding-top : 10vh;
-        @media screen and (max-width : 990px){
-            padding : 0;
-            width : 100%;
-            height : fit-content;
-        }
-        
-
-        &-txt{
-            display : flex;
-            flex-direction: column;
-            gap : 3vh;
-            @media screen and (max-width : 990px){
-                display : none;
-            }
-
-            h2{
-                font-size : 1.5vw;
-            }
-        }  
-    }
-
     &_arrows{
+        position : absolute;
         display : flex;
-        gap : 1.5vw;
+        align-items: center;
+        justify-content : space-between;
+        width : 45vw; 
+        height : 80vh;
 
         @media screen and (max-width : 990px){
             display : none;
@@ -92,8 +71,7 @@
             align-items: center;
             width : 3vw;
             height : 3vw;
-            border : 1px solid $noir;
-            background-color: $blanc;
+            background-color: $primary;
             border-radius : 100vmax;
             transition : .3s ease;
             cursor : pointer;
@@ -104,12 +82,14 @@
             }
 
             &.lightbox-prev{
+                margin-left : -1.5vw;
                 svg{
                     transform : rotate(90deg);
                 }
             }
 
             &.lightbox-next{
+                margin-right : -1.5vw;
                 svg{
                     transform : rotate(-90deg);
                     
@@ -119,7 +99,7 @@
             svg{
                 width : 1.2vw;
                 will-change: transform;
-                fill : $noir;
+                fill : $secondary;
                 transition : .3s ease;
                 @media screen and (max-width : 990px){
                     width : 5vw;
@@ -128,9 +108,9 @@
             }
 
             &:hover{
-                background-color: $noir;
+                background-color: $secondary;
                 svg{
-                    fill : $blanc;
+                    fill : $primary;
                 }
             }
         }
@@ -146,6 +126,7 @@
         justify-content: center;
         align-items: center;
         border-radius : 100%;
+        background-color: $secondary;;
         transition : .5s ease;
         will-change : transform;
         cursor : pointer;
@@ -158,8 +139,8 @@
         &-barre{
             position : absolute;           
             width : 1.5vw;
-            height : 2px;
-            background-color: $noir;
+            height : 1px;
+            background-color: $primary;
             transition : .3s ease;
             @media screen and (max-width : 990px){
                 width : 5vw;
@@ -179,9 +160,9 @@
         }
 
         &:hover{
-            background-color: $noir;
+            background-color: $primary;
             .lightbox_close-barre{
-                background-color : $blanc;
+                background-color : $secondary;
             }
         }
     }

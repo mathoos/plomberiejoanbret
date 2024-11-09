@@ -15,6 +15,9 @@
 
     h2{
         color : $noir;
+        @media screen and (max-width:990px){
+            font-size: 7.4vw;
+        }
     }
 
     &_forme{

@@ -150,6 +150,16 @@
             "tag" : "mobilier"
         },
         { 
+            "src" : "/realisations/mobilier/mobilier(14).jpg" , 
+            "alt" : "Texte alternatif",
+            "tag" : "mobilier"
+        },
+        { 
+            "src" : "/realisations/mobilier/mobilier(15).jpg" , 
+            "alt" : "Texte alternatif",
+            "tag" : "mobilier"
+        },
+        { 
             "src" : "/realisations/amenagement-pmr/amenagement-pmr(1).jpg" , 
             "alt" : "Texte alternatif",
             "tag" : "pmr"
@@ -246,6 +256,21 @@
         },
         { 
             "src" : "/realisations/salle-de-douche/salle-de-douche(15).jpg" , 
+            "alt" : "Texte alternatif",
+            "tag" : "salle de douche"
+        },
+        { 
+            "src" : "/realisations/salle-de-douche/salle-de-douche(16).jpg" , 
+            "alt" : "Texte alternatif",
+            "tag" : "salle de douche"
+        },
+        { 
+            "src" : "/realisations/salle-de-douche/salle-de-douche(17).jpg" , 
+            "alt" : "Texte alternatif",
+            "tag" : "salle de douche"
+        },
+        { 
+            "src" : "/realisations/salle-de-douche/salle-de-douche(18).jpg" , 
             "alt" : "Texte alternatif",
             "tag" : "salle de douche"
         },

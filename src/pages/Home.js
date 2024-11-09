@@ -6,7 +6,7 @@ import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
 import HeaderImg from "../img/galerie/header_home.jpg";
 import SalleDeBain from "../img/galerie/cuisine(6).jpg";
-import SalleDeDouche from "../img/galerie/salle-de-douche-moderne.jpg";
+import SalleDeDouche from "../img/galerie/cuisineAmericaine2.jpg";
 
 
 function Home() {
