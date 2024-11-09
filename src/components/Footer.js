@@ -1,9 +1,9 @@
 import Pastille from "../img/logos/logo-plomberie-circle-beige.svg";
 import './Footer.scss';
 
-function Footer(){
+function Footer({className}){
     return(
-        <footer className="footer">
+        <footer className={`footer ${className || ""}`}>
             <div className="footer_container">
                 <div className="footer_container-bloc">
                     <h4>Adresse</h4>

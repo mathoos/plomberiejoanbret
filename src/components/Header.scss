@@ -49,11 +49,13 @@
                     font-size : 3vw;
                 }
             }
-
-            &-button{
-
-            }
         }  
+
+        &-button{
+            opacity : 0;
+            transform : translateY(-50%);
+            animation : slideTop 1s ease .8s forwards;
+        }
     }
 
     &_img{

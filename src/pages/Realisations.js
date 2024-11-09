@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Marquee from '../components/Marquee';
 import Galerie from '../components/Galerie';
 import Footer from '../components/Footer';
 import HeaderImg from "../img/galerie/cuisine(3).jpg";
@@ -18,8 +19,13 @@ function Home() {
                         à travers nos réalisations
                     `} 
             />
+            <Marquee
+                className="marron"
+            />
             <Galerie/>
-            <Footer/>
+            <Footer
+                className="realisations-page"
+            />
         </div>
     )
 }
