@@ -31,11 +31,12 @@ const Realisations = () => {
 
 
     return (
-        <section className="realisations" id="realisations">
+        <div className="realisations" id="realisations">
+            <section className="realisations_container">
 
-            <div className="realisations_txt">
+            <div className="realisations_container-txt">
                 <div className="container">
-                    <div className="realisations_txt-title">
+                    <div className="realisations_container-txt--title">
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <h2 dangerouslySetInnerHTML={{__html: photographies[currentImageIndex]?.title}}></h2>    
                         </Reveal> 
@@ -45,7 +46,7 @@ const Realisations = () => {
                             </p>
                         </Reveal>
                     </div>
-                    <div className="realisations_txt-subtitle">
+                    <div className="realisations_container-txt--subtitle">
                         
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
                             <p className="description">
@@ -58,14 +59,14 @@ const Realisations = () => {
                     </Reveal>
                 </div>
             </div>
-            
-            <div className="realisations_slider">
-                <figure className="realisations_slider-img">
+
+            <div className="realisations_container-slider">
+                <figure className="realisations_container-slider--img">
                     <Reveal keyframes={scaleAnimation} className="reveal">
                         <img src={photographies[currentImageIndex]?.photo} alt="Réalisation"/>
                     </Reveal>
                 </figure>          
-                <div className="realisations_slider-arrows">
+                <div className="realisations_container-slider--arrows">
                     <figure className="arrow arrow-right" onClick={showNextImage}>
                         <svg viewBox="0 0 38 41" xmlns="http://www.w3.org/2000/svg">
                             <path d="M36.5251 27.556L37.5146 27.4117L37.226 25.4326L36.2365 25.5769L36.5251 27.556ZM18.4167 39.5392C18.1622 40.0293 18.3533 40.633 18.8434 40.8875C19.3336 41.142 19.9372 40.951 20.1917 40.4608L18.4167 39.5392ZM36.2365 25.5769C32.3299 26.1466 23.5068 29.736 18.4167 39.5392L20.1917 40.4608C24.9377 31.3203 33.1457 28.0488 36.5251 27.556L36.2365 25.5769Z" fill="#1F1F1F"/>
@@ -75,8 +76,10 @@ const Realisations = () => {
                     </figure>
                 </div>
             </div>
-          
-        </section>
+
+            </section>
+        </div>
+                    
     ) 
 }
 

@@ -1,189 +1,198 @@
 @import "../style.scss";
 
+
 .realisations{
-    display : flex;
-    background-color: $noir;
-    height : 100vh;
-    
-    @media screen and (max-width : 990px){
-        flex-direction: column;
-    }
+    position : relative;
+    width : 100%;
+    height : 150vh;
 
-    &_txt{
+    &_container{
+        position : sticky;
+        top : 0;
         display : flex;
-        align-items: center;
-        width : 45vw;
-        padding : 7.5vw 8.5vw;
-        @media screen and (max-width : 990px){
-            width : 100%;
-            height : 60vh;
-            padding : 30px;
-        }
-
-        .container{
-            display : flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap : 10vh; 
-            width : 28vw;
-            height : 100%;
-            @media screen and (max-width : 990px){
-                gap : 5vh;
-                width : 100%;
-            }
-        }
-
-        &-title{
-            display : flex;
-            flex-direction: column;
-            gap : 3vh;
-            @media screen and (max-width:990px){
-                gap : 2vh;
-            }
-            
-
-            h2{
-                color : $secondary;
-                transition: transform .8s ease, opacity .4s ease;
-                will-change: transform; 
-
-                &.show {
-                    transform: translateY(0);
-                    transition-delay : .3s;
-                }
-                
-                &.hide {
-                    transform: translateY(-100%);
-                    transition-delay : .3s;
-                    opacity : 0;
-                } 
-            }  
-
-            .subtitle{
-                color : $secondary;
-                transition: transform .8s ease, opacity .4s ease;
-                will-change: transform; 
-                
-                &.show {
-                    transform: translateY(0);
-                    transition-delay : .4s;
-                }
-                
-                &.hide {
-                    transform: translateY(-100%);
-                    transition-delay : .4s;
-                    opacity : 0;
-                } 
-            }
-        }    
+        background-color: $noir;
+        height : 100vh;
         
-        &-subtitle{
-            @media screen and (max-width : 990px){
-                width : 100%;
-            }
-
-            .description{
-                color : $secondary;
-                transition: transform .8s ease, opacity .4s ease;
-                will-change: transform; 
-                @media screen and (max-width:990px){
-                    font-size: 4.5vw;
-                }
-                
-                &.show {
-                    transform: translateY(0);
-                    transition-delay : .5s;
-                }
-                
-                &.hide {
-                    transform: translateY(-100%);
-                    transition-delay : .5s;
-                    opacity : 0;
-                } 
-            }
-        }   
-    }
-
-    &_slider{
-        position : relative;
-        width : 55vw;
-
         @media screen and (max-width : 990px){
-            width : 100%;
-            height : 40vh;
+            flex-direction: column;
         }
-
-        &-img{
-            width : 100%;
-            height : 100%;
-            overflow : hidden;
-            
-            &::after{
-                position : absolute;
-                content : "";
-                left : 0;
-                bottom : 0;
-                width : 100%;
-                background-color: $secondary;
-            }
-
-            img{
-                width : 100%;
-                height : 100%;            
-                object-fit: cover;    
-            }
-        }
-
-        &-arrows{
-            position : absolute;
-            left : -1.5vw;
-            bottom : 50%;
-            transform : translateY(50%);
-
+    
+        &-txt{
+            display : flex;
+            align-items: center;
+            width : 45vw;
+            padding : 7.5vw 8.5vw;
             @media screen and (max-width : 990px){
-                left : unset;
-                right : 30px;
+                width : 100%;
+                height : 60vh;
+                padding : 30px;
             }
-
-            .arrow{
+    
+            .container{
                 display : flex;
-                justify-content: center;
-                align-items: center;
-                width : 3vw;
-                height : 3vw;
-                background-color: $primary;
-                border-radius : 100vmax;
-                transition : .3s ease;
-                cursor : pointer;
+                flex-direction: column;
+                justify-content: space-between;
+                gap : 10vh; 
+                width : 28vw;
+                height : 100%;
                 @media screen and (max-width : 990px){
-                    width : 15vw;
-                    height : 15vw;
+                    gap : 5vh;
+                    width : 100%;
                 }
-
-                &.arrow-right{
-                    svg{
-                        transform : rotate(-90deg);
+            }
+    
+            &--title{
+                display : flex;
+                flex-direction: column;
+                gap : 3vh;
+                @media screen and (max-width:990px){
+                    gap : 2vh;
+                }
+                
+    
+                h2{
+                    color : $secondary;
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform; 
+    
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .3s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .3s;
+                        opacity : 0;
+                    } 
+                }  
+    
+                .subtitle{
+                    color : $secondary;
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform; 
+                    
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .4s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .4s;
+                        opacity : 0;
                     } 
                 }
-
-                svg{
-                    width : 1.2vw;
-                    will-change: transform;
-                    transition : .3s ease;
-                    path{
-                        fill : $secondary;
-                    }
-                    @media screen and (max-width : 990px){
-                        width : 5vw;
-                        height : 5vw;
-                    }
+            }    
+            
+            &--subtitle{
+                @media screen and (max-width : 990px){
+                    width : 100%;
                 }
-
-                &:hover{
+    
+                .description{
+                    color : $secondary;
+                    transition: transform .8s ease, opacity .4s ease;
+                    will-change: transform; 
+                    @media screen and (max-width:990px){
+                        font-size: 4.5vw;
+                    }
+                    
+                    &.show {
+                        transform: translateY(0);
+                        transition-delay : .5s;
+                    }
+                    
+                    &.hide {
+                        transform: translateY(-100%);
+                        transition-delay : .5s;
+                        opacity : 0;
+                    } 
+                }
+            }   
+        }
+    
+        &-slider{
+            position : relative;
+            width : 55vw;
+    
+            @media screen and (max-width : 990px){
+                width : 100%;
+                height : 40vh;
+            }
+    
+            &--img{
+                width : 100%;
+                height : 100%;
+                overflow : hidden;
+                
+                &::after{
+                    position : absolute;
+                    content : "";
+                    left : 0;
+                    bottom : 0;
+                    width : 100%;
                     background-color: $secondary;
+                }
+    
+                img{
+                    width : 100%;
+                    height : 100%;            
+                    object-fit: cover;    
+                }
+            }
+    
+            &--arrows{
+                position : absolute;
+                left : -1.5vw;
+                bottom : 50%;
+                transform : translateY(50%);
+    
+                @media screen and (max-width : 990px){
+                    left : unset;
+                    right : 30px;
+                }
+    
+                .arrow{
+                    display : flex;
+                    justify-content: center;
+                    align-items: center;
+                    width : 3vw;
+                    height : 3vw;
+                    background-color: $primary;
+                    border-radius : 100vmax;
+                    transition : .3s ease;
+                    cursor : pointer;
+                    @media screen and (max-width : 990px){
+                        width : 15vw;
+                        height : 15vw;
+                    }
+    
+                    &.arrow-right{
+                        svg{
+                            transform : rotate(-90deg);
+                        } 
+                    }
+    
                     svg{
+                        width : 1.2vw;
+                        will-change: transform;
+                        transition : .3s ease;
                         path{
-                            fill : $primary;
+                            fill : $secondary;
+                        }
+                        @media screen and (max-width : 990px){
+                            width : 5vw;
+                            height : 5vw;
+                        }
+                    }
+    
+                    &:hover{
+                        background-color: $secondary;
+                        svg{
+                            path{
+                                fill : $primary;
+                            }
                         }
                     }
                 }
