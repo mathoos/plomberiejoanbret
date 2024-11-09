@@ -8,6 +8,11 @@ RewriteRule ^ https://plomberiejoanbret.fr%{REQUEST_URI} [R=301,L]
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
+# Supprimer définitivement les anciennes pages en renvoyant un code 410
+Redirect gone /realisations.html
+Redirect gone /Pages/Prestations/Prestations.html
+Redirect gone /Pages/Réalisations/realisations.html
+
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
 PassengerAppRoot "/home/plomepuw/public_html/backend"
 PassengerBaseURI "/"
