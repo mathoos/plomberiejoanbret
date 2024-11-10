@@ -1,0 +1,29 @@
+@import "../style.scss";
+
+.mentions-legales{
+    display : flex;
+    flex-direction: column;
+    gap : 10vh;
+    width : 100%;
+    min-height : 100vh;
+    padding : 20vh 8.5vw;
+    background-color: $noir;
+
+    h1{
+        margin-bottom : 10vh;
+    }
+
+    &_bloc{
+        display : flex;
+        flex-direction: column;
+        gap : 2.5vh;
+
+        h3{
+            text-align : left;
+        }
+
+        p{
+            color : $secondary;
+        }
+    }
+}

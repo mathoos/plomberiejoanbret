@@ -24,7 +24,7 @@ function Footer({className}){
                 </figure>
             </div>
             <div className="footer_copyright">
-                <p>Copyright 2024 - Entreprise de Plomberie Joan Bret | Plombier sur Rouen et périphérie - <a href="/">Mentions légales</a> </p>
+                <p>Copyright 2024 - Entreprise de Plomberie Joan Bret | Plombier sur Rouen et périphérie - <a href="/mentions-legales">Mentions légales</a> </p>
                 <p>Site designé et développé par <a href="https://mathilde-bret.onrender.com/" target="_blank" rel="noreferrer">Mathilde Bret</a></p>
             </div>
         </footer>
