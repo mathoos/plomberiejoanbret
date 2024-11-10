@@ -11,7 +11,7 @@
     background-color: $primary;
     transform : translateY(-100%);
     animation : slideTop 1s ease .2s forwards;
-    z-index : 100;
+    z-index : 200;
 
     @media screen and (max-width:990px){
         position : fixed;

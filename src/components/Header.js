@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Parallax } from "react-scroll-parallax";
 import { add100Vh } from '../functions/add100vh';
 import PastilleTxt from "../img/pastilles/pastille-marron-txt.svg";
@@ -16,6 +17,9 @@ const Header = ({
     txt,
     children
     }) => {
+
+        const location = useLocation();
+        const contactLink = location.pathname === "/" ? "#contact" : "/#contact";
 
         useEffect(() => {
             add100Vh();
@@ -36,7 +40,7 @@ const Header = ({
                         <p className="subtitle" dangerouslySetInnerHTML={{ __html: txt }} />
                     </div> 
                     <div className="header_txt-button">
-                        <a href="#contact" className="bouton bouton_marron">Nous contacter</a>
+                        <a href={contactLink} className="bouton bouton_marron">Nous contacter</a>
                     </div>
                 </div>
             )}

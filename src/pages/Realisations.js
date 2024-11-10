@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import HeaderImg from "../img/galerie/cuisine(3).jpg";
 
 
-function Home() {
+function Realisations() {
     return (
         <div>
             <Header 
@@ -31,4 +31,4 @@ function Home() {
 }
 
 
-export default Home;
+export default Realisations;

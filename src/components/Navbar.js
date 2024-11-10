@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "../img/logos/logo-plomberie-circle-beige.svg";
-import {Link} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { clearToken } from "../utilities/Slice";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import './Navbar.scss';
 const Navbar = ({ isUserPage }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogout = async () => {
         try {
@@ -20,6 +21,9 @@ const Navbar = ({ isUserPage }) => {
             console.error("Une erreur s'est produite lors de la déconnexion :", error);
         }
     };
+
+    const entrepriseLink = location.pathname === "/" ? "#entreprise" : "/#entreprise";
+    const prestationsLink = location.pathname === "/" ? "#prestations" : "/#prestations";
 
 
     return(   
@@ -34,8 +38,8 @@ const Navbar = ({ isUserPage }) => {
                     <button className="nav_links-link" onClick={handleLogout}>Déconnexion</button>
                 ) : (
                     <>
-                        <a href="#entreprise" className="nav_links-link">L'entreprise</a>
-                        <a href="#prestations" className="nav_links-link">Prestations</a>
+                        <a href={entrepriseLink} className="nav_links-link">L'entreprise</a>
+                        <a href={prestationsLink} className="nav_links-link">Prestations</a>
                         <a href="/realisations" className="nav_links-link">Réalisations</a>
                         <Link to="tel:0235607629" className="bouton bouton_beige">02 35 60 76 29</Link>
                     </>

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
@@ -10,6 +12,18 @@ import SalleDeDouche from "../img/galerie/cuisineAmericaine2.jpg";
 
 
 function Home() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const sectionId = location.hash.replace("#", "");
+        if (sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
 
     return (
         <div>           
