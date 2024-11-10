@@ -12,6 +12,7 @@ import './Header.scss';
 const Header = ({ 
     showHeaderTxt=true,
     img,
+    imgMobile,
     title,
     span,
     txt,
@@ -47,7 +48,8 @@ const Header = ({
 
             <figure className="header_img">
                 <Parallax translateY={['-200px', '200px']}>
-                    <img src={img} alt="Salle de bain"/>
+                    <img src={img} className="hidden-mobile" alt="Salle de bain"/>
+                    <img src={imgMobile} className="hidden-pc" alt="Salle de bain"/>
                 </Parallax>
             </figure>
             
