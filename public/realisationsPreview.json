@@ -1,7 +1,7 @@
 {
     "photographies": [
     {
-        "title" : "Salle <br/> de bain",
+        "title" : "Salle <br> de bain",
         "subtitle" : "Plus qu'une simple pièce fonctionnelle, la salle de bain est un lieu de détente.",
         "description" : "Nous comprenons l'importance de la salle de bain en tant que lieu de bien-être, et c'est pourquoi nous sommes dédiés à créer des salles de bain sur mesure et fonctionnelles, pour répondre à vos besoins, votre style et vos préférences.",
         "photo": "/slider/salle-de-bain.jpg"
@@ -15,7 +15,7 @@
     {
         "title" : "Salle <br> d'eau",
         "subtitle" : "Une pièce fonctionnelle où domine le souci du confort et de l'hygiène.",
-        "description" : "Nous proposons une gamme variée de toilettes, avec des options écoénergétiques pour réduire votre empreinte écologique. Nous intervenons également sur les problèmes de fuites, de débouchage de canalisations, ou tout autre problème de toilettes qui peut perturber votre quotidien.",
+        "description" : "Nous proposons une gamme variée de toilettes. Nous intervenons également sur les problèmes de fuites, de débouchage de canalisations, ou tout autre problème de toilettes qui peut perturber votre quotidien.",
         "photo": "/slider/toilette.jpg"
     },
     {

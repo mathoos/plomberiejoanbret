@@ -14,144 +14,124 @@
         height : 100vh;
         
         @media screen and (max-width : 990px){
+            height : 90vh;
             top : 10vh;
             flex-direction: column;
         }
     
         &-txt{
+            position : relative;
             display : flex;
             align-items: center;
             width : 45vw;
             padding : 7.5vw 8.5vw;
+            
             @media screen and (max-width : 990px){
                 width : 100%;
-                height : 60vh;
-                padding : 30px;
+                height : 55vh;
+                padding : 5vh 30px;
             }
     
-            .container{
+            .container-txt{
                 display : flex;
                 flex-direction: column;
-                justify-content: space-between;
                 gap : 10vh; 
                 width : 28vw;
                 height : 100%;
                 @media screen and (max-width : 990px){
-                    gap : 5vh;
+                    justify-content: flex-end;
+                    gap : 3.5vh;
                     width : 100%;
                 }
-            }
-    
-            &--title{
-                display : flex;
-                flex-direction: column;
-                gap : 3vh;
-                @media screen and (max-width:990px){
-                    gap : 2vh;
-                }
-                
-    
-                h2{
-                    color : $secondary;
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform; 
-    
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .3s;
-                    }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .3s;
-                        opacity : 0;
-                    } 
-                }  
-    
-                .subtitle{
-                    color : $secondary;
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform; 
-                    
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .4s;
-                    }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .4s;
-                        opacity : 0;
-                    } 
-                }
-            }    
-            
-            &--subtitle{
-                @media screen and (max-width : 990px){
-                    width : 100%;
-                }
-    
-                .description{
-                    color : $secondary;
-                    transition: transform .8s ease, opacity .4s ease;
-                    will-change: transform; 
+
+                &_content{
+                    display : flex;
+                    flex-direction: column;
+                    gap : 3vh;
+
                     @media screen and (max-width:990px){
-                        font-size: 4.5vw;
+                        gap : 2vh;
                     }
-                    
-                    &.show {
-                        transform: translateY(0);
-                        transition-delay : .5s;
+
+                    &--title{
+                        position : relative;
+                        width : 100%;
+                        overflow : hidden;
+
+                        .slides-titles{
+                            position: absolute;
+                            left: 0;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        h2{         
+                            font-size: 2.7vw;                
+                            color : $secondary;
+                            padding-top : 10px;       
+                            @media screen and (max-width:990px){
+                                font-size: 6.5vw;
+                                padding-top : 5px;
+                            }                
+                        }
                     }
-                    
-                    &.hide {
-                        transform: translateY(-100%);
-                        transition-delay : .5s;
-                        opacity : 0;
+
+                    &--subtitle{
+                        position : relative;
+                        width : 100%;
+                        overflow : hidden;
+
+                        .slides-subtitles{
+                            position: absolute;
+                            left: 0;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .subtitle{
+                            color : $secondary; 
+                            @media screen and (max-width:990px){
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }  
+
+                    &--description{
+                        position : relative;
+                        width : 100%;
+                        overflow : hidden;
+
+                        .slides-descriptions{
+                            position: absolute;
+                            left: 0;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .description{
+                            color : $secondary;
+                            padding-bottom : 10px;
+                            @media screen and (max-width:990px){
+                                font-size: 4vw;
+                                padding-bottom : 1px;
+                            }
+                        }
                     } 
-                }
-            }   
-        }
-    
-        &-slider{
-            position : relative;
-            width : 55vw;
-    
-            @media screen and (max-width : 990px){
-                width : 100%;
-                height : 40vh;
-            }
-    
-            &--img{
-                width : 100%;
-                height : 100%;
-                overflow : hidden;
-                
-                &::after{
-                    position : absolute;
-                    content : "";
-                    left : 0;
-                    bottom : 0;
-                    width : 100%;
-                    background-color: $secondary;
-                }
-    
-                img{
-                    width : 100%;
-                    height : 100%;            
-                    object-fit: cover;    
-                }
-            }
-    
+                }      
+            } 
+            
             &--arrows{
                 position : absolute;
-                left : -1.5vw;
+                right : -1.5vw;
                 bottom : 50%;
                 transform : translateY(50%);
+                z-index : 5;
     
                 @media screen and (max-width : 990px){
                     left : unset;
                     right : 30px;
+                    bottom : calc(-35vh + 30px);
+                    transform : none;
                 }
     
                 .arrow{
@@ -201,6 +181,42 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    
+        &-slider{
+            position : relative;
+            width : 55vw;
+            height : 100%;
+            overflow : hidden;
+    
+            @media screen and (max-width : 990px){
+                width : 100vw;
+                height : 35vh;
+            }
+
+            .slides {
+                position: absolute;
+                top: 0;
+                left: -55vw;
+                display: flex;
+                @media screen and (max-width : 990px){
+                    left : -100vw;
+                }
+
+                .slide{
+                    width: 55vw;
+                    height : 100%;
+                    @media screen and (max-width : 990px){
+                        width : 100vw;
+                    }
+        
+                    img{
+                        width : 100%;
+                        height : 100%;            
+                        object-fit: cover;    
                     }
                 }
             }
