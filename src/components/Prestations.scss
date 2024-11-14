@@ -7,14 +7,13 @@
     gap : 13.8vh;
     padding : 19.4vh 8.5vw;
     overflow : hidden;
-    background-color: $primary;
+    background-color: $secondary;
     @media screen and (max-width : 990px){
         gap : 10vh;
         padding : 15vh 30px;
     }
 
     h2{
-        color : $noir;
         @media screen and (max-width:990px){
             font-size: 7.4vw;
         }
@@ -32,7 +31,7 @@
         img{
             width : 30vw;
             height : auto;
-            opacity : .6;
+            opacity : .7;
             @media screen and (max-width:990px){
                 display : none;
             }
@@ -67,8 +66,8 @@
                 align-items: center;
                 width : 6.5vw;
                 height : 6.5vw;
-                //border : 2px solid $primary;
-                background-color: $secondary;;
+                border : 2px solid $primary;
+                background-color: $secondary;
                 border-radius: 100vmax;
 
                 @media screen and (max-width : 990px){
@@ -87,7 +86,7 @@
 
             p{
                 text-align : center;
-                color : $secondary;
+                color : $primary;
             }
         }
     }

@@ -11,12 +11,17 @@
 
     h1{
         margin-bottom : 10vh;
+        color : $primary;
     }
 
     &_bloc{
         display : flex;
         flex-direction: column;
         gap : 2.5vh;
+
+        h2{
+            color : $secondary;
+        }
 
         h3{
             text-align : left;

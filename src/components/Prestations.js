@@ -1,6 +1,6 @@
 import { Parallax } from "react-scroll-parallax";
 import { Reveal } from "react-awesome-reveal";
-import LogoNoir from "../img/logos/logo-plomberie-noir.svg";
+import Logo from "../img/logos/logo-plomberie-marron.svg";
 import PictogrammeSalleDeBain from "../img/pictogrammes/baignoire-marron.svg";
 import PictogrammeSalleDeDouche from "../img/pictogrammes/douche-marron.svg";
 import PictogrammeCuisine from "../img/pictogrammes/cuisine-marron.svg";
@@ -17,8 +17,8 @@ const Prestations = () => {
         <section className="prestations" id="prestations">
 
             <figure className="prestations_forme">
-                <Parallax translateY={['50px', '-50px']} easing="ease">
-                    <img src={LogoNoir} alt="Logo Plomberie Joan Bret"/>
+                <Parallax translateY={['-50px', '50px']} easing="ease">
+                    <img src={Logo} alt="Logo Plomberie Joan Bret"/>
                 </Parallax>
             </figure>
 

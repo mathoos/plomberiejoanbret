@@ -2,7 +2,7 @@
 
 .entreprise{
     display : flex;
-    background-color: $secondary;
+    background-color: $primary;
     @media screen and (max-width:990px){
         flex-direction: column-reverse;
     }
@@ -54,8 +54,12 @@
                 flex-direction: column;
                 gap : 3vh;
 
+                h2{
+                    color : $noir;
+                }
+
                 .subtitle{
-                    color : $primary;
+                    color : $noir;
                 }
             }
 
@@ -64,19 +68,63 @@
                 flex-direction: column;
                 gap : 5vh;
 
+                p{
+                    color : $secondary;
+                }
+
                 @media screen and (max-width:990px){
                     width : 100%;
                 }
             }
 
-            .bouton{
-                &:hover{
-                    color : $secondary;
-                    &::after{
-                        background-color: $noir;
-                    }
-                } 
-            }
+            // .bouton{
+            //     &:hover{
+            //         color : $secondary;
+            //         &::after{
+            //             background-color: $noir;
+            //         }
+            //     } 
+            // }
         }
+    }
+
+    &.entreprise-contact{
+        background-color: $secondary;
+
+        .entreprise_bloc{
+            &-container{               
+                &--title{
+                    h2{
+                        color : $primary;
+                    }
+    
+                    .subtitle{
+                        color : $primary;
+                    }
+                }
+    
+                &--txt{
+                    p{
+                        color : $noir;
+
+                        a{
+                            transition : .3s ease;
+                            &:hover{
+                                color : $primary;
+                            }
+                        }
+                    }
+                }
+    
+                .bouton{
+                    &:hover{
+                        color : $secondary;
+                        &::after{
+                            background-color: $noir;
+                        }
+                    } 
+                }
+            }
+        }  
     }
 }

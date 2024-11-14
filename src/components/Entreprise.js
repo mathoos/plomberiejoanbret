@@ -30,14 +30,13 @@ const Entreprise = ({id, img, alt, title, subtitle, txt, a, href, link, classNam
                     </div>
                     
                     <div className="entreprise_bloc-container--txt">
-                       
                         <Reveal keyframes={bottomAnimation} triggerOnce="true">
-                            <p dangerouslySetInnerHTML={{ __html: txt }}></p>
+                            <p>{txt}</p>
                         </Reveal> 
                     </div>
                     <Reveal keyframes={bottomAnimation} triggerOnce={true}>
                         {a && (
-                            <a href={href} className="bouton bouton_marron">
+                            <a href={href} className="bouton bouton_noir">
                                 {a}
                             </a>
                         )}
