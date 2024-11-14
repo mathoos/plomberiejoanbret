@@ -1,318 +1,274 @@
 {
-    "photographies": [
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(6).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(7).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(8).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(9).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/salle-de-bain/salle-de-bain(10).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de bain"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(6).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/cuisine/cuisine(7).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "cuisine"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(6).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(7).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(8).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(9).jpg" , 
-            "alt" : "Texte alternatif"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(10).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(11).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(12).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(13).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(14).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/mobilier/mobilier(15).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "mobilier"
-        },
-        { 
-            "src" : "/realisations/amenagement-pmr/amenagement-pmr(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "pmr"
-        },
-        { 
-            "src" : "/realisations/amenagement-pmr/amenagement-pmr(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "pmr"
-        },
-        { 
-            "src" : "/realisations/amenagement-pmr/amenagement-pmr(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "pmr"
-        },
-        { 
-            "src" : "/realisations/amenagement-pmr/amenagement-pmr(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "pmr"
-        },
-        { 
-            "src" : "/realisations/amenagement-pmr/amenagement-pmr(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "pmr"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(6).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(7).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(8).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(9).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(10).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(11).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(12).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(13).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(14).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(15).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(16).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(17).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/salle-de-douche/salle-de-douche(18).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "salle de douche"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(1).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(2).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(3).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(4).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(5).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(6).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(7).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        },
-        { 
-            "src" : "/realisations/toilette/toilette(8).jpg" , 
-            "alt" : "Texte alternatif",
-            "tag" : "toilette"
-        }
-    ]
+    "photographies": {
+
+        "salle de bain": [
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(1).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(2).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(3).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(4).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(5).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(6).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(7).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(8).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(9).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(10).jpg" , 
+                "alt" : "Salle de bain"
+            }
+        ],
+
+        "cuisine": [
+            { 
+                "src" : "/realisations/cuisine/cuisine(1).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(2).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(3).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(4).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(5).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(6).jpg" , 
+                "alt" : "Cuisine"
+            },
+            { 
+                "src" : "/realisations/cuisine/cuisine(7).jpg" , 
+                "alt" : "Cuisine"
+            }
+        ],
+
+        "mobilier": [
+            { 
+                "src" : "/realisations/mobilier/mobilier(1).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(2).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(3).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(4).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(5).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(6).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(7).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(8).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(9).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(10).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(11).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(12).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(13).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(14).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(15).jpg" , 
+                "alt" : "Mobilier"
+            }
+        ],
+
+        "pmr": [
+            { 
+                "src" : "/realisations/amenagement-pmr/amenagement-pmr(1).jpg" , 
+                "alt" : "Aménagement PMR"
+            },
+            { 
+                "src" : "/realisations/amenagement-pmr/amenagement-pmr(2).jpg" , 
+                "alt" : "Aménagement PMR"
+            },
+            { 
+                "src" : "/realisations/amenagement-pmr/amenagement-pmr(3).jpg" , 
+                "alt" : "Aménagement PMR"
+            },
+            { 
+                "src" : "/realisations/amenagement-pmr/amenagement-pmr(4).jpg" , 
+                "alt" : "Aménagement PMR"
+            },
+            { 
+                "src" : "/realisations/amenagement-pmr/amenagement-pmr(5).jpg" , 
+                "alt" : "Aménagement PMR"
+            }
+        ],
+
+        "salle de douche": [
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(1).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(2).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(3).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(4).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(5).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(6).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(7).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(8).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(9).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(10).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(11).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(12).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(13).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(14).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(15).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(16).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(17).jpg" , 
+                "alt" : "Salle de douche"
+            },
+            { 
+                "src" : "/realisations/salle-de-douche/salle-de-douche(18).jpg" , 
+                "alt" : "Salle de douche"
+            }
+        ],
+
+        "toilette": [
+            { 
+                "src" : "/realisations/toilette/toilette(1).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(2).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(3).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(4).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(5).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(6).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(7).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(8).jpg" , 
+                "alt" : "Toilette"
+            }
+        ]
+    }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; 
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Reveal } from "react-awesome-reveal";
 import { bottomAnimation } from "../functions/keyframes";
 import Tags from './Tags';
@@ -17,14 +17,29 @@ const Galerie = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    // Fonction pour mélanger les images
+    const shuffleArray = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
     // Charger les images à partir du fichier JSON
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await fetch('/photographies.json');
                 const data = await res.json();
-                setImages(data.photographies);
-                setFilteredImages(data.photographies);
+
+                // Créer une liste plate d'images avec leurs tags
+                const flattenedImages = [];
+                for (const [tag, images] of Object.entries(data.photographies)) {
+                    images.forEach(image => flattenedImages.push({ ...image, tag }));
+                }
+
+                // Mélanger les images avant de les stocker
+                const shuffledImages = shuffleArray(flattenedImages);
+
+                setImages(shuffledImages);
+                setFilteredImages(shuffledImages);
             } catch (error) {
                 console.log(error);
             }
@@ -112,7 +127,7 @@ const Galerie = () => {
             )}
             
         </section>
-    ) 
+    );
 }
 
 export default Galerie;
