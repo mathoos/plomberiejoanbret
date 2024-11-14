@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
@@ -27,7 +28,12 @@ function Home() {
     }, [location]);
 
     return (
-        <div>           
+        <div>    
+            <Helmet>
+                <title>Plomberie Joan Bret | Plombier sur Rouen et périphérie</title>
+                <meta name="description" content="Plombier basé sur Rouen depuis 1994, mon entreprise propose ses services de dépannage sanitaire, et de création de salle de bain, salle de douche et cuisine." />
+                <meta name="keywords" content="plombier, plomberie, dépannage, salle de bain, salle de douche, cuisine, Rouen" />
+            </Helmet>       
             <Header 
                 img={HeaderImg} 
                 imgMobile={HeaderImgMobile}
