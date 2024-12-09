@@ -41,6 +41,18 @@
             { 
                 "src" : "/realisations/salle-de-bain/salle-de-bain(10).jpg" , 
                 "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(11).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(12).jpg" , 
+                "alt" : "Salle de bain"
+            },
+            { 
+                "src" : "/realisations/salle-de-bain/salle-de-bain(13).jpg" , 
+                "alt" : "Salle de bain"
             }
         ],
 
@@ -134,6 +146,10 @@
             },
             { 
                 "src" : "/realisations/mobilier/mobilier(15).jpg" , 
+                "alt" : "Mobilier"
+            },
+            { 
+                "src" : "/realisations/mobilier/mobilier(16).jpg" , 
                 "alt" : "Mobilier"
             }
         ],
@@ -267,6 +283,10 @@
             },
             { 
                 "src" : "/realisations/toilette/toilette(8).jpg" , 
+                "alt" : "Toilette"
+            },
+            { 
+                "src" : "/realisations/toilette/toilette(9).jpg" , 
                 "alt" : "Toilette"
             }
         ]

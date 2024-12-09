@@ -2,18 +2,21 @@
 
 .entreprise{
     display : flex;
-    background-color: $primary;
+    background-color: $blanc;
     @media screen and (max-width:990px){
         flex-direction: column-reverse;
     }
 
     &_img{
-        width : 55vw;
-        padding : 8.5vw 4.25vw 8.5vw 8.5vw;
+        width : 45vw;
+       // padding : 8.5vw 4.25vw 8.5vw 8.5vw;
+       border-right : 2px solid $noir;
         @media screen and (max-width:990px){
             width : 100%;
             height : 40vh;
             padding : 0;
+            border-right : none;
+            border-top : 2px solid $noir;
         }
 
         &-img{
@@ -32,8 +35,9 @@
     &_bloc{
         display : flex;
         align-items: flex-end;
-        width : 45vw;
-        padding : 8.5vw 8.5vw 8.5vw 4.25vw;
+        width : 55vw;
+        //padding : 8.5vw 8.5vw 8.5vw 4.25vw;
+        padding : 8.5vw;
 
         @media screen and (max-width:990px){
             width : 100%;
@@ -68,10 +72,6 @@
                 flex-direction: column;
                 gap : 5vh;
 
-                p{
-                    color : $secondary;
-                }
-
                 @media screen and (max-width:990px){
                     width : 100%;
                 }
@@ -89,42 +89,19 @@
     }
 
     &.entreprise-contact{
-        background-color: $secondary;
 
         .entreprise_bloc{
-            &-container{               
-                &--title{
-                    h2{
-                        color : $primary;
-                    }
-    
-                    .subtitle{
-                        color : $primary;
-                    }
-                }
-    
-                &--txt{
-                    p{
-                        color : $noir;
-
-                        a{
-                            transition : .3s ease;
-                            &:hover{
-                                color : $primary;
-                            }
-                        }
-                    }
-                }
-    
-                .bouton{
-                    &:hover{
-                        color : $secondary;
-                        &::after{
-                            background-color: $noir;
-                        }
-                    } 
-                }
+            width : 45vw;
+            @media screen and (max-width:990px){
+                width : 100%;
             }
         }  
+
+        .entreprise_img{
+            width : 55vw;
+            @media screen and (max-width:990px){
+                width : 100%;
+            }
+        }
     }
 }

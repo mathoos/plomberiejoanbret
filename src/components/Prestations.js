@@ -1,12 +1,12 @@
 import { Parallax } from "react-scroll-parallax";
 import { Reveal } from "react-awesome-reveal";
-import Logo from "../img/logos/logo-plomberie-marron.svg";
-import PictogrammeSalleDeBain from "../img/pictogrammes/baignoire-marron.svg";
-import PictogrammeSalleDeDouche from "../img/pictogrammes/douche-marron.svg";
-import PictogrammeCuisine from "../img/pictogrammes/cuisine-marron.svg";
-import PictogrammeAmenagementPMR from "../img/pictogrammes/pmr-marron.svg";
-import PictogrammeDepannage from "../img/pictogrammes/depannage-marron.svg";
-import PictogrammeTraitementEau from "../img/pictogrammes/traitement-marron.svg";
+import Logo from "../img/logos/logo-plomberie-beige.svg";
+import PictogrammeSalleDeBain from "../img/pictogrammes/baignoire-noir.svg";
+import PictogrammeSalleDeDouche from "../img/pictogrammes/douche-noir.svg";
+import PictogrammeCuisine from "../img/pictogrammes/cuisine-noir.svg";
+import PictogrammeAmenagementPMR from "../img/pictogrammes/pmr-noir.svg";
+import PictogrammeDepannage from "../img/pictogrammes/depannage.svg";
+import PictogrammeTraitementEau from "../img/pictogrammes/traitement-eau.svg";
 import { bottomAnimation} from "../functions/keyframes";
 import './Prestations.scss';
 

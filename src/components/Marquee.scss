@@ -14,10 +14,9 @@
         flex-wrap: nowrap;      
 
         p{
-            font-family : $font-title;
             font-size : 3.7vw;
             white-space: nowrap;
-            color : $secondary;
+            color : $blanc;
             text-transform : uppercase;
             font-variation-settings:
                 "wdth" 120,
@@ -30,7 +29,7 @@
 
             span{
                 color : transparent;
-                -webkit-text-stroke: 2px $secondary;
+                -webkit-text-stroke: 2px $blanc;
 
                 @media screen and (max-width:990px){
                     -webkit-text-stroke: 1px $blanc;

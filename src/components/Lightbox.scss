@@ -10,7 +10,7 @@
     align-items: center;
     width : 100%;
     height : 100vh;
-    background-color: $noir;  
+    background-color: $blanc;  
     padding : 10vh 15vw 10vh 15vw;
     transition : opacity .3s ease;
     z-index : 100;
@@ -71,7 +71,7 @@
             align-items: center;
             width : 3vw;
             height : 3vw;
-            background-color: $primary;
+            background-color: $noir;
             border-radius : 100vmax;
             transition : .3s ease;
             cursor : pointer;
@@ -99,7 +99,7 @@
             svg{
                 width : 1.2vw;
                 will-change: transform;
-                fill : $secondary;
+                fill : $beige;
                 transition : .3s ease;
                 @media screen and (max-width : 990px){
                     width : 5vw;
@@ -108,9 +108,9 @@
             }
 
             &:hover{
-                background-color: $secondary;
+                background-color: $beige;
                 svg{
-                    fill : $primary;
+                    fill : $noir;
                 }
             }
         }
@@ -126,7 +126,7 @@
         justify-content: center;
         align-items: center;
         border-radius : 100%;
-        background-color: $secondary;;
+        background-color: $noir;
         transition : .5s ease;
         will-change : transform;
         cursor : pointer;
@@ -140,7 +140,7 @@
             position : absolute;           
             width : 1.5vw;
             height : 1px;
-            background-color: $primary;
+            background-color: $beige;
             transition : .3s ease;
             @media screen and (max-width : 990px){
                 width : 5vw;
@@ -160,9 +160,9 @@
         }
 
         &:hover{
-            background-color: $primary;
+            background-color: $beige;
             .lightbox_close-barre{
-                background-color : $secondary;
+                background-color : $noir;
             }
         }
     }

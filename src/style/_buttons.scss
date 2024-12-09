@@ -5,10 +5,8 @@
     align-items: center;
     flex-wrap : nowrap;
     width : fit-content;
-    min-height : 5vh;
+    min-height : 7vh;
     padding : 0 2vw;
-    border-radius: 100vmax; 
-    font-size : 1.1vw;
     text-transform: uppercase;
     font-family : $font-title;
     font-variation-settings:
@@ -20,9 +18,9 @@
     z-index : 1;
 
     @media screen and (max-width:990px){
-        font-size: 3.5vw;
-        padding : 0 8vw;    
-        min-height : 5vh;
+        //font-size: 3.5vw;
+        padding : 0 10vw;    
+        min-height : 7vh;
         white-space : nowrap;
     }  
 
@@ -32,22 +30,11 @@
         }      
     }
 
-    &_marron{
-        background-color: $primary;
-        color : $secondary;
-        &:hover{
-            color : $primary;
-            &::after{
-                background-color: $secondary;
-            }
-        }     
-    }
-
     &_beige{
-        background-color: $secondary;
-        color : $primary;
+        background-color: $beige;
+        color : $noir;
         &:hover{
-            color : $secondary;
+            color : $beige;
             &::after{
                 background-color: $noir;
             }
@@ -57,10 +44,24 @@
     &_noir{
         background-color: $noir;
         color : $secondary;
+        border : 2px solid transparent;
         &:hover{
             color : $noir;
+            border-color : $noir;
             &::after{
-                background-color: $secondary;
+                background-color: $blanc;
+            }
+        }  
+    }
+
+    &_noirTrait{
+        background-color: transparent;
+        color : $noir;
+        border : 2px solid $noir;
+        &:hover{
+            color : $blanc;
+            &::after{
+                background-color: $noir;
             }
         }  
     }

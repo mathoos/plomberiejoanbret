@@ -7,7 +7,7 @@
     gap : 13.8vh;
     padding : 19.4vh 8.5vw;
     overflow : hidden;
-    background-color: $secondary;
+    background-color: $blanc;
     @media screen and (max-width : 990px){
         gap : 10vh;
         padding : 15vh 30px;
@@ -66,8 +66,8 @@
                 align-items: center;
                 width : 6.5vw;
                 height : 6.5vw;
-                border : 2px solid $primary;
-                background-color: $secondary;
+                border : 2px solid $noir;
+                background-color: $blanc;
                 border-radius: 100vmax;
 
                 @media screen and (max-width : 990px){
@@ -86,7 +86,7 @@
 
             p{
                 text-align : center;
-                color : $primary;
+                color : $noir;
             }
         }
     }

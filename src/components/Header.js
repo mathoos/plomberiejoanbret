@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Parallax } from "react-scroll-parallax";
 import { add100Vh } from '../functions/add100vh';
-import PastilleTxt from "../img/pastilles/pastille-marron-txt.svg";
-import PastilleImg from "../img/pastilles/pastille-marron-img.svg";
+
 import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 import './Header.scss';
@@ -16,6 +15,7 @@ const Header = ({
     title,
     span,
     txt,
+    txtMobile,
     children
     }) => {
 
@@ -36,12 +36,13 @@ const Header = ({
                 <div className="header_txt">
                     <div className="header_txt-title">           
                         <h1>
-                            {title} <br/> {span}
+                            {title} <br/> <span>{span}</span>
                         </h1>
-                        <p className="subtitle" dangerouslySetInnerHTML={{ __html: txt }} />
+                        <p className="subtitle hidden-mobile" dangerouslySetInnerHTML={{ __html: txt }} />
+                        <p className="subtitle hidden-pc" dangerouslySetInnerHTML={{ __html: txtMobile }} />
                     </div> 
                     <div className="header_txt-button">
-                        <a href={contactLink} className="bouton bouton_marron">Nous contacter</a>
+                        <a href={contactLink} className="bouton bouton_noir">Nous contacter</a>
                     </div>
                 </div>
             )}
@@ -52,11 +53,7 @@ const Header = ({
                     <img src={imgMobile} className="hidden-pc" alt="Salle de bain"/>
                 </Parallax>
             </figure>
-            
-            <figure className="header_pastille">
-                <img src={PastilleTxt} className="txt" alt="Pastille Plomberie Joan Bret"/>
-                <img src={PastilleImg} className="img" alt="Pastille Plomberie Joan Bret"/>
-            </figure>  
+                        
         </header>
     ) 
 }

@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
-import Marquee from '../components/Marquee';
+import Resume from '../components/Resume';
 import Galerie from '../components/Galerie';
 import Footer from '../components/Footer';
-import HeaderImg from "../img/galerie/cuisine(3).jpg";
+import HeaderImg from "../img/galerie/salle-de-douche-moderne.jpg";
 
 
 function Realisations() {
@@ -25,14 +25,24 @@ function Realisations() {
                         Découvrez notre savoir-faire <br/> 
                         à travers nos réalisations
                     `} 
+                txtMobile=
+                {`
+                    Découvrez notre savoir-faire en plomberie
+                    à travers nos réalisations sur-mesure
+                `} 
             />
-            <Marquee
-                className="marron"
+            <Resume
+                txt=
+                {
+                    <>
+                        Découvrez en images notre savoir-faire en plomberie. <br/>
+                        Chaque projet reflète notre engagement à fournir un travail de qualité pour répondre à vos besoins 
+                        et à vos attentes.
+                    </>
+                } 
             />
             <Galerie/>
-            <Footer
-                className="realisations-page"
-            />
+            <Footer/>
         </div>
     )
 }

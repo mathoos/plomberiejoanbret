@@ -1,9 +1,10 @@
 @import "../style.scss";
 
 .accelerateurs{
-    padding : 20vh 8.5vw;
+    width : 100%;
+    padding : 20vh 8.5vw 0 8.5vw;
     @media screen and (max-width:990px){
-        padding : 10vh 30px;
+        padding : 10vh 30px 0 30px;
     }
 
     &_container{
@@ -31,9 +32,9 @@
             }
 
             &:hover, &.active{
-                color : $primary;
+                color : $blanc;
                 &::after{
-                    background-color: $secondary;
+                    background-color: $noir;
                     height : 100%;
                 }
             }  

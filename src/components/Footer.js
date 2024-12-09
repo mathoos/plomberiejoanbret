@@ -1,4 +1,4 @@
-import Pastille from "../img/logos/logo-plomberie-circle-beige.svg";
+import Pastille from "../img/logos/logo-plomberie-circle-blanc.svg";
 import './Footer.scss';
 
 function Footer({className}){

@@ -229,7 +229,7 @@ const Realisations = () => {
                                 </div>
                             </div>
                         </div>
-                        <a href="/realisations" className="bouton bouton_marron">Toutes nos réalisations</a>
+                        <a href="/realisations" className="bouton bouton_beige hidden-mobile">Toutes nos réalisations</a>
                     </div>
                     <div className="realisations_container-txt--arrows">
                         <figure className="arrow arrow-right" onClick={showNextImage}>
@@ -256,6 +256,10 @@ const Realisations = () => {
                     </div>
                 </div>
 
+                <div className="realisations_container-bouton hidden-pc">
+                    <a href="/realisations" className="bouton bouton_beige">Toutes nos réalisations</a>
+                </div>
+               
             </section>
         </div>
                     

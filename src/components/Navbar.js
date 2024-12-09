@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../img/logos/logo-plomberie-circle-beige.svg";
+import Logo from "../img/logos/logo-plomberie-circle-blanc.svg";
 import { Link, useLocation } from "react-router-dom";
 import './Navbar.scss';
 

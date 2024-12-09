@@ -36,12 +36,12 @@ const Entreprise = ({id, img, alt, title, subtitle, txt, a, href, link, classNam
                     </div>
                     <Reveal keyframes={bottomAnimation} triggerOnce={true}>
                         {a && (
-                            <a href={href} className="bouton bouton_noir">
+                            <a href={href} className="bouton bouton_beige">
                                 {a}
                             </a>
                         )}
                         {link && (
-                            <Link to={href} className="bouton bouton_marron" target="_blank" rel="noreferrer">
+                            <Link to={href} className="bouton bouton_beige" target="_blank" rel="noreferrer">
                                 {link}
                             </Link>
                         )}

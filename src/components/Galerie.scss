@@ -1,13 +1,12 @@
 @import "../style.scss";
 
 .galerie{
-    background-color: $noir;
-
-    &_title{
-        h2{
-            color : $secondary;
-        }
-    }
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10vh;
+    background-color: $blanc;
+    padding-bottom : 20vh;
 
     &_container {       
         display : flex;

@@ -5,7 +5,7 @@
     display : flex;
     width : 100%;
     height : 110vh;
-    background-color: $noir;
+    background-color: $blanc;
     
     @media screen and (max-width : 990px){
         flex-direction : column;
@@ -37,16 +37,24 @@
                 opacity : 0;
                 transform : translateY(-50%);
                 animation : slideTop 1s ease .4s forwards;
+
+                span{
+                    color : transparent;
+                    -webkit-text-stroke: 2px $noir;
+                    @media screen and (max-width : 990px){
+                        -webkit-text-stroke: 1px $noir;
+                    }
+                }
             }
 
             .subtitle{
                 opacity : 0;
-                color : $secondary;
+                color : $noir;
                 transform : translateY(-50%);
                 animation : slideTop 1s ease .6s forwards;
                 
                 @media screen and (max-width : 990px){
-                    font-size : 3vw;
+                    //font-size : 3vw;
                 }
             }
         }  
@@ -63,10 +71,13 @@
         width : 45vw;
         height : 100%;
         overflow : hidden;
+        border-left : 2px solid $noir;
 
         @media screen and (max-width : 990px){
             width : 100%;
             height : 55vh;
+            border-left : none;
+            border-top : 2px solid $noir;
         }
 
         img{
@@ -82,39 +93,8 @@
             left : 0;
             width : 100%;
             height : 100%;
-            background-color: $noir;
+            background-color: $blanc;
             animation : curtain 1s linear .5s forwards;
-        }
-    }
-
-    &_pastille{
-        position : absolute;
-        bottom : 20vh;
-        right : 5vw;
-        z-index : 99;
-
-        @media screen and (max-width:990px){
-            bottom : 30px;
-            right : 30px;
-        }
-
-        img{
-            width : 8vw;
-            height : auto;
-
-            &.img{
-                position : absolute;
-                top : 0;
-                left : 0;
-            }
-
-            &.txt{
-                animation : infiniteRotation 20s infinite linear;
-            }
-            
-            @media screen and (max-width:990px){
-                width : 25vw;
-            }
         }
     }
 }

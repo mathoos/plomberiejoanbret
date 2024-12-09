@@ -13,6 +13,7 @@ const Galerie = () => {
     const [selectedTag, setSelectedTag] = useState("all");
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+    const [visibleImagesCount, setVisibleImagesCount] = useState(16); // Nombre initial d'images visibles
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -88,34 +89,45 @@ const Galerie = () => {
     const handleTagClick = (tag) => {
         setSelectedTag(tag);
         navigate(`?tag=${tag}`, { replace: true });
+        setVisibleImagesCount(16); // Réinitialiser à 16 images quand on change de tag
     };
 
     const numberOfBoxes = window.innerWidth < 990 ? 3 : 4;
     const imageGroups = Array.from({ length: numberOfBoxes }, () => []);
 
-    filteredImages.forEach((image, index) => {
+    // Limiter les images affichées par le nombre de visibleImagesCount
+    const limitedImages = filteredImages.slice(0, visibleImagesCount);
+
+    limitedImages.forEach((image, index) => {
         const boxIndex = index % numberOfBoxes;
         imageGroups[boxIndex].push({ image, index });
     });
 
+    const loadMoreImages = () => {
+        setVisibleImagesCount(prevCount => prevCount + 16); // Charger 16 images supplémentaires
+    };
+
     return (
         <section className="galerie">
-
-            <Tags onTagClick={handleTagClick} selectedTag={selectedTag} isHomePage={false}/>
+            <Tags onTagClick={handleTagClick} selectedTag={selectedTag} isHomePage={false} />
             
             <div className="galerie_container">
                 {imageGroups.map((group, groupIndex) => (
                     <div key={groupIndex} className="box">
                         {group.map(({ image, index }) => ( 
-                            <figure key={index} className="galerie_container-image" onClick={() => openLightbox(index)}>
-                                <Reveal keyframes={bottomAnimation} triggerOnce={true}>
-                                    <img src={image.src} alt={image.alt} />
-                                </Reveal>
+                            <figure key={index} className="galerie_container-image" onClick={() => openLightbox(index)}>                               
+                                <img src={image.src} alt={image.alt} />                         
                             </figure>
                         ))}
                     </div>
                 ))}
             </div>
+
+            {visibleImagesCount < filteredImages.length && ( // Afficher le bouton si toutes les images ne sont pas visibles
+                <button className="bouton bouton_noirTrait" onClick={loadMoreImages}>
+                    Afficher plus
+                </button>
+            )}
 
             {lightboxOpen && (
                 <Lightbox
@@ -125,7 +137,6 @@ const Galerie = () => {
                     onNext={nextImage}
                 />
             )}
-            
         </section>
     );
 }

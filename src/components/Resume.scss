@@ -1,0 +1,62 @@
+@import "../style.scss";
+
+.resume{
+    position : relative;
+    padding : 14vh 15vw;
+    background-color: $beige;
+    border-top : 2px solid $noir;
+    border-bottom : 2px solid $noir;
+    @media screen and (max-width : 990px){
+        padding : 10vh 30px;
+    }
+
+    p{
+        //color : $blanc;
+        text-align : center;
+        font-family: $font-title;
+        font-size: 1.2vw;
+        line-height : 1.2;
+        text-transform: uppercase;
+        font-variation-settings:
+            "wdth" 120,
+            "wght" $light;
+
+            @media screen and (max-width : 990px){
+                font-size : 3.5vw;
+            }
+    }
+
+    &_pastille{
+        position : absolute;
+        bottom : -4vw;
+        right : 5vw;
+        z-index : 99;
+
+        @media screen and (max-width:990px){
+            bottom : -12.5vw;
+            right : 30px;
+        }
+
+        img{
+            width : 8vw;
+            height : auto;
+
+            &.img{
+                position : absolute;
+                top : 0;
+                left : 0;
+                
+            }
+
+            &.txt{
+                position : relative;
+                z-index : 5;
+                animation : infiniteRotation 20s infinite linear;
+            }
+            
+            @media screen and (max-width:990px){
+                width : 25vw;
+            }
+        }
+    }
+}

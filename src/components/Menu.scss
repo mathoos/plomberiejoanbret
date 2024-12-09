@@ -13,7 +13,7 @@
     transform : translateY(-100%);
     transition : .5s ease;
     z-index : 150;
-    background-color: $noir;
+    background-color: $blanc;
     overflow : hidden;
 
     &_container{
@@ -27,7 +27,7 @@
             font-size : 6vw;
             line-height : 1.2;
             text-transform : uppercase;
-            color : $secondary;
+            color : $noir;
             font-variation-settings:
                 "wdth" 120,
                 "wght" $medium;

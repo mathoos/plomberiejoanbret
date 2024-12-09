@@ -1,14 +1,14 @@
 @import "../style.scss";
 
 .nav{
-    position : absolute;
+    position : fixed;
     top : 0;
     left : 0;
     display : flex;
     justify-content: space-between;
     width : 100%;
     padding : 2.5vh 5vw 2.5vh 8.5vw;
-    background-color: $primary;
+    background-color: $noir;
     transform : translateY(-100%);
     animation : slideTop 1s ease .2s forwards;
     z-index : 200;
@@ -17,7 +17,6 @@
         position : fixed;
         align-items: center;
         padding : 2vh 30px;
-        border-bottom : 1px solid $secondary;
     }
 
     &_logo{
@@ -49,13 +48,18 @@
 
         &-link{
             font-size : 1.1vw;
-            color : $secondary;
+            color : $blanc;
             font-family : $font-title;
             font-variation-settings:
                 "wdth" 120,
                 "wght" $regular;
             text-transform : uppercase;
             cursor: pointer;
+        }
+
+        .bouton{
+            min-height : 5vh;
+            border-radius : 100vmax;
         }
     }
 

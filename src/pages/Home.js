@@ -3,15 +3,16 @@ import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
 import Header from '../components/Header';
+import Resume from '../components/Resume';
 import Entreprise from '../components/Entreprise';
 import Prestations from '../components/Prestations';
 import Realisations from '../components/Realisations';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
-import HeaderImg from "../img/galerie/header_home.jpg";
+import HeaderImg from "../img/galerie/header-home.jpg";
 import HeaderImgMobile from "../img/galerie/header_home_mobile.jpg";
-import SalleDeBain from "../img/galerie/cuisine(6).jpg";
-import SalleDeDouche from "../img/galerie/cuisineAmericaine2.jpg";
+import SalleDeBain from "../img/galerie/experience-plombier.jpg";
+import SalleDeDouche from "../img/galerie/nous-trouver.jpg";
 
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
             </Helmet>       
             <Header 
                 img={HeaderImg} 
-                imgMobile={HeaderImgMobile}
+                imgMobile={HeaderImg}
                 title="Plomberie" 
                 span="Joan Bret" 
                 txt=
@@ -46,12 +47,27 @@ function Home() {
                         Dépannage, création & rénovation <br/> 
                         Rouen et périphérie
                     `} 
+                txtMobile=
+                {`
+                    Artisan plombier agréé Jacob Delafon sur Rouen et sa périphérie.
+                `} 
+            />
+            <Resume
+                txt=
+                {`
+                    Besoin d'un plombier à Rouen pour un dépannage, une réparation ou un projet d'installation ? Nous sommes là 
+                    pour vous accompagner avec sérieux et simplicité, en trouvant des solutions adaptées à vos besoins. 
+                `} 
             />
             <Entreprise
                 id="entreprise"
                 img={SalleDeBain} 
                 alt="Salle de bain"
-                title="Expérience d'un plombier" 
+                title={
+                    <>
+                        Expérience <br/> d'un plombier
+                    </>
+                }
                 subtitle="Votre partenaire plomberie, alliant passion et savoir-faire artisanal, sur Rouen et sa périphérie." 
                 txt={
                     <>
@@ -71,17 +87,32 @@ function Home() {
             />
             <Marquee/>
             <Prestations/>
+            <Marquee/>
             <Realisations/>
-            <Marquee
-                className="marron"
-            />
+            <Resume
+                txt=
+                {`
+                    Parce que votre confort est essentiel, nous nous engageons à vous offrir des prestations de qualité, 
+                    adaptées à vos besoins. Chaque intervention est réalisée avec soin, car votre 
+                    satisfaction est notre priorité.
+                `} 
+            />          
             <Entreprise
-                className="entreprise-contact"
                 id="contact"
+                className="entreprise-contact"
                 img={SalleDeDouche} 
                 alt="Salle de douche"
-                title="Où nous trouver ?" 
-                subtitle="Une question, une demande de devis, une urgence ? Contactez-nous." 
+                title={
+                    <>
+                        Où nous <br/> trouver ?
+                    </>
+                }
+                subtitle=
+                {
+                    <>
+                        Une question, une demande de devis, une urgence ? <br/> Contactez-nous.
+                    </>
+                }
                 txt={
                     <>
                         Notre équipe de plombiers intervient pour résoudre tous vos problèmes de plomberie, 
