@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Resume from '../components/Resume';
 import Galerie from '../components/Galerie';
 import Footer from '../components/Footer';
-import HeaderImg from "../img/galerie/salle-de-douche-moderne.jpg";
+import HeaderImg from "../img/galerie/salle-de-bain-moderne-noire.jpg";
 
 
 function Realisations() {

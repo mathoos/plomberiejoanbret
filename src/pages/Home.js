@@ -9,10 +9,10 @@ import Prestations from '../components/Prestations';
 import Realisations from '../components/Realisations';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
-import HeaderImg from "../img/galerie/header-home.jpg";
+import HeaderImg from "../img/galerie/salle-de-bain-carrelage.jpg";
 import HeaderImgMobile from "../img/galerie/header_home_mobile.jpg";
-import SalleDeBain from "../img/galerie/experience-plombier.jpg";
-import SalleDeDouche from "../img/galerie/nous-trouver.jpg";
+import EntrepriseImg from "../img/galerie/salle-de-bain-vert.jpg";
+import ContactImg from "../img/galerie/salle-de-bain-moderne-noire.jpg";
 
 
 function Home() {
@@ -61,7 +61,7 @@ function Home() {
             />
             <Entreprise
                 id="entreprise"
-                img={SalleDeBain} 
+                img={EntrepriseImg} 
                 alt="Salle de bain"
                 title={
                     <>
@@ -100,7 +100,7 @@ function Home() {
             <Entreprise
                 id="contact"
                 className="entreprise-contact"
-                img={SalleDeDouche} 
+                img={ContactImg} 
                 alt="Salle de douche"
                 title={
                     <>
