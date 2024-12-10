@@ -10,9 +10,9 @@ import Realisations from '../components/Realisations';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
 import HeaderImg from "../img/galerie/salle-de-bain-carrelage.jpg";
-import HeaderImgMobile from "../img/galerie/header_home_mobile.jpg";
+import HeaderImgMobile from "../img/galerie/header-home-mobile.jpg";
 import EntrepriseImg from "../img/galerie/salle-de-bain-vert.jpg";
-import ContactImg from "../img/galerie/salle-de-bain-moderne-noire.jpg";
+import ContactImg from "../img/galerie/nous-trouver.jpg";
 
 
 function Home() {
@@ -38,7 +38,7 @@ function Home() {
             </Helmet>       
             <Header 
                 img={HeaderImg} 
-                imgMobile={HeaderImg}
+                imgMobile={HeaderImgMobile}
                 title="Plomberie" 
                 span="Joan Bret" 
                 txt=

@@ -64,7 +64,7 @@ const Realisations = () => {
                 slidesRef.current.style.transform = `translateX(-${currentImageIndex * 100}vw)`; // Ajuster pour mobile
             } 
             else {
-                slidesRef.current.style.transform = `translateX(-${currentImageIndex * 55}vw)`; // Valeur par défaut pour écran plus large
+                slidesRef.current.style.transform = `translateX(-${currentImageIndex * 40}vw)`; // Valeur par défaut pour écran plus large
             }
         }
     }, [currentImageIndex, isMobile]);
@@ -152,7 +152,7 @@ const Realisations = () => {
                 slidesRef.current.style.transform = `translateX(-${currentImageIndex * 100}vw)`; // Par exemple, plus large pour mobile
             } else {
                 // Sinon, pour les écrans plus larges, on applique la transformation par défaut
-                slidesRef.current.style.transform = `translateX(-${currentImageIndex * 55}vw)`;
+                slidesRef.current.style.transform = `translateX(-${currentImageIndex * 40}vw)`;
             }
             slidesTitlesRef.current.style.transition = `transform 1s ease-in-out`;
             slidesTitlesRef.current.style.transform = `translateY(-${currentTitleIndex * maxHeightTitles}px)`;
@@ -243,16 +243,19 @@ const Realisations = () => {
                 </div>
 
                 <div className="realisations_container-slider">
-                    <div
-                        ref={slidesRef}
-                        className="slides"
-                        onTransitionEnd={() => console.log('Transition terminée')}
-                    >
-                        {photographies.map((photo, index) => (
-                            <figure key={index} className="slide">
-                                <img src={photo.photo} alt="Réalisation" />
-                            </figure>
-                        ))}
+
+                    <div className="coucou">
+                        <div
+                            ref={slidesRef}
+                            className="slides"
+                            onTransitionEnd={() => console.log('Transition terminée')}
+                        >
+                            {photographies.map((photo, index) => (
+                                <figure key={index} className="slide">
+                                    <img src={photo.photo} alt="Réalisation" />
+                                </figure>
+                            ))}
+                        </div>
                     </div>
                 </div>
 

@@ -4,6 +4,7 @@ import Resume from '../components/Resume';
 import Galerie from '../components/Galerie';
 import Footer from '../components/Footer';
 import HeaderImg from "../img/galerie/salle-de-bain-moderne-noire.jpg";
+import HeaderImgMobile from "../img/galerie/header-realisations-mobile.jpg";
 
 
 function Realisations() {
@@ -16,7 +17,7 @@ function Realisations() {
             </Helmet>
             <Header 
                 img={HeaderImg} 
-                imgMobile={HeaderImg}
+                imgMobile={HeaderImgMobile}
                 title="Plomberie" 
                 span="creations" 
                 txt=
