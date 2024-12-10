@@ -13,7 +13,7 @@
     background-color: $blanc;  
     padding : 10vh 15vw 10vh 15vw;
     transition : opacity .3s ease;
-    z-index : 100;
+    z-index : 201;
 
     @media screen and (max-width : 990px){
         flex-direction: column;

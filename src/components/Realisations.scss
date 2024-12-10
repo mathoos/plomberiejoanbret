@@ -192,8 +192,8 @@
 
             .coucou{
                 position : relative;
-                width : 40vw;
-                height : 70vh;
+                width : 35vw;
+                height : 35vw;
                 overflow : hidden;
                 @media screen and (max-width : 990px){
                     width : 100vw;
@@ -204,7 +204,7 @@
             .slides {
                 position: absolute;
                 top: 0;
-                left: -40vw;
+                left: -35vw;
                 display: flex;
                 height : 100%;
                 @media screen and (max-width : 990px){
@@ -212,7 +212,7 @@
                 }
 
                 .slide{
-                    width: 40vw;
+                    width: 35vw;
                     height : 100%;
                     @media screen and (max-width : 990px){
                         width : 100vw;

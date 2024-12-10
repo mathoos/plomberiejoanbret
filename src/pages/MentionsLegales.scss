@@ -7,11 +7,11 @@
     width : 100%;
     min-height : 100vh;
     padding : 20vh 8.5vw;
-    background-color: $noir;
+    background-color: $blanc;
 
     h1{
         margin-bottom : 10vh;
-        color : $primary;
+        color : $noir
     }
 
     &_bloc{
@@ -20,7 +20,7 @@
         gap : 2.5vh;
 
         h2{
-            color : $secondary;
+            color : $noir;
         }
 
         h3{
@@ -28,7 +28,7 @@
         }
 
         p{
-            color : $secondary;
+            color : $noir;
         }
     }
 }
