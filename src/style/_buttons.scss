@@ -18,7 +18,6 @@
     z-index : 1;
 
     @media screen and (max-width:990px){
-        //font-size: 3.5vw;
         padding : 0 10vw;    
         min-height : 7vh;
         white-space : nowrap;
@@ -33,6 +32,7 @@
     &_beige{
         background-color: $beige;
         color : $noir;
+        border : 2px solid $noir;
         &:hover{
             color : $beige;
             &::after{
