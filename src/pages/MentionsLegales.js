@@ -1,6 +1,20 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './MentionsLegales.scss';
 
 function MentionsLegales() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+
+        // Envoi d'un événement de page vue à Google Analytics
+        window.gtag('event', 'page_view', {
+            page_path: location.pathname + location.search, 
+            page_title: 'Plomberie Joan Bret - Mentions légales' 
+        });
+
+    }, [location]);
 
     return (
         <div className="mentions-legales">   

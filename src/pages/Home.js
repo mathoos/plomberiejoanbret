@@ -20,6 +20,14 @@ function Home() {
     const location = useLocation();
 
     useEffect(() => {
+
+        // Envoi d'un événement de page vue à Google Analytics
+        window.gtag('event', 'page_view', {
+            page_path: location.pathname + location.search, 
+            page_title: 'Plomberie Joan Bret - Accueil' 
+        });
+
+
         const sectionId = location.hash.replace("#", "");
         if (sectionId) {
             const section = document.getElementById(sectionId);

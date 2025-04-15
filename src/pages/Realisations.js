@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Resume from '../components/Resume';
@@ -8,6 +10,19 @@ import HeaderImgMobile from "../img/galerie/header-realisations-mobile.jpg";
 
 
 function Realisations() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+
+        // Envoi d'un événement de page vue à Google Analytics
+        window.gtag('event', 'page_view', {
+            page_path: location.pathname + location.search, 
+            page_title: 'Plomberie Joan Bret - Réalisations' 
+        });
+
+    }, [location]);
+
     return (
         <div>
             <Helmet>
